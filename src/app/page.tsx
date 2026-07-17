@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { ScrollVideo } from "@/components/home/ScrollVideo";
+import { LogoOrbitSection } from "@/components/home/LogoOrbitSection";
 import { CompanyIntroduction } from "@/components/home/CompanyIntroduction";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FeaturedPos } from "@/components/home/FeaturedPos";
@@ -49,6 +50,9 @@ export default function Home() {
         heightVh={300}
         staticBehavior="hide"
       />
+
+      {/* Full-page scroll-scrubbed brand moment: stripes orbit and form the X */}
+      <LogoOrbitSection />
 
       <Hero />
       <CompanyIntroduction />
