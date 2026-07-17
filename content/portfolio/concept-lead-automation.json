@@ -4,11 +4,12 @@
   "category": "automation",
   "shortDescription": "Concept Project — automated lead capture, routing and follow-up email workflows.",
   "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa automation project: website leads captured into a central list, qualified and routed to the right person, with automatic follow-up emails and internal notifications.",
-  "thumbnail": "/images/portfolio/placeholder-project-2.png",
-  "galleryImages": [],
-  "technologies": ["Automation workflows", "Email APIs", "REST APIs"],
-  "customerName": "",
-  "websiteUrl": "",
+  "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_45_42 PM.png",
+  "technologies": [
+    "Automation workflows",
+    "Email APIs",
+    "REST APIs"
+  ],
   "projectStatus": "concept",
   "featured": false,
   "published": true,
