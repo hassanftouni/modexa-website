@@ -57,6 +57,9 @@ src/lib/             site config + content loaders
 3. Set the environment variable `NEXT_PUBLIC_SITE_URL` to the final domain
    (e.g. `https://modexa.example`) so canonical URLs, sitemap and Open Graph
    metadata are correct.
+4. Set `NEXT_PUBLIC_FORMSPREE_CONTACT_ID` and `NEXT_PUBLIC_FORMSPREE_QUOTE_ID`
+   (same values as in `.env.local`) so the contact and quote forms can submit.
+   These are public Formspree form ids — no secrets belong in frontend env vars.
 
 ## Before launch — placeholders to replace
 
@@ -64,6 +67,9 @@ src/lib/             site config + content loaders
   (via Pages CMS).
 - Contact email + social links in `src/lib/site.ts`.
 - Privacy Policy and Terms of Service copy (legal review).
-- Wire the contact/quote forms to a real service (Resend, Formspree or a
-  route handler) — see comments in `src/components/forms/`.
 - Real Modexa POS screenshots (currently a CSS mockup + placeholder images).
+
+The contact and quote forms submit to Formspree
+(`src/components/forms/ContactForm.tsx` / `QuoteForm.tsx`) using the
+`NEXT_PUBLIC_FORMSPREE_*` ids above; submissions are tagged with a
+`form_source` field so both forms are easy to tell apart in the inbox.

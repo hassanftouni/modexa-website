@@ -15,9 +15,19 @@ import {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/*
+ * NEXT_PUBLIC_FORMSPREE_QUOTE_ID is a public Formspree form id (safe to
+ * expose in the browser). Never put passwords, API secrets or email
+ * credentials in this component.
+ */
+const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_QUOTE_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_QUOTE_ID}`
+  : null;
+
 export function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -47,17 +57,37 @@ export function QuoteForm() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
+    if (!endpoint) {
+      setSubmitError(
+        "The quote form is not configured yet (missing NEXT_PUBLIC_FORMSPREE_QUOTE_ID). Please email us directly instead."
+      );
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
+    setSubmitError(null);
     try {
-      /*
-       * PLACEHOLDER SUBMISSION HANDLER — wire to a serverless function,
-       * Resend or Formspree before launch (see ContactForm for details).
-       * Never expose API keys or email passwords in frontend code.
-       */
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      // Keep the submission readable in Formspree: drop the empty honeypot
+      // field and tag which form the request came from.
+      data.delete("company_website");
+      data.append("form_source", "Modexa Quote Request");
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
       setStatus("success");
       form.reset();
     } catch {
+      // Entered values stay in the form so the visitor can simply retry.
+      setSubmitError(
+        "Something went wrong while sending your request. Please try again."
+      );
       setStatus("error");
     }
   }
@@ -172,9 +202,9 @@ export function QuoteForm() {
         placeholder="Anything else Modexa should know?"
       />
 
-      {status === "error" ? (
+      {status === "error" && submitError ? (
         <p role="alert" className="text-sm text-red-400">
-          Something went wrong while sending your request. Please try again.
+          {submitError}
         </p>
       ) : null}
 

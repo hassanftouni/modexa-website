@@ -17,9 +17,19 @@ import {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/*
+ * NEXT_PUBLIC_FORMSPREE_CONTACT_ID is a public Formspree form id (safe to
+ * expose in the browser). Never put passwords, API secrets or email
+ * credentials in this component.
+ */
+const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID}`
+  : null;
+
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -55,21 +65,37 @@ export function ContactForm() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
+    if (!endpoint) {
+      setSubmitError(
+        "The contact form is not configured yet (missing NEXT_PUBLIC_FORMSPREE_CONTACT_ID). Please email us directly instead."
+      );
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
+    setSubmitError(null);
     try {
-      /*
-       * PLACEHOLDER SUBMISSION HANDLER.
-       * Wire this to a real backend before launch, e.g.:
-       *   - a Next.js route handler (src/app/api/contact/route.ts) that sends
-       *     the message via Resend (RESEND_API_KEY as a server-side env var), or
-       *   - a Formspree/Web3Forms endpoint:
-       *       await fetch("https://formspree.io/f/<id>", { method: "POST", body: data })
-       * Never put API keys or email passwords in this client component.
-       */
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      // Keep the submission readable in Formspree: drop the empty honeypot
+      // field and tag which form the message came from.
+      data.delete("company_website");
+      data.append("form_source", "Modexa Contact Form");
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
       setStatus("success");
       form.reset();
     } catch {
+      // Entered values stay in the form so the visitor can simply retry.
+      setSubmitError(
+        "Something went wrong while sending your message. Please try again."
+      );
       setStatus("error");
     }
   }
@@ -180,9 +206,9 @@ export function ContactForm() {
         error={errors.consent}
       />
 
-      {status === "error" ? (
+      {status === "error" && submitError ? (
         <p role="alert" className="text-sm text-red-400">
-          Something went wrong while sending your message. Please try again.
+          {submitError}
         </p>
       ) : null}
 
