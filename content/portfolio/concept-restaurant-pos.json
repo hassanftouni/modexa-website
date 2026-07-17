@@ -1,0 +1,16 @@
+{
+  "title": "Restaurant POS Deployment",
+  "slug": "concept-restaurant-pos",
+  "category": "modexa-pos",
+  "shortDescription": "Concept Project — Modexa POS configured for a multi-station restaurant with kitchen and bar printing.",
+  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa POS deployment: multiple checkout terminals on a local network, kitchen and bar ticket printing, inventory tracking and daily sales analytics for a restaurant.",
+  "thumbnail": "/images/portfolio/placeholder-project-1.png",
+  "galleryImages": [],
+  "technologies": ["Modexa POS", "Local network", "Thermal printing"],
+  "customerName": "",
+  "websiteUrl": "",
+  "projectStatus": "concept",
+  "featured": true,
+  "published": true,
+  "displayOrder": 1
+}

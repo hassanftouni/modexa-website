@@ -1,0 +1,223 @@
+# Pages CMS configuration for the Modexa website.
+#
+# Connect this repository to https://pagescms.org (log in with GitHub) and
+# Pages CMS will read this file to provide an admin UI for the collections
+# below. Every save commits to GitHub, which triggers a Vercel rebuild — the
+# website owner never needs to touch React or TypeScript code.
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: customers
+    label: Customers
+    description: >
+      Customers shown in the "Trusted by businesses" section and on the
+      Customers page. Only records with "Published" enabled appear on the
+      website. Replace the placeholder entries with real, approved customers
+      before launch.
+    type: collection
+    path: content/customers
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [name, industry, projectType, featured, published, displayOrder]
+      sort: [displayOrder, name]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-customer)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers and dashes only."
+      - name: logo
+        label: Logo
+        type: image
+        options:
+          path: images/customers
+          extensions: [png, jpg, jpeg, webp, svg]
+      - name: industry
+        label: Industry
+        type: string
+      - name: website
+        label: Website URL
+        type: string
+      - name: testimonial
+        label: Testimonial (optional quote from this customer)
+        type: text
+      - name: projectType
+        label: Project type
+        type: select
+        options:
+          values:
+            - Modexa POS
+            - Business Website
+            - Portfolio Website
+            - E-commerce Website
+            - Web Application
+            - AI Agent
+            - Business Automation
+            - Custom Software
+            - API Integration
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: Display order
+        type: number
+        default: 99
+
+  - name: portfolio
+    label: Portfolio projects
+    description: >
+      Projects shown on the Portfolio page and in the home-page preview.
+      Only records with "Published" enabled appear on the website. Placeholder
+      concept projects can be unpublished or deleted once real projects exist.
+    type: collection
+    path: content/portfolio
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, category, projectStatus, featured, published, displayOrder]
+      sort: [displayOrder, title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-project)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers and dashes only."
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - value: websites
+              label: Websites
+            - value: modexa-pos
+              label: Modexa POS
+            - value: ai
+              label: AI
+            - value: automation
+              label: Automation
+            - value: web-applications
+              label: Web applications
+      - name: shortDescription
+        label: Short description (shown on cards)
+        type: text
+        required: true
+      - name: fullDescription
+        label: Full description
+        type: text
+      - name: thumbnail
+        label: Thumbnail image
+        type: image
+        options:
+          path: images/portfolio
+          extensions: [png, jpg, jpeg, webp]
+      - name: galleryImages
+        label: Gallery images
+        type: image
+        list: true
+        options:
+          path: images/portfolio
+          extensions: [png, jpg, jpeg, webp]
+      - name: technologies
+        label: Technologies
+        type: string
+        list: true
+      - name: customerName
+        label: Customer name (leave empty if not public)
+        type: string
+      - name: websiteUrl
+        label: Live website URL
+        type: string
+      - name: projectStatus
+        label: Project status
+        type: select
+        options:
+          values:
+            - value: concept
+              label: Concept Project
+            - value: in-progress
+              label: In progress
+            - value: completed
+              label: Completed
+        default: concept
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: Display order
+        type: number
+        default: 99
+
+  - name: testimonials
+    label: Testimonials
+    description: >
+      Customer quotes shown on the Home and Customers pages. The current
+      entries are temporary placeholders — replace them with real, approved
+      testimonials before launch. Only published records appear.
+    type: collection
+    path: content/testimonials
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [author, company, featured, published, displayOrder]
+      sort: [displayOrder, author]
+    fields:
+      - name: slug
+        label: Slug (URL-safe id)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers and dashes only."
+      - name: quote
+        label: Quote
+        type: text
+        required: true
+      - name: author
+        label: Author name
+        type: string
+        required: true
+      - name: role
+        label: Role (e.g. Owner)
+        type: string
+      - name: company
+        label: Company
+        type: string
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: Display order
+        type: number
+        default: 99

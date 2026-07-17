@@ -1,0 +1,16 @@
+{
+  "title": "Business Website",
+  "slug": "concept-business-website",
+  "category": "websites",
+  "shortDescription": "Concept Project — a modern, responsive company website with an SEO-ready structure.",
+  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa business website: custom branding, responsive layouts, fast performance and a clear structure that presents services and builds customer trust.",
+  "thumbnail": "/images/portfolio/placeholder-project-2.png",
+  "galleryImages": [],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+  "customerName": "",
+  "websiteUrl": "",
+  "projectStatus": "concept",
+  "featured": true,
+  "published": true,
+  "displayOrder": 2
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Modexa">
+  <defs>
+    <linearGradient id="modexa-gradient" x1="132" y1="116" x2="380" y2="396" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A855F7" />
+      <stop offset="0.5" stop-color="#6366F1" />
+      <stop offset="1" stop-color="#3FA2F7" />
+    </linearGradient>
+  </defs>
+  <line x1="148" y1="132" x2="364" y2="380" stroke="url(#modexa-gradient)" stroke-width="64" stroke-linecap="round" />
+  <line x1="364" y1="132" x2="148" y2="380" stroke="#FFFFFF" stroke-width="64" stroke-linecap="round" />
+</svg>

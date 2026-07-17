@@ -1,0 +1,16 @@
+{
+  "title": "AI Customer-Support Agent",
+  "slug": "concept-ai-support-agent",
+  "category": "ai",
+  "shortDescription": "Concept Project — an AI agent that answers customer questions from a business knowledge base.",
+  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa AI solution: a support agent trained on a company's services and policies, embedded in the website chat, answering common questions instantly and escalating to staff when needed.",
+  "thumbnail": "/images/portfolio/placeholder-project-1.png",
+  "galleryImages": [],
+  "technologies": ["AI APIs", "Next.js", "REST APIs"],
+  "customerName": "",
+  "websiteUrl": "",
+  "projectStatus": "concept",
+  "featured": true,
+  "published": true,
+  "displayOrder": 4
+}

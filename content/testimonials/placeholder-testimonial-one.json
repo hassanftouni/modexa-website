@@ -1,0 +1,10 @@
+{
+  "slug": "placeholder-testimonial-one",
+  "quote": "This is temporary placeholder feedback. Replace it with a real, approved customer testimonial before launch.",
+  "author": "Placeholder Name",
+  "role": "Owner",
+  "company": "Placeholder Restaurant",
+  "featured": true,
+  "published": true,
+  "displayOrder": 1
+}

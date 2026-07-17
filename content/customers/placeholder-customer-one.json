@@ -1,0 +1,12 @@
+{
+  "name": "Placeholder Customer One",
+  "slug": "placeholder-customer-one",
+  "logo": "/images/customers/placeholder-customer-1.png",
+  "industry": "Restaurants & Hospitality",
+  "website": "",
+  "testimonial": "",
+  "projectType": "Modexa POS",
+  "featured": true,
+  "published": true,
+  "displayOrder": 1
+}

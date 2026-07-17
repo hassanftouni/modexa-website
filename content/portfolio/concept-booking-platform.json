@@ -1,0 +1,16 @@
+{
+  "title": "Booking & Scheduling Platform",
+  "slug": "concept-booking-platform",
+  "category": "web-applications",
+  "shortDescription": "Concept Project — a web application for appointments, staff scheduling and customer management.",
+  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa web application: online appointment booking, staff and resource scheduling, automated reminders and a management dashboard for the business owner.",
+  "thumbnail": "/images/portfolio/placeholder-project-3.png",
+  "galleryImages": [],
+  "technologies": ["Next.js", "TypeScript", "PostgreSQL"],
+  "customerName": "",
+  "websiteUrl": "",
+  "projectStatus": "concept",
+  "featured": false,
+  "published": true,
+  "displayOrder": 6
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Placeholder Customer Two",
+  "slug": "placeholder-customer-two",
+  "logo": "/images/customers/placeholder-customer-2.png",
+  "industry": "Retail",
+  "website": "",
+  "testimonial": "",
+  "projectType": "Business Website",
+  "featured": true,
+  "published": true,
+  "displayOrder": 2
+}

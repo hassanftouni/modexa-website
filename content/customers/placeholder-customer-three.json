@@ -1,0 +1,12 @@
+{
+  "name": "Placeholder Customer Three",
+  "slug": "placeholder-customer-three",
+  "logo": "/images/customers/placeholder-customer-3.png",
+  "industry": "Professional Services",
+  "website": "",
+  "testimonial": "",
+  "projectType": "Business Automation",
+  "featured": true,
+  "published": true,
+  "displayOrder": 3
+}
