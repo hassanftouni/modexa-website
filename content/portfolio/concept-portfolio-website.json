@@ -4,11 +4,13 @@
   "category": "websites",
   "shortDescription": "Concept Project — a personal portfolio website with project showcases and personal branding.",
   "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa portfolio website: elegant personal branding, project case studies, skills and experience sections and a contact flow — all fast, responsive and SEO-friendly.",
-  "thumbnail": "/images/portfolio/placeholder-project-3.png",
-  "galleryImages": [],
-  "technologies": ["Next.js", "Tailwind CSS", "Motion"],
-  "customerName": "",
-  "websiteUrl": "",
+  "thumbnail": "/images/Screenshot 2026-07-17 225951-1.png",
+  "technologies": [
+    "Next.js",
+    "Tailwind CSS",
+    "Motion"
+  ],
+  "websiteUrl": "https://mjportfolio-woad.vercel.app/",
   "projectStatus": "concept",
   "featured": false,
   "published": true,
