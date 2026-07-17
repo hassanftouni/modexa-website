@@ -1,16 +1,23 @@
 {
-  "title": "Restaurant POS Deployment",
-  "slug": "concept-restaurant-pos",
+  "title": "POS",
+  "slug": "modexa-pos",
   "category": "modexa-pos",
-  "shortDescription": "Concept Project — Modexa POS configured for a multi-station restaurant with kitchen and bar printing.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa POS deployment: multiple checkout terminals on a local network, kitchen and bar ticket printing, inventory tracking and daily sales analytics for a restaurant.",
-  "thumbnail": "/images/portfolio/placeholder-project-1.png",
-  "galleryImages": [],
-  "technologies": ["Modexa POS", "Local network", "Thermal printing"],
-  "customerName": "",
-  "websiteUrl": "",
-  "projectStatus": "concept",
+  "shortDescription": "Modexa POS is a modern point-of-sale system that helps businesses manage sales, products, inventory, customers, employees, and reports from one simple dashboard.",
+  "fullDescription": "Modexa POS is a complete business management and point-of-sale solution designed for retail stores, restaurants, cafés, and growing businesses. It provides a fast and user-friendly checkout experience while giving business owners full control over daily operations.\n\nWith Modexa POS, businesses can manage products, categories, prices, stock levels, customers, employees, orders, payments, and sales reports from one central system. The dashboard presents important business information clearly, helping owners understand performance and make better decisions.\n\nThe system is designed with a modern interface, smooth navigation, and a responsive layout that works across computers, tablets, and mobile devices. Modexa POS can also be customized based on the needs of each business, including branding, workflows, user permissions, reporting, and additional integrations.",
+  "thumbnail": "/images/WhatsApp Image 2026-07-17 at 6.24.35 PM.jpeg",
+  "galleryImages": [
+    "/images/Screenshot 2026-07-16 155736.png",
+    "/images/Screenshot 2026-07-16 155724.png",
+    "/images/Screenshot 2026-07-16 155624.png"
+  ],
+  "technologies": [
+    "Laravel",
+    "PHP",
+    "Tailwind CSS",
+    " REST API",
+    "Electron"
+  ],
+  "projectStatus": "completed",
   "featured": true,
-  "published": true,
-  "displayOrder": 1
+  "published": true
 }
