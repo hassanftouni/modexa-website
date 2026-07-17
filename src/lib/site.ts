@@ -11,7 +11,7 @@ export const siteConfig = {
   description:
     "Modexa builds modern software, websites, AI agents and automation solutions for businesses ready to grow.",
   // PLACEHOLDER: replace with the official Modexa contact email before launch.
-  email: "hello@modexa.example",
+  email: "modexa.info.dev@gmail.com",
   social: {
     // PLACEHOLDER: add real social profile URLs when available.
     linkedin: "#",
