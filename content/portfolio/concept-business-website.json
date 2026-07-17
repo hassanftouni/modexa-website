@@ -4,11 +4,13 @@
   "category": "websites",
   "shortDescription": "Concept Project — a modern, responsive company website with an SEO-ready structure.",
   "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa business website: custom branding, responsive layouts, fast performance and a clear structure that presents services and builds customer trust.",
-  "thumbnail": "/images/portfolio/placeholder-project-2.png",
-  "galleryImages": [],
-  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-  "customerName": "",
-  "websiteUrl": "",
+  "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_56_17 PM.png",
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vercel"
+  ],
   "projectStatus": "concept",
   "featured": true,
   "published": true,
