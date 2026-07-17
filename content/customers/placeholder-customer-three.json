@@ -1,11 +1,10 @@
 {
-  "name": "Placeholder Customer Three",
-  "slug": "placeholder-customer-three",
-  "logo": "/images/customers/placeholder-customer-3.png",
+  "name": "Moussa Jaffar Portfolio",
+  "slug": "concept-portfolio",
+  "logo": "/images/Screenshot 2026-07-17 225951.png",
   "industry": "Professional Services",
-  "website": "",
-  "testimonial": "",
-  "projectType": "Business Automation",
+  "website": "https://mjportfolio-woad.vercel.app/",
+  "projectType": "Portfolio Website",
   "featured": true,
   "published": true,
   "displayOrder": 3
