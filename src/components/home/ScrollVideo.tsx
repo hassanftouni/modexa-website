@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
-import { useEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import { Icon } from "@/components/ui/icons";
 
 /*
@@ -53,6 +59,7 @@ export function ScrollVideo({
   const durationRef = useRef(0);
   const targetProgressRef = useRef(0);
   const rafRef = useRef<number | null>(null);
+  const [videoUrl, setVideoUrl] = useState(src);
 
   // SSR renders the static fallback; capable desktops upgrade after mount.
   const isStatic = useSyncExternalStore(
@@ -60,6 +67,35 @@ export function ScrollVideo({
     () => window.matchMedia(STATIC_QUERY).matches,
     () => true
   );
+
+  /*
+   * Prefetch the whole video into memory and scrub from a blob URL. Seeking
+   * against the network (range requests per seek) is what makes deployed
+   * scrubbing laggy — from a blob, every seek is instant, like localhost.
+   * Until the download finishes (and if it fails) the streaming src is used.
+   */
+  useEffect(() => {
+    if (isStatic) return;
+    let objectUrl: string | null = null;
+    const controller = new AbortController();
+    fetch(src, { signal: controller.signal })
+      .then((response) =>
+        response.ok
+          ? response.blob()
+          : Promise.reject(new Error(`HTTP ${response.status}`))
+      )
+      .then((blob) => {
+        objectUrl = URL.createObjectURL(blob);
+        setVideoUrl(objectUrl);
+      })
+      .catch(() => {
+        // Keep streaming from the network as a fallback.
+      });
+    return () => {
+      controller.abort();
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, [src, isStatic]);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -133,16 +169,19 @@ export function ScrollVideo({
         {/* The video never plays on its own — scroll position is its timeline. */}
         <video
           ref={videoRef}
-          src={src}
+          src={videoUrl}
           poster={poster}
           muted
           playsInline
           preload="metadata"
           aria-hidden="true"
           onLoadedMetadata={(event) => {
+            // Fires again when the src swaps to the prefetched blob —
+            // re-sync the frame to the current scroll position.
             const video = event.currentTarget;
             video.pause();
             durationRef.current = video.duration;
+            video.currentTime = targetProgressRef.current * video.duration;
           }}
           className="absolute inset-0 h-full w-full object-cover"
         />
