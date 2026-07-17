@@ -18,9 +18,12 @@ const headlineWords: { text: string; gradient?: boolean }[] = [
 export function Hero() {
   const reduceMotion = useReducedMotion();
 
+  // whileInView (not animate) so the entrance plays when the hero scrolls
+  // into view — it now sits below the scroll-video opener.
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduceMotion ? 0 : 24 },
-    animate: { opacity: 1, y: 0 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-60px" },
     transition: { duration: 0.6, delay, ease: [0.21, 0.65, 0.36, 1] as const },
   });
 
@@ -55,7 +58,8 @@ export function Hero() {
         {/* Cinematic word-by-word headline reveal */}
         <motion.h1
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
           variants={{
             visible: {
               transition: { staggerChildren: 0.09, delayChildren: 0.25 },

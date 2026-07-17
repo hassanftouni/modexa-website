@@ -83,7 +83,9 @@ export function QuoteForm() {
       }
       setStatus("success");
       form.reset();
-    } catch {
+    } catch (err) {
+      // Logged for debugging only — never shown to the visitor.
+      console.error("Quote form submission failed:", err);
       // Entered values stay in the form so the visitor can simply retry.
       setSubmitError(
         "Something went wrong while sending your request. Please try again."

@@ -11,12 +11,15 @@ export function AnimatedLogo({ size = 64 }: { size?: number }) {
   const gradientId = useId();
   const reduceMotion = useReducedMotion();
 
+  // whileInView so the strokes draw themselves in when the logo becomes
+  // visible (the hero may sit below the fold on the home page).
   const draw = (delay: number) =>
     reduceMotion
       ? {}
       : {
           initial: { pathLength: 0, opacity: 0 },
-          animate: { pathLength: 1, opacity: 1 },
+          whileInView: { pathLength: 1, opacity: 1 },
+          viewport: { once: true },
           transition: {
             pathLength: { duration: 0.9, delay, ease: [0.65, 0, 0.35, 1] as const },
             opacity: { duration: 0.2, delay },
@@ -31,7 +34,8 @@ export function AnimatedLogo({ size = 64 }: { size?: number }) {
       fill="none"
       aria-hidden="true"
       initial={reduceMotion ? undefined : { scale: 0.85 }}
-      animate={reduceMotion ? undefined : { scale: 1 }}
+      whileInView={reduceMotion ? undefined : { scale: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1.1, ease: [0.21, 0.65, 0.36, 1] }}
     >
       <defs>

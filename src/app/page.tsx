@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { ScrollVideo } from "@/components/home/ScrollVideo";
 import { CompanyIntroduction } from "@/components/home/CompanyIntroduction";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FeaturedPos } from "@/components/home/FeaturedPos";
@@ -24,6 +25,31 @@ export default function Home() {
 
   return (
     <>
+      {/* Opening scroll film: brand intro, words stay visible throughout */}
+      <ScrollVideo
+        src="/videos/modexa-scroll-background2.mp4"
+        poster="/images/mockups/scroll-video-poster.jpg"
+        label="Modexa in motion"
+        showHint
+      >
+        <p className="text-sm font-medium tracking-widest text-brand-accent uppercase">
+          Modexa in motion
+        </p>
+        <h2 className="mt-4 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+          One company.{" "}
+          <span className="text-gradient">Every digital solution.</span>
+        </h2>
+      </ScrollVideo>
+
+      {/* Second scroll film: Modexa POS interfaces, starts right after */}
+      <ScrollVideo
+        src="/videos/modexa-scroll-background.mp4"
+        poster="/images/mockups/scroll-video-poster-pos.jpg"
+        label="Modexa POS preview"
+        heightVh={300}
+        staticBehavior="hide"
+      />
+
       <Hero />
       <CompanyIntroduction />
       <ServicesOverview />
