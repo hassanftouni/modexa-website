@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
-import { TiltReveal } from "@/components/ui/TiltReveal";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
@@ -84,9 +83,9 @@ export default function ModexaPosPage() {
             className="pointer-events-none absolute -inset-x-4 -top-8 bottom-0 rounded-[3rem] bg-[radial-gradient(closest-side,rgba(99,102,241,0.16),transparent)] blur-2xl"
             aria-hidden="true"
           />
-          <TiltReveal tilt={14} className="relative">
+          <div className="relative">
             <PosMockup />
-          </TiltReveal>
+          </div>
           <p className="mt-4 text-center text-xs text-muted">
             Interface preview — real product screenshots coming soon.
           </p>

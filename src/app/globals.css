@@ -31,6 +31,9 @@
   --color-edge-strong: var(--border-strong);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-archivo), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-label: var(--font-space-mono), ui-monospace, monospace;
+  --font-copy: var(--font-instrument), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -82,48 +85,81 @@ body {
   border: 1px solid var(--border);
 }
 
-@keyframes float-y {
-  0%,
-  100% {
-    transform: translateY(-7px);
-  }
-  50% {
-    transform: translateY(7px);
-  }
+/* ============================================================
+   Name-assembly hero
+   Condensed Archivo display type; the X is never a font glyph —
+   it is built from the two rounded stripes of the Modexa mark.
+   All motion is applied by the hero's rAF loop via transform and
+   opacity only; these rules hold the static look of each piece.
+   ============================================================ */
+
+.hero-display {
+  font-family: var(--font-display);
+  font-stretch: 62%;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.animate-float {
-  animation: float-y 7s ease-in-out infinite;
+.hero-wordmark {
+  font-size: clamp(3.1rem, 12.5vw, 9.75rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
 }
 
-.animate-float-delayed {
-  animation: float-y 8.5s ease-in-out 1.2s infinite;
+.hero-letter {
+  will-change: transform;
+  text-shadow:
+    0 0 22px rgba(168, 85, 247, 0.16),
+    0 0 64px rgba(56, 189, 248, 0.1);
 }
 
-/* Slow ambient drift for decorative background glows (cinematic feel). */
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(34px, -22px, 0) scale(1.07);
-  }
+/* The X: two rounded stripes that can split and rejoin. */
+.hero-x {
+  position: relative;
+  display: block;
+  width: 0.74em;
+  height: 0.72em;
 }
 
-.animate-drift {
-  animation: drift 16s ease-in-out infinite;
+.hero-stripe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.04em;
+  height: 0.16em;
+  border-radius: 999px;
+  will-change: transform;
 }
 
-.animate-drift-slow {
-  animation: drift 24s ease-in-out 2s infinite;
+.hero-stripe-grad {
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
+  box-shadow:
+    0 0 18px rgba(168, 85, 247, 0.4),
+    0 0 44px rgba(56, 189, 248, 0.22);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-float-delayed,
-  .animate-drift,
-  .animate-drift-slow {
-    animation: none;
-  }
+.hero-stripe-white {
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Soft radial light behind the letter on stage; opacity-driven. */
+.hero-stage-light {
+  background: radial-gradient(
+    closest-side,
+    rgba(168, 85, 247, 0.15),
+    rgba(56, 189, 248, 0.06) 46%,
+    transparent 72%
+  );
+}
+
+/* Glow bloom pulsed once when the wordmark locks together. */
+.hero-bloom {
+  background: radial-gradient(
+    closest-side,
+    rgba(168, 85, 247, 0.28),
+    rgba(56, 189, 248, 0.12) 52%,
+    transparent 78%
+  );
+  filter: blur(26px);
 }

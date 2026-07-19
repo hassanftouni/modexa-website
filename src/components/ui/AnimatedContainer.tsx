@@ -27,10 +27,18 @@ export function AnimatedContainer({
     <motion.div
       id={id}
       className={className}
-      initial={{ opacity: 0, y: reduceMotion ? 0 : 26 }}
+      // The initial pose must not branch on reduced motion: it is serialized
+      // into the SSR HTML, and a client-only branch would hydrate mismatched.
+      // Reduced motion instead collapses the slide instantly (pure fade).
+      initial={{ opacity: 0, y: 26 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-70px" }}
-      transition={{ duration: 0.55, delay, ease: [0.21, 0.65, 0.36, 1] }}
+      transition={{
+        duration: 0.55,
+        delay,
+        ease: [0.21, 0.65, 0.36, 1],
+        y: reduceMotion ? { duration: 0, delay: 0 } : undefined,
+      }}
     >
       {children}
     </motion.div>

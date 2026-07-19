@@ -1,8 +1,6 @@
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Parallax } from "@/components/ui/Parallax";
-import { TiltReveal } from "@/components/ui/TiltReveal";
 import { Icon, type IconName } from "@/components/ui/icons";
 import { PosMockup } from "@/components/products/PosMockup";
 
@@ -61,14 +59,13 @@ export function FeaturedPos() {
         </AnimatedContainer>
 
         <AnimatedContainer delay={0.15} className="relative">
-          <Parallax
-            distance={36}
-            aria-hidden
+          <div
+            aria-hidden="true"
             className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(closest-side,rgba(99,102,241,0.15),transparent)] blur-2xl"
           />
-          <TiltReveal className="relative">
+          <div className="relative">
             <PosMockup />
-          </TiltReveal>
+          </div>
         </AnimatedContainer>
       </div>
     </section>
