@@ -1,4 +1,5 @@
 import { AssemblyHero } from "@/components/home/AssemblyHero";
+import { StackBuildSection } from "@/components/home/StackBuildSection";
 import { CompanyIntroduction } from "@/components/home/CompanyIntroduction";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FeaturedPos } from "@/components/home/FeaturedPos";
@@ -27,6 +28,10 @@ export default function Home() {
       {/* Scroll-driven name assembly: the six parts of MODEXA tour the stage,
           then lock into the wordmark. */}
       <AssemblyHero />
+
+      {/* Scene two: the isometric stack build — six platform layers descend
+          and lock as the visitor keeps scrolling. */}
+      <StackBuildSection />
       <CompanyIntroduction />
       <ServicesOverview />
       <FeaturedPos />

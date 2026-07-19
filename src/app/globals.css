@@ -163,3 +163,58 @@ body {
   );
   filter: blur(26px);
 }
+
+/* ============================================================
+   Stack-build section
+   Isometric tower of six slabs. The tower keeps preserve-3d, so
+   it must never gain overflow, filter or animated opacity — all
+   motion lands on the slabs (transform) and overlays (opacity).
+   ============================================================ */
+
+.stack-perspective {
+  perspective: 1400px;
+}
+
+.stack-tower {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.stack-slab {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(13, 13, 20, 0.86);
+  will-change: transform, opacity;
+}
+
+/* Top slab (USERS) is the accent layer. */
+.stack-slab-top {
+  background:
+    linear-gradient(135deg, rgba(168, 85, 247, 0.16), rgba(56, 189, 248, 0.1)),
+    rgba(13, 13, 20, 0.86);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 26px rgba(168, 85, 247, 0.18);
+}
+
+/* Baked-in lock glow, flashed via opacity when a slab lands. */
+.stack-pulse {
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  border: 1px solid rgba(168, 85, 247, 0.6);
+  box-shadow:
+    0 0 34px rgba(168, 85, 247, 0.55),
+    0 0 80px rgba(168, 85, 247, 0.28);
+  pointer-events: none;
+}
+
+/* Soft floor glow revealed when the stack comes online. */
+.stack-underglow {
+  background: radial-gradient(
+    closest-side,
+    rgba(124, 93, 247, 0.22),
+    transparent 70%
+  );
+}
