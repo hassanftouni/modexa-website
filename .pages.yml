@@ -334,7 +334,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: href
                 label: Link (page path, e.g. /services)
                 type: string
@@ -836,6 +836,101 @@ content:
               - name: ar
                 label: "Arabic (العربية)"
                 type: string
+      - name: walkthrough
+        label: Animated walkthrough (real checkout screenshot)
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: image
+            label: Screenshot (must be the Modexa POS checkout screen layout)
+            type: image
+            options:
+              path: images/pos
+              extensions: [png, jpg, jpeg, webp, svg]
+          - name: imageAlt
+            label: Image alt
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: note
+            label: Note
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: steps
+            label: Steps
+            type: object
+            fields:
+              - name: label
+                label: Label
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: caption
+                label: Caption
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+            list: true
       - name: demo
         label: Demo
         type: object
@@ -930,7 +1025,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: name
                 label: Name
                 type: object
@@ -1618,7 +1713,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: name
                 label: Name
                 type: object
@@ -1890,7 +1985,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: name
                 label: Name
                 type: object
@@ -1964,7 +2059,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: name
                 label: Name
                 type: object
@@ -2031,7 +2126,7 @@ content:
                 label: Icon
                 type: select
                 options:
-                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
               - name: title
                 label: Title
                 type: object
@@ -2909,7 +3004,7 @@ content:
             label: Icon
             type: select
             options:
-              values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
           - name: title
             label: Title
             type: object
@@ -3194,7 +3289,7 @@ content:
         label: Icon
         type: select
         options:
-          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
       - name: name
         label: Name
         type: object
@@ -3299,7 +3394,7 @@ content:
         label: Icon
         type: select
         options:
-          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
       - name: status
         label: Status
         type: select
@@ -3378,7 +3473,7 @@ content:
         label: Icon
         type: select
         options:
-          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
       - name: title
         label: Title
         type: object
@@ -3497,7 +3592,7 @@ content:
         label: Icon
         type: select
         options:
-          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, alert, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
       - name: title
         label: Title
         type: object

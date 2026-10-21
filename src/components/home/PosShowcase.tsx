@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 import { Section } from "@/components/ui/Section";
 import { Icon } from "@/components/ui/icons";
-import { PosDemo, type DemoTab } from "@/components/products/PosDemo";
-import type { HomePage } from "@/content/pages";
+import { PosWalkthrough } from "@/components/products/PosWalkthrough";
+import type { HomePage, PosWalkthroughContent } from "@/content/pages";
 import type { Localized } from "@/lib/content";
 
 interface PosShowcaseProps {
   content: Localized<HomePage["pos"]>;
-  screenshots?: Partial<Record<DemoTab, string>>;
+  walkthrough: Localized<PosWalkthroughContent>;
 }
 
-/** Flagship product section: the pitch on top, the interactive demo below. */
-export function PosShowcase({ content, screenshots }: PosShowcaseProps) {
+/** Flagship product section: the pitch on top, the animated walkthrough below. */
+export function PosShowcase({ content, walkthrough }: PosShowcaseProps) {
   return (
     <Section id="modexa-pos">
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
@@ -46,7 +46,7 @@ export function PosShowcase({ content, screenshots }: PosShowcaseProps) {
       </div>
 
       <AnimatedContainer delay={0.1} className="mt-14 lg:mt-16">
-        <PosDemo screenshots={screenshots} />
+        <PosWalkthrough content={walkthrough} />
       </AnimatedContainer>
     </Section>
   );

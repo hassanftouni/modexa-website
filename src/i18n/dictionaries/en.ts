@@ -277,6 +277,13 @@ export const en = {
     ok: "OK",
     low: "Low",
   },
+  walkthrough: {
+    play: "Play",
+    pause: "Pause",
+    replay: "Replay",
+    steps: "Walkthrough steps",
+    step: "Step",
+  },
   notFound: {
     eyebrow: "404 — Page not found",
     title: "We couldn't find that page.",

@@ -48,7 +48,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <>
       <Hero content={page.hero} />
       <ServicesIndex content={page.services} allServicesLabel={dict.common.allServices} />
-      <PosShowcase content={page.pos} screenshots={posPage.demo.screenshots} />
+      <PosShowcase content={page.pos} walkthrough={posPage.walkthrough} />
       <Problems content={page.problems} />
 
       <Section>

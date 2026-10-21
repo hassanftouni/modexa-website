@@ -102,6 +102,14 @@ const paths = {
   ),
   refresh: <path d="M21 3v5.5h-5.5M21 8.5A9 9 0 1 0 21.5 12" />,
   check: <path d="M4 12.5l5 5L20 7" />,
+  play: <path d="M8 5.5v13l10.5-6.5L8 5.5z" />,
+  pause: <path d="M8.5 5.5v13M15.5 5.5v13" />,
+  alert: (
+    <>
+      <path d="M12 3.5 2.5 20h19L12 3.5z" />
+      <path d="M12 10v4.5M12 17.2v.3" />
+    </>
+  ),
   arrowRight: <path d="M4 12h16M13 5l7 7-7 7" />,
   arrowUpRight: <path d="M7 17L17 7M8 7h9v9" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,

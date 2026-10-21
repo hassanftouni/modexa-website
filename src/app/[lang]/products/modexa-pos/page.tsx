@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { PosDemo } from "@/components/products/PosDemo";
+import { PosWalkthrough } from "@/components/products/PosWalkthrough";
 import { FinalCta } from "@/components/shared/FinalCta";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
 import { Button } from "@/components/ui/Button";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { Highlight } from "@/components/ui/Highlight";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/icons";
@@ -56,14 +58,26 @@ export default async function ModexaPosPage({ params }: PageProps<"/[lang]/produ
             {page.hero.primaryCta}
             <Icon name="arrowRight" className="size-4" />
           </Button>
-          <Button href="#demo" variant="secondary" size="lg">
+          <Button href="#walkthrough" variant="secondary" size="lg">
             {page.hero.secondaryCta}
           </Button>
         </div>
       </PageHeader>
 
-      {/* Interactive demo */}
-      <Section id="demo">
+      {/* Animated walkthrough on the real checkout screen */}
+      <Section id="walkthrough">
+        <SectionHeading
+          eyebrow={page.walkthrough.eyebrow}
+          title={<Highlight text={page.walkthrough.title} highlight={page.walkthrough.highlight} />}
+          description={page.walkthrough.description}
+        />
+        <AnimatedContainer delay={0.1} className="mt-12">
+          <PosWalkthrough content={page.walkthrough} />
+        </AnimatedContainer>
+      </Section>
+
+      {/* Hands-on demo */}
+      <Section id="demo" tone="light">
         <SectionHeading
           eyebrow={page.demo.eyebrow}
           title={page.demo.title}

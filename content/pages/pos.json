@@ -31,18 +31,117 @@
       "ar": "اطلب عرضًا تجريبيًا"
     },
     "secondaryCta": {
-      "en": "Try the interactive demo",
-      "ar": "جرّب العرض التفاعلي"
+      "en": "Watch it work",
+      "ar": "شاهده يعمل"
     }
+  },
+  "walkthrough": {
+    "eyebrow": {
+      "en": "See it work",
+      "ar": "شاهده يعمل"
+    },
+    "title": {
+      "en": "One order, from scan to receipt.",
+      "ar": "طلب واحد، من المسح حتى الإيصال."
+    },
+    "highlight": {
+      "en": "from scan to receipt.",
+      "ar": "من المسح حتى الإيصال."
+    },
+    "description": {
+      "en": "A walkthrough on the real Modexa POS checkout screen: scan, add to the order, take payment, print — and keep selling when the internet is down.",
+      "ar": "جولة على شاشة البيع الفعلية في Modexa POS: امسح المنتج، أضفه إلى الطلب، حصّل الدفع، اطبع — وواصل البيع حتى عند انقطاع الإنترنت."
+    },
+    "image": "/images/pos/checkout.jpg",
+    "imageAlt": {
+      "en": "Modexa POS checkout screen",
+      "ar": "شاشة البيع في Modexa POS"
+    },
+    "note": {
+      "en": "Animated walkthrough with sample data, based on a real Modexa POS screen.",
+      "ar": "جولة متحركة ببيانات تجريبية، مبنية على شاشة حقيقية من Modexa POS."
+    },
+    "steps": [
+      {
+        "label": {
+          "en": "Ready",
+          "ar": "جاهز"
+        },
+        "caption": {
+          "en": "The checkout screen, connected and ready for the next customer.",
+          "ar": "شاشة البيع متصلة وجاهزة للعميل التالي."
+        }
+      },
+      {
+        "label": {
+          "en": "Scan",
+          "ar": "المسح"
+        },
+        "caption": {
+          "en": "Scan a barcode or type a product name — no searching through menus.",
+          "ar": "امسح الباركود أو اكتب اسم المنتج — دون البحث في القوائم."
+        }
+      },
+      {
+        "label": {
+          "en": "Products",
+          "ar": "المنتجات"
+        },
+        "caption": {
+          "en": "Products appear as large buttons, quick to tap at a busy counter.",
+          "ar": "تظهر المنتجات كأزرار كبيرة يسهل الضغط عليها في أوقات الازدحام."
+        }
+      },
+      {
+        "label": {
+          "en": "Order & totals",
+          "ar": "الطلب والإجمالي"
+        },
+        "caption": {
+          "en": "Items go straight into the order. Tax and the LBP total update instantly.",
+          "ar": "تُضاف الأصناف مباشرة إلى الطلب، ويُحدَّث الضريبة والإجمالي بالليرة فورًا."
+        }
+      },
+      {
+        "label": {
+          "en": "Low stock",
+          "ar": "مخزون منخفض"
+        },
+        "caption": {
+          "en": "A low-stock warning appears without interrupting the sale.",
+          "ar": "يظهر تنبيه انخفاض المخزون دون أن يقاطع عملية البيع."
+        }
+      },
+      {
+        "label": {
+          "en": "Pay & print",
+          "ar": "الدفع والطباعة"
+        },
+        "caption": {
+          "en": "Payment is completed and the order prints to the kitchen automatically.",
+          "ar": "تكتمل عملية الدفع ويُطبع الطلب في المطبخ تلقائيًا."
+        }
+      },
+      {
+        "label": {
+          "en": "Offline",
+          "ar": "دون إنترنت"
+        },
+        "caption": {
+          "en": "No internet? Checkout keeps working over your local network.",
+          "ar": "لا يوجد إنترنت؟ يستمر البيع عبر شبكتك المحلية."
+        }
+      }
+    ]
   },
   "demo": {
     "eyebrow": {
-      "en": "Try it",
-      "ar": "جرّبه"
+      "en": "Try it yourself",
+      "ar": "جرّبه بنفسك"
     },
     "title": {
-      "en": "Follow one order from the counter to the report.",
-      "ar": "تابع طلبًا واحدًا من الكاشير حتى التقرير."
+      "en": "Now take an order yourself.",
+      "ar": "والآن سجّل طلبًا بنفسك."
     },
     "description": {
       "en": "Add items, send the order to the kitchen, charge it and watch it appear in today's sales. Switch the internet off to see what happens.",

@@ -68,9 +68,21 @@ interface PageHeaderBlock extends Heading {
   highlight: T;
 }
 
+/** Animated walkthrough over the real POS checkout screenshot. */
+export interface PosWalkthroughContent extends Heading {
+  highlight: T;
+  /** Must be the Modexa POS checkout screen — overlays are positioned on its layout. */
+  image: string;
+  imageAlt: T;
+  note: T;
+  /** Exactly seven steps, in the order of the animation. */
+  steps: { label: T; caption: T }[];
+}
+
 export interface PosPage {
   seo: Seo;
   hero: PageHeaderBlock & Cta;
+  walkthrough: PosWalkthroughContent;
   demo: Heading & {
     /** Optional real screenshots that replace the coded demo screens. */
     screenshots: { order: string; kitchen: string; sales: string; stock: string };

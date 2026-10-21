@@ -275,6 +275,13 @@ export const ar: Dictionary = {
     ok: "جيد",
     low: "منخفض",
   },
+  walkthrough: {
+    play: "تشغيل",
+    pause: "إيقاف مؤقت",
+    replay: "إعادة",
+    steps: "خطوات الجولة",
+    step: "الخطوة",
+  },
   notFound: {
     eyebrow: "404 — الصفحة غير موجودة",
     title: "لم نتمكن من العثور على هذه الصفحة.",
