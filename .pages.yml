@@ -1,112 +1,3564 @@
 # Pages CMS configuration for the Modexa website.
 #
 # Connect this repository to https://pagescms.org (log in with GitHub) and
-# Pages CMS will read this file to provide an admin UI for the collections
-# below. Every save commits to GitHub, which triggers a Vercel rebuild — the
-# website owner never needs to touch React or TypeScript code.
+# Pages CMS reads this file to provide the editing interface. Every save
+# commits to GitHub, which triggers a Vercel rebuild — the team never needs
+# to touch React or TypeScript code.
+#
+# Text fields come in pairs: English and Arabic (العربية). If an Arabic
+# field is left empty, the website shows the English text instead.
+#
+# Field definitions mirror the JSON files in content/ and the types in
+# src/content/schema.ts and src/content/pages.ts — keep all three in sync
+# when adding a field.
 
 media:
   input: public/images
-  output: /images
-
+  output: "/images"
 content:
-  - name: customers
-    label: Customers
-    description: >
-      Customers shown in the "Trusted by businesses" section and on the
-      Customers page. Only records with "Published" enabled appear on the
-      website. Replace the placeholder entries with real, approved customers
-      before launch.
+  - name: settings
+    label: Site settings
+    description: Contact details and social profiles used across the website. Social links only appear when filled in.
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: email
+        label: Email
+        type: string
+      - name: phone
+        label: Phone
+        type: string
+      - name: whatsapp
+        label: WhatsApp number
+        type: string
+      - name: responseTime
+        label: Typical reply time
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: social
+        label: Social
+        type: object
+        fields:
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: x
+            label: X (Twitter)
+            type: string
+          - name: github
+            label: GitHub
+            type: string
+  - name: page-home
+    label: Pages / Home page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/home.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: facts
+            label: Facts
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+            list: true
+          - name: showcase
+            label: Showcase
+            type: object
+            fields:
+              - name: label
+                label: Label
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: website
+                label: Website
+                type: object
+                fields:
+                  - name: tab
+                    label: Tab
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: caption
+                    label: Caption
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: headline
+                    label: Headline
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: cta
+                    label: Button
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: nav
+                    label: Nav
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                    list: true
+              - name: pos
+                label: Pos
+                type: object
+                fields:
+                  - name: tab
+                    label: Tab
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: caption
+                    label: Caption
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+              - name: automation
+                label: Automation
+                type: object
+                fields:
+                  - name: tab
+                    label: Tab
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: caption
+                    label: Caption
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                  - name: steps
+                    label: Steps
+                    type: object
+                    fields:
+                      - name: en
+                        label: English
+                        type: string
+                      - name: ar
+                        label: "Arabic (العربية)"
+                        type: string
+                    list: true
+      - name: services
+        label: Services
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: href
+                label: Link (page path, e.g. /services)
+                type: string
+              - name: title
+                label: Title
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+            list: true
+      - name: pos
+        label: Pos
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: points
+            label: Points
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+            list: true
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: problems
+        label: Problems
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: problem
+                label: Problem
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: solution
+                label: Solution
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+              - name: linkLabel
+                label: Link label
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: href
+                label: Link (page path, e.g. /services)
+                type: string
+            list: true
+      - name: process
+        label: Process
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: work
+        label: Work
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: cta
+            label: Button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: why
+        label: Why
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: points
+            label: Points
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+            list: true
+          - name: customersTitle
+            label: Customers title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: testimonialsTitle
+            label: Testimonials title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: faq
+        label: Faq
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-pos
+    label: Pages / Modexa POS page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/pos.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: demo
+        label: Demo
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: screenshots
+            label: "Demo screenshots (optional — replace the coded demo screens)"
+            type: object
+            fields:
+              - name: order
+                label: Order
+                type: image
+                options:
+                  path: images/pos
+                  extensions: [png, jpg, jpeg, webp, svg]
+              - name: kitchen
+                label: Kitchen
+                type: image
+                options:
+                  path: images/pos
+                  extensions: [png, jpg, jpeg, webp, svg]
+              - name: sales
+                label: Sales
+                type: image
+                options:
+                  path: images/pos
+                  extensions: [png, jpg, jpeg, webp, svg]
+              - name: stock
+                label: Stock
+                type: image
+                options:
+                  path: images/pos
+                  extensions: [png, jpg, jpeg, webp, svg]
+      - name: industries
+        label: Industries
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: name
+                label: Name
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+            list: true
+      - name: offline
+        label: Offline
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: points
+            label: Points
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+            list: true
+          - name: terminalsLabel
+            label: Terminals label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: serverLabel
+            label: Server label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: serverNote
+            label: Server note
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: printersLabel
+            label: Printers label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: features
+        label: Features
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: faq
+        label: Faq
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-products
+    label: Pages / Products page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/products.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: flagshipLabel
+        label: Flagship label
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: otherTitle
+        label: Other title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: otherDescription
+        label: Other description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-services
+    label: Pages / Services page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/services.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: jumpLabel
+        label: Jump label
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: labels
+        label: Labels
+        type: object
+        fields:
+          - name: problem
+            label: Problem
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: solution
+            label: Solution
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: benefits
+            label: Benefits
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: features
+            label: Features
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: examples
+            label: Examples
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: cta
+            label: Button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-websites
+    label: Pages / Websites page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/websites.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: types
+        label: Types
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: name
+                label: Name
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+            list: true
+      - name: standards
+        label: Standards
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+            list: true
+      - name: process
+        label: Process
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-ai-automation
+    label: Pages / AI & automation page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/ai-automation.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: agents
+        label: Agents
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: name
+                label: Name
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+              - name: note
+                label: Note
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+            list: true
+      - name: automations
+        label: Automations
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: name
+                label: Name
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+              - name: note
+                label: Note
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+            list: true
+      - name: process
+        label: Process
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: steps
+            label: Steps
+            type: object
+            fields:
+              - name: slug
+                label: Slug (URL-safe id, e.g. my-item)
+                type: string
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+              - name: title
+                label: Title
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+            list: true
+          - name: note
+            label: Note
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-about
+    label: Pages / About page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/about.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: mission
+        label: Mission
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: text
+            label: Text
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: vision
+        label: Vision
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: text
+            label: Text
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: story
+        label: Story
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: paragraphs
+            label: Paragraphs
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+            list: true
+      - name: values
+        label: Values
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: string
+              - name: description
+                label: Description
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: text
+                  - name: ar
+                    label: "Arabic (العربية)"
+                    type: text
+            list: true
+      - name: approach
+        label: Approach
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: items
+            label: Items
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+            list: true
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-portfolio
+    label: Pages / Work page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/portfolio.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-customers
+    label: Pages / Customers page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/customers.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: emptyTitle
+        label: Empty title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: emptyText
+        label: Empty text
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: testimonialsTitle
+        label: Testimonials title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: cta
+        label: Button
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+          - name: primaryCta
+            label: Main button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: secondaryCta
+            label: Second button
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+  - name: page-contact
+    label: Pages / Contact page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/contact.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: directTitle
+        label: Direct title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: quoteHint
+        label: Quote hint
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: quoteLink
+        label: Quote link
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: faqTitle
+        label: Faq title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+  - name: page-request-quote
+    label: Pages / Request a quote page
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/request-quote.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+      - name: stepsTitle
+        label: Steps title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: steps
+        label: Steps
+        type: object
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+        list: true
+  - name: page-privacy
+    label: Pages / Privacy policy
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/privacy.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: updated
+        label: Updated
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: sections
+        label: Sections
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: body
+            label: Body
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+        list: true
+      - name: contactLabel
+        label: Contact label
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+  - name: page-terms
+    label: Pages / Terms of service
+    description: Headings and text for this page, in English and Arabic. If an Arabic field is empty, the English text is shown.
+    type: file
+    path: content/pages/terms.json
+    format: json
+    fields:
+      - name: seo
+        label: Search engine title & description
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label above the heading
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: highlight
+            label: Highlighted words (must appear exactly in the heading)
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: description
+            label: Description
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+      - name: updated
+        label: Updated
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: sections
+        label: Sections
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: ar
+                label: "Arabic (العربية)"
+                type: string
+          - name: body
+            label: Body
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: text
+              - name: ar
+                label: "Arabic (العربية)"
+                type: text
+        list: true
+      - name: contactLabel
+        label: Contact label
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+  - name: services
+    label: Services
+    description: Services on the Services page (the home page shows its own short list, edited under Pages / Home page).
     type: collection
-    path: content/customers
+    path: content/services
     format: json
     filename: "{fields.slug}.json"
     view:
-      fields: [name, industry, projectType, featured, published, displayOrder]
-      sort: [displayOrder, name]
+      primary: name.en
+      fields: [name.en, published, displayOrder]
+      sort: [displayOrder]
     fields:
-      - name: name
-        label: Name
-        type: string
-        required: true
       - name: slug
-        label: Slug (URL-safe id, e.g. my-customer)
+        label: Slug (URL-safe id, e.g. my-item)
         type: string
         required: true
         pattern:
           regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          message: "Use lowercase letters, numbers and dashes only."
-      - name: logo
-        label: Logo
-        type: image
-        options:
-          path: images/customers
-          extensions: [png, jpg, jpeg, webp, svg]
-      - name: industry
-        label: Industry
-        type: string
-      - name: website
-        label: Website URL
-        type: string
-      - name: testimonial
-        label: Testimonial (optional quote from this customer)
-        type: text
-      - name: projectType
-        label: Project type
+          message: Use lowercase letters, numbers and dashes only.
+      - name: icon
+        label: Icon
         type: select
         options:
-          values:
-            - Modexa POS
-            - Business Website
-            - Portfolio Website
-            - E-commerce Website
-            - Web Application
-            - AI Agent
-            - Business Automation
-            - Custom Software
-            - API Integration
-      - name: featured
-        label: Featured
-        type: boolean
-        default: false
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+      - name: name
+        label: Name
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: summary
+        label: Summary
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: problem
+        label: Problem
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: solution
+        label: Solution
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: benefits
+        label: Benefits
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+        list: true
+      - name: features
+        label: Features
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+        list: true
+      - name: examples
+        label: Examples
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+        list: true
       - name: published
-        label: Published
+        label: Published (visible on the website)
         type: boolean
         default: false
       - name: displayOrder
-        label: Display order
+        label: "Display order (lower = first)"
         type: number
         default: 99
-
+  - name: products
+    label: Products
+    description: Products on the Products page. Modexa POS (slug modexa-pos) is shown as the flagship.
+    type: collection
+    path: content/products
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      primary: name.en
+      fields: [name.en, status, published, displayOrder]
+      sort: [displayOrder]
+    fields:
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-item)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: icon
+        label: Icon
+        type: select
+        options:
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+      - name: status
+        label: Status
+        type: select
+        options:
+          values:
+            - value: available
+              label: Available now
+            - value: coming-soon
+              label: Coming soon
+            - value: in-development
+              label: In development
+            - value: by-request
+              label: Built on request
+      - name: href
+        label: Link (page path, e.g. /services)
+        type: string
+      - name: name
+        label: Name
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: summary
+        label: Summary
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: highlights
+        label: Highlights
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+        list: true
+      - name: published
+        label: Published (visible on the website)
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: "Display order (lower = first)"
+        type: number
+        default: 99
+  - name: pos-features
+    label: Modexa POS features
+    description: Feature list on the Modexa POS page.
+    type: collection
+    path: content/pos-features
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      primary: title.en
+      fields: [title.en, published, displayOrder]
+      sort: [displayOrder]
+    fields:
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-item)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: icon
+        label: Icon
+        type: select
+        options:
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+      - name: title
+        label: Title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: description
+        label: Description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: features
+        label: Features
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+        list: true
+      - name: published
+        label: Published (visible on the website)
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: "Display order (lower = first)"
+        type: number
+        default: 99
+  - name: faqs
+    label: FAQs
+    description: Questions and answers. Group decides where each appears.
+    type: collection
+    path: content/faqs
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      primary: question.en
+      fields: [question.en, group, published, displayOrder]
+      sort: [group, displayOrder]
+    fields:
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-item)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: group
+        label: Group
+        type: select
+        options:
+          values:
+            - value: general
+              label: General (home & contact pages)
+            - value: pos
+              label: Modexa POS page
+      - name: question
+        label: Question
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: answer
+        label: Answer
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: published
+        label: Published (visible on the website)
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: "Display order (lower = first)"
+        type: number
+        default: 99
+  - name: process-steps
+    label: How we work (steps)
+    description: Steps shown on the home and websites pages.
+    type: collection
+    path: content/process-steps
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      primary: title.en
+      fields: [title.en, published, displayOrder]
+      sort: [displayOrder]
+    fields:
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-item)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: icon
+        label: Icon
+        type: select
+        options:
+          values: [globe, layout, cart, appWindow, bot, sparkles, workflow, plug, wrench, monitor, printer, package, users, wifiOff, shield, mail, phone, mapPin, search, star, database, cpu, clock, layers, creditCard, receipt, building, message, calendar, fileText, store, utensils]
+      - name: title
+        label: Title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: description
+        label: Description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
+      - name: published
+        label: Published (visible on the website)
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: "Display order (lower = first)"
+        type: number
+        default: 99
   - name: portfolio
     label: Portfolio projects
-    description: >
-      Projects shown on the Portfolio page and in the home-page preview.
-      Only records with "Published" enabled appear on the website. Placeholder
-      concept projects can be unpublished or deleted once real projects exist.
+    description: Projects on the Work page and home page. Only publish real projects the client has approved.
     type: collection
     path: content/portfolio
     format: json
     filename: "{fields.slug}.json"
     view:
-      fields: [title, category, projectStatus, featured, published, displayOrder]
-      sort: [displayOrder, title]
+      primary: title.en
+      fields: [title.en, category, projectStatus, featured, published, displayOrder]
+      sort: [displayOrder]
     fields:
       - name: title
         label: Title
-        type: string
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
         required: true
       - name: slug
-        label: Slug (URL-safe id, e.g. my-project)
+        label: Slug (URL-safe id, e.g. my-item)
         type: string
         required: true
         pattern:
           regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          message: "Use lowercase letters, numbers and dashes only."
+          message: Use lowercase letters, numbers and dashes only.
       - name: category
         label: Category
         type: select
-        required: true
         options:
           values:
             - value: websites
@@ -119,105 +3571,194 @@ content:
               label: Automation
             - value: web-applications
               label: Web applications
-      - name: shortDescription
-        label: Short description (shown on cards)
-        type: text
         required: true
+      - name: shortDescription
+        label: Short description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
       - name: fullDescription
         label: Full description
-        type: text
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
       - name: thumbnail
-        label: Thumbnail image
+        label: Thumbnail
         type: image
         options:
           path: images/portfolio
-          extensions: [png, jpg, jpeg, webp]
-      - name: galleryImages
-        label: Gallery images
-        type: image
-        list: true
-        options:
-          path: images/portfolio
-          extensions: [png, jpg, jpeg, webp]
+          extensions: [png, jpg, jpeg, webp, svg]
       - name: technologies
         label: Technologies
         type: string
         list: true
-      - name: customerName
-        label: Customer name (leave empty if not public)
-        type: string
-      - name: websiteUrl
-        label: Live website URL
-        type: string
       - name: projectStatus
         label: Project status
         type: select
         options:
           values:
             - value: concept
-              label: Concept Project
+              label: Concept
             - value: in-progress
               label: In progress
             - value: completed
               label: Completed
-        default: concept
       - name: featured
         label: Featured
         type: boolean
-        default: false
       - name: published
-        label: Published
+        label: Published (visible on the website)
         type: boolean
         default: false
       - name: displayOrder
-        label: Display order
+        label: "Display order (lower = first)"
         type: number
         default: 99
-
+      - name: galleryImages
+        label: Gallery images
+        type: image
+        options:
+          path: images/portfolio
+          extensions: [png, jpg, jpeg, webp, svg]
+        list: true
+      - name: customerName
+        label: Customer name
+        type: string
+      - name: websiteUrl
+        label: Website url
+        type: string
+  - name: customers
+    label: Customers
+    description: Customers on the home and Customers pages. Only publish real customers who agreed to be listed.
+    type: collection
+    path: content/customers
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      primary: name
+      fields: [name, industry.en, featured, published, displayOrder]
+      sort: [displayOrder, name]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: slug
+        label: Slug (URL-safe id, e.g. my-item)
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and dashes only.
+      - name: logo
+        label: Logo
+        type: image
+        options:
+          path: images/customers
+          extensions: [png, jpg, jpeg, webp, svg]
+      - name: industry
+        label: Industry
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: projectType
+        label: Project type
+        type: select
+        options:
+          values: [Modexa POS, Business Website, Portfolio Website, E-commerce Website, Web Application, AI Agent, Business Automation, Custom Software, API Integration, Maintenance & Support]
+      - name: featured
+        label: Featured
+        type: boolean
+      - name: published
+        label: Published (visible on the website)
+        type: boolean
+        default: false
+      - name: displayOrder
+        label: "Display order (lower = first)"
+        type: number
+        default: 99
+      - name: testimonial
+        label: Testimonial
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
+      - name: website
+        label: Website
+        type: string
   - name: testimonials
     label: Testimonials
-    description: >
-      Customer quotes shown on the Home and Customers pages. The current
-      entries are temporary placeholders — replace them with real, approved
-      testimonials before launch. Only published records appear.
+    description: Customer quotes. Only publish real, approved quotes from real people.
     type: collection
     path: content/testimonials
     format: json
     filename: "{fields.slug}.json"
     view:
+      primary: author
       fields: [author, company, featured, published, displayOrder]
-      sort: [displayOrder, author]
+      sort: [displayOrder]
     fields:
       - name: slug
-        label: Slug (URL-safe id)
+        label: Slug (URL-safe id, e.g. my-item)
         type: string
         required: true
         pattern:
           regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          message: "Use lowercase letters, numbers and dashes only."
+          message: Use lowercase letters, numbers and dashes only.
       - name: quote
         label: Quote
-        type: text
-        required: true
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: "Arabic (العربية)"
+            type: text
       - name: author
-        label: Author name
+        label: Author
         type: string
         required: true
       - name: role
-        label: Role (e.g. Owner)
-        type: string
+        label: Role
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: ar
+            label: "Arabic (العربية)"
+            type: string
       - name: company
         label: Company
         type: string
       - name: featured
         label: Featured
         type: boolean
-        default: false
       - name: published
-        label: Published
+        label: Published (visible on the website)
         type: boolean
         default: false
       - name: displayOrder
-        label: Display order
+        label: "Display order (lower = first)"
         type: number
         default: 99
