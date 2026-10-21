@@ -57,14 +57,14 @@ const SCAN_TEXT = "8901234567890 · Cappuccino";
 
 const STEPS: StepDef[] = [
   // 0 · Ready
-  { show: [], camera: { x: 0, y: 0, w: 100, h: 100 }, duration: 3200 },
+  { show: [], camera: { x: 0, y: 0, w: 100, h: 100 }, duration: 2400 },
   // 1 · Scan
   {
     show: ["scan"],
     focus: { x: 1.8, y: 5.8, w: 47, h: 8.8 },
     tap: { x: 30, y: 10.4 },
     camera: { x: 1, y: 2, w: 50, h: 30 },
-    duration: 3800,
+    duration: 2900,
   },
   // 2 · Products
   {
@@ -72,7 +72,7 @@ const STEPS: StepDef[] = [
     focus: { x: 17.6, y: 33, w: 32, h: 61 },
     tap: { x: 26.5, y: 41 },
     camera: { x: 0, y: 25, w: 52, h: 72 },
-    duration: 3800,
+    duration: 2900,
   },
   // 3 · Order & totals
   {
@@ -80,14 +80,14 @@ const STEPS: StepDef[] = [
     focus: { x: 50.7, y: 19.8, w: 48.3, h: 60.2 },
     tap: { x: 37.5, y: 41 },
     camera: { x: 50, y: 2, w: 50, h: 92 },
-    duration: 4200,
+    duration: 3200,
   },
   // 4 · Low stock
   {
     show: ["products", "itemCount", "cart", "totals", "payReady", "alert"],
     focus: { x: 18.6, y: 79.5, w: 30, h: 10 },
     camera: { x: 12, y: 55, w: 42, h: 42 },
-    duration: 3800,
+    duration: 2900,
   },
   // 5 · Pay & print
   {
@@ -95,14 +95,14 @@ const STEPS: StepDef[] = [
     focus: { x: 70.4, y: 84.6, w: 28, h: 7.8 },
     tap: { x: 84, y: 88.5 },
     camera: { x: 30, y: 18, w: 58, h: 62 },
-    duration: 5200,
+    duration: 4000,
   },
   // 6 · Offline
   {
     show: ["products", "itemCount", "cart", "totals", "payReady", "offline"],
     focus: { x: 56.8, y: 94.6, w: 16.4, h: 3.8 },
     camera: { x: 0, y: 14, w: 76, h: 86 },
-    duration: 4400,
+    duration: 3300,
   },
 ];
 
@@ -180,7 +180,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
     initial: { opacity: 0, y: reduceMotion ? 0 : 6 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0 },
-    transition: { duration: reduceMotion ? 0 : 0.35, ease: [0.22, 0.61, 0.36, 1] as const },
+    transition: { duration: reduceMotion ? 0 : 0.28, ease: [0.22, 0.61, 0.36, 1] as const },
   };
 
   return (
@@ -194,7 +194,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
         <motion.div
           className="absolute inset-0 origin-top-left"
           animate={{ scale, x: pct(tx), y: pct(ty) }}
-          transition={{ duration: reduceMotion ? 0 : 0.9, ease: [0.65, 0, 0.35, 1] }}
+          transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.65, 0, 0.35, 1] }}
         >
           <Image
             src={content.image}
@@ -233,7 +233,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                         key={product.name}
                         initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.94 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: reduceMotion ? 0 : 0.08 * index }}
+                        transition={{ duration: 0.25, delay: reduceMotion ? 0 : 0.06 * index }}
                         className={`flex items-center gap-[0.8cqw] rounded-[0.6cqw] border bg-white p-[0.8cqw] shadow-[0_0.2cqw_0.6cqw_rgba(21,42,64,0.06)] ${
                           picked ? "border-[#06b6d4]" : "border-[#d8d6e2]"
                         }`}
@@ -283,7 +283,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                       key={product.name}
                       initial={{ opacity: 0, x: reduceMotion ? 0 : -12 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.35, delay: reduceMotion ? 0 : 0.25 + index * 0.45 }}
+                      transition={{ duration: 0.3, delay: reduceMotion ? 0 : 0.15 + index * 0.3 }}
                       className="flex items-center justify-between border-b border-[#e4ebf2] py-[0.75cqw]"
                       style={fs(0.98)}
                     >
@@ -333,7 +333,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: reduceMotion ? 0 : 0.4 }}
+                  transition={{ duration: reduceMotion ? 0 : 0.3 }}
                   className="absolute flex items-center gap-[0.7cqw] rounded-[0.6cqw] border border-[#f3b89f] bg-[#fff3ea] px-[1cqw] text-[#a8441f] shadow-[0_0.3cqw_1cqw_rgba(184,94,61,0.15)]"
                   style={{ ...box({ x: 19.2, y: 80.6, w: 28.8, h: 7.8 }), ...fs(0.9) }}
                 >
@@ -353,7 +353,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                   <motion.div
                     initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: reduceMotion ? 0 : 0.5 }}
+                    transition={{ duration: 0.3, delay: reduceMotion ? 0 : 0.3 }}
                     className="absolute flex flex-col items-center rounded-[1.2cqw] border border-[#9fdcd2] bg-white px-[2cqw] py-[1.6cqw] text-center text-[#184f4a] shadow-[0_1cqw_3cqw_rgba(11,18,32,0.3)]"
                     style={{ left: "36%", top: "30%", width: "27%" }}
                   >
@@ -381,7 +381,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                   initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
                   animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: reduceMotion ? 0 : 1.1, delay: reduceMotion ? 0 : 1, ease: "easeOut" }}
+                  transition={{ duration: reduceMotion ? 0 : 0.8, delay: reduceMotion ? 0 : 0.6, ease: "easeOut" }}
                   className="absolute rounded-b-[0.5cqw] bg-[#fbfdfe] px-[1.2cqw] py-[1cqw] font-mono text-[#1b3b4c] shadow-[0_0.8cqw_2.4cqw_rgba(25,59,86,0.3)]"
                   style={{ ...box({ x: 66.5, y: 22, w: 17, h: 52 }), ...fs(0.82) }}
                 >
@@ -436,7 +436,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                     height: pct(def.focus.h),
                   }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: reduceMotion ? 0 : 0.6, ease: [0.65, 0, 0.35, 1] }}
+                  transition={{ duration: reduceMotion ? 0 : 0.45, ease: [0.65, 0, 0.35, 1] }}
                 />
               ) : null}
             </AnimatePresence>
@@ -451,7 +451,7 @@ export function PosWalkthrough({ content }: { content: Localized<PosWalkthroughC
                   style={{ width: "3cqw", height: "3cqw" }}
                   initial={{ scale: 0.4, opacity: 0.9 }}
                   animate={reduceMotion ? { scale: 1, opacity: 0.6 } : { scale: [0.4, 1.6], opacity: [0.9, 0] }}
-                  transition={{ duration: 1.1, delay: 0.4, repeat: reduceMotion ? 0 : 2, repeatDelay: 0.3 }}
+                  transition={{ duration: 0.9, delay: 0.25, repeat: reduceMotion ? 0 : 2, repeatDelay: 0.2 }}
                 />
                 <span
                   className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#06b6d4]/80"
@@ -532,7 +532,7 @@ function TypedText({ text, animate }: { text: string; animate: boolean }) {
     if (!animate) return;
     const timer = window.setInterval(() => {
       setCount((n) => (n >= text.length ? n : n + 1));
-    }, 55);
+    }, 35);
     return () => window.clearInterval(timer);
   }, [animate, text.length]);
 
