@@ -1,5 +1,5 @@
 {
-  "title": "POS",
+  "title": "Modexa POS",
   "slug": "modexa-pos",
   "category": "modexa-pos",
   "shortDescription": "Modexa POS is a modern point-of-sale system that helps businesses manage sales, products, inventory, customers, employees, and reports from one simple dashboard.",
@@ -9,7 +9,7 @@
     "Laravel",
     "PHP",
     "Tailwind CSS",
-    " REST API",
+    "REST API",
     "Electron"
   ],
   "projectStatus": "completed",

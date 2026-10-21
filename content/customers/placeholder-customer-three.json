@@ -6,6 +6,6 @@
   "website": "https://mjportfolio-woad.vercel.app/",
   "projectType": "Portfolio Website",
   "featured": true,
-  "published": true,
+  "published": false,
   "displayOrder": 3
 }

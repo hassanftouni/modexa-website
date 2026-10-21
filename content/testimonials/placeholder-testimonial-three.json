@@ -5,6 +5,6 @@
   "role": "Founder",
   "company": "Placeholder Studio",
   "featured": true,
-  "published": true,
+  "published": false,
   "displayOrder": 3
 }
