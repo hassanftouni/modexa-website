@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": {
+      "en": "Products",
+      "ar": "المنتجات"
+    },
+    "description": {
+      "en": "Modexa POS — our point-of-sale system — plus business dashboards, booking systems and custom software built on request.",
+      "ar": "Modexa POS — نظام نقاط البيع الخاص بنا — إضافة إلى لوحات متابعة الأعمال وأنظمة الحجز والبرمجيات المخصّصة حسب الطلب."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Products",
+      "ar": "المنتجات"
+    },
+    "title": {
+      "en": "Software products for day-to-day operations.",
+      "ar": "منتجات برمجية للعمل اليومي."
+    },
+    "highlight": {
+      "en": "day-to-day operations.",
+      "ar": "للعمل اليومي."
+    },
+    "description": {
+      "en": "Modexa POS is ready to use today. Our other products are built on request and shaped around each business.",
+      "ar": "نظام Modexa POS جاهز للاستخدام اليوم، أما منتجاتنا الأخرى فتُبنى حسب الطلب وتُصمّم لكل نشاط."
+    }
+  },
+  "flagshipLabel": {
+    "en": "Our flagship product",
+    "ar": "منتجنا الرئيسي"
+  },
+  "otherTitle": {
+    "en": "Built on request",
+    "ar": "يُبنى حسب الطلب"
+  },
+  "otherDescription": {
+    "en": "These start from a proven base and are tailored to how your business works.",
+    "ar": "تنطلق هذه المنتجات من أساس مجرّب وتُخصّص بحسب طريقة عملك."
+  },
+  "cta": {
+    "title": {
+      "en": "Need something that doesn't exist yet?",
+      "ar": "تحتاج إلى شيء غير موجود بعد؟"
+    },
+    "highlight": {
+      "en": "doesn't exist yet?",
+      "ar": "غير موجود بعد؟"
+    },
+    "description": {
+      "en": "Describe what your business needs and we'll design it with you.",
+      "ar": "صِف ما يحتاجه عملك، وسنصمّمه معك."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

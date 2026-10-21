@@ -4,7 +4,7 @@ import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { Icon } from "@/components/ui/icons";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { generalFaqs } from "@/content/faqs";
+import { getFaqs } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -61,7 +61,7 @@ export default function ContactPage() {
           <AnimatedContainer delay={0.15}>
             <div>
               <h2 className="mb-4 text-lg font-semibold">Common questions</h2>
-              <FaqAccordion faqs={generalFaqs} />
+              <FaqAccordion faqs={getFaqs("general", "en")} />
             </div>
           </AnimatedContainer>
         </div>

@@ -1,97 +1,86 @@
+import Image from "next/image";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
+import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Icon, type IconName } from "@/components/ui/icons";
+import type { HomePage } from "@/content/pages";
+import type { Customer, Testimonial } from "@/content/schema";
+import type { Localized } from "@/lib/content";
 
-const reasons: { title: string; description: string; icon: IconName }[] = [
-  {
-    title: "Business-focused solutions",
-    description:
-      "Every project starts from your operational reality — not from a template.",
-    icon: "building",
-  },
-  {
-    title: "Modern technologies",
-    description:
-      "Built on current, well-supported tools like Next.js, TypeScript and Laravel.",
-    icon: "cpu",
-  },
-  {
-    title: "Custom development",
-    description:
-      "Software shaped around your requirements instead of forcing workarounds.",
-    icon: "code",
-  },
-  {
-    title: "Professional design",
-    description:
-      "Clean, premium interfaces that customers trust and staff enjoy using.",
-    icon: "layout",
-  },
-  {
-    title: "Clear communication",
-    description:
-      "You always know what is being built, why, and what happens next.",
-    icon: "message",
-  },
-  {
-    title: "Scalable architecture",
-    description:
-      "Solutions designed to grow with your business, from day one.",
-    icon: "layers",
-  },
-  {
-    title: "Secure development practices",
-    description:
-      "Careful handling of data, access and deployments across every project.",
-    icon: "shield",
-  },
-  {
-    title: "Responsive support",
-    description:
-      "Maintenance and support agreements that keep your product healthy.",
-    icon: "wrench",
-  },
-  {
-    title: "AI & automation expertise",
-    description:
-      "Practical automation that saves real hours — not technology for its own sake.",
-    icon: "sparkles",
-  },
-  {
-    title: "Complete digital solutions",
-    description:
-      "Websites, software, AI and POS — one team covering the whole stack.",
-    icon: "globe",
-  },
-];
+interface WhyModexaProps {
+  content: Localized<HomePage["why"]>;
+  customers: Localized<Customer>[];
+  testimonials: Localized<Testimonial>[];
+}
 
-export function WhyModexa() {
+/**
+ * Reasons to trust Modexa, stated as facts. Customer logos and testimonials
+ * appear only once real, approved records are published in Pages CMS.
+ */
+export function WhyModexa({ content, customers, testimonials }: WhyModexaProps) {
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-24">
-      <SectionHeading
-        eyebrow="Why Modexa"
-        title="Why businesses choose Modexa"
-        description="A single partner for websites, software, AI and automation — focused on solving real problems well."
-      />
-      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-        {reasons.map((reason, index) => (
-          <AnimatedContainer
-            key={reason.title}
-            delay={(index % 5) * 0.05}
-            className="h-full"
-          >
-            <article className="card-surface flex h-full flex-col gap-2.5 rounded-2xl p-5 transition-colors hover:border-white/20">
-              <span className="flex size-9 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-brand">
-                <Icon name={reason.icon} className="size-4.5" />
-              </span>
-              <h3 className="text-sm font-semibold">{reason.title}</h3>
-              <p className="text-sm leading-relaxed text-muted">
-                {reason.description}
-              </p>
-            </article>
-          </AnimatedContainer>
-        ))}
+    <Section tone="light">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <SectionHeading eyebrow={content.eyebrow} title={content.title} className="lg:col-span-5" />
+        <ul className="grid gap-x-10 sm:grid-cols-2 lg:col-span-7">
+          {content.points.map((point, index) => (
+            <li key={point.title} className="border-t border-edge">
+              <AnimatedContainer delay={(index % 2) * 0.06} className="flex flex-col gap-2 py-6">
+                <h3 className="flex items-center gap-3 text-lg font-semibold">
+                  <span className="h-px w-4 bg-brand-accent" aria-hidden="true" />
+                  {point.title}
+                </h3>
+                <p className="leading-relaxed text-soft/80">{point.description}</p>
+              </AnimatedContainer>
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
+
+      {customers.length > 0 ? (
+        <div className="mt-20">
+          <h3 className="text-sm font-medium text-muted">{content.customersTitle}</h3>
+          <ul className="mt-6 flex flex-wrap items-center gap-x-12 gap-y-6">
+            {customers.map((customer) => (
+              <li key={customer.slug} className="flex items-center gap-3">
+                {customer.logo ? (
+                  <Image
+                    src={customer.logo}
+                    alt={customer.name}
+                    width={120}
+                    height={48}
+                    className="h-10 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-lg font-semibold">{customer.name}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
+      {testimonials.length > 0 ? (
+        <div className="mt-20">
+          <h3 className="text-sm font-medium text-muted">{content.testimonialsTitle}</h3>
+          <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.slice(0, 3).map((testimonial) => (
+              <li key={testimonial.slug}>
+                <figure className="card-surface flex h-full flex-col gap-5 rounded-xl p-6">
+                  <blockquote className="flex-1 leading-relaxed text-soft">“{testimonial.quote}”</blockquote>
+                  <figcaption className="text-sm">
+                    <span className="font-semibold">{testimonial.author}</span>
+                    <span className="text-muted">
+                      {[testimonial.role, testimonial.company].filter(Boolean).join(", ")
+                        ? ` — ${[testimonial.role, testimonial.company].filter(Boolean).join(", ")}`
+                        : ""}
+                    </span>
+                  </figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </Section>
   );
 }

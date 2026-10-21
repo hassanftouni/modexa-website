@@ -13,7 +13,9 @@ interface LogoProps {
  */
 export function Logo({ size = 30, withWordmark = true, className = "" }: LogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+    // The logo is a fixed brand mark: never mirrored in RTL, and lang="en"
+    // keeps the wordmark's letter-spacing on Arabic pages.
+    <span dir="ltr" lang="en" className={`inline-flex items-center gap-2.5 ${className}`}>
       <svg
         width={size}
         height={size}

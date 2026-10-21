@@ -1,0 +1,510 @@
+{
+  "seo": {
+    "title": {
+      "en": "Modexa — Websites, business software, automation and Modexa POS",
+      "ar": "Modexa — مواقع إلكترونية وبرمجيات أعمال وأتمتة ونظام Modexa POS"
+    },
+    "description": {
+      "en": "Modexa designs and builds websites, web applications, AI agents, business automation and custom software — plus Modexa POS for restaurants and shops. Clear language, honest quotes, support after launch.",
+      "ar": "تصمّم Modexa وتبني المواقع الإلكترونية وتطبيقات الويب ووكلاء الذكاء الاصطناعي وأتمتة الأعمال والبرمجيات المخصّصة، إضافة إلى نظام Modexa POS للمطاعم والمتاجر. لغة واضحة، عروض أسعار صادقة، ودعم بعد الإطلاق."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "en": "Software studio for growing businesses",
+      "ar": "استوديو برمجيات للأعمال النامية"
+    },
+    "title": {
+      "en": "We build the software your business runs on.",
+      "ar": "نبني البرمجيات التي يقوم عليها عملك."
+    },
+    "highlight": {
+      "en": "your business",
+      "ar": "عملك"
+    },
+    "description": {
+      "en": "Websites, web applications, AI assistants, automation and our own Modexa POS — designed and built by one team, explained in plain language and supported after launch.",
+      "ar": "مواقع إلكترونية وتطبيقات ويب ومساعدو ذكاء اصطناعي وأتمتة، ونظامنا الخاص Modexa POS — يصمّمها ويبنيها فريق واحد، ويشرحها بلغة بسيطة، ويدعمها بعد الإطلاق."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Explore our services",
+      "ar": "تعرّف على خدماتنا"
+    },
+    "facts": [
+      {
+        "en": "Arabic & English",
+        "ar": "بالعربية والإنجليزية"
+      },
+      {
+        "en": "Custom quotes, no fixed packages",
+        "ar": "عروض أسعار مخصّصة دون باقات جاهزة"
+      },
+      {
+        "en": "Support after launch",
+        "ar": "دعم بعد الإطلاق"
+      }
+    ],
+    "showcase": {
+      "label": {
+        "en": "What we build",
+        "ar": "ماذا نبني"
+      },
+      "website": {
+        "tab": {
+          "en": "Websites",
+          "ar": "مواقع"
+        },
+        "caption": {
+          "en": "A clear, fast website that explains what you do.",
+          "ar": "موقع واضح وسريع يشرح ما تقدّمه."
+        },
+        "headline": {
+          "en": "Fresh bread, every morning.",
+          "ar": "خبز طازج كل صباح."
+        },
+        "cta": {
+          "en": "Order online",
+          "ar": "اطلب الآن"
+        },
+        "nav": [
+          {
+            "en": "Menu",
+            "ar": "القائمة"
+          },
+          {
+            "en": "About",
+            "ar": "من نحن"
+          },
+          {
+            "en": "Visit",
+            "ar": "زورونا"
+          }
+        ]
+      },
+      "pos": {
+        "tab": {
+          "en": "Modexa POS",
+          "ar": "Modexa POS"
+        },
+        "caption": {
+          "en": "Orders, printing and stock — even without internet.",
+          "ar": "الطلبات والطباعة والمخزون — حتى دون إنترنت."
+        }
+      },
+      "automation": {
+        "tab": {
+          "en": "Automation",
+          "ar": "أتمتة"
+        },
+        "caption": {
+          "en": "Repetitive work handled for you, with your team in control.",
+          "ar": "الأعمال المتكررة تُنجز عنك، وفريقك يبقى صاحب القرار."
+        },
+        "steps": [
+          {
+            "en": "New enquiry from your website",
+            "ar": "استفسار جديد من موقعك"
+          },
+          {
+            "en": "Assistant replies with your prices and hours",
+            "ar": "المساعد يرد بأسعارك ومواعيد عملك"
+          },
+          {
+            "en": "Your team is notified to follow up",
+            "ar": "يصل تنبيه لفريقك للمتابعة"
+          }
+        ]
+      }
+    }
+  },
+  "services": {
+    "eyebrow": {
+      "en": "What we do",
+      "ar": "ماذا نقدّم"
+    },
+    "title": {
+      "en": "One team for the technology your business needs.",
+      "ar": "فريق واحد لكل ما يحتاجه عملك من تقنية."
+    },
+    "description": {
+      "en": "Tell us the problem. We'll recommend the right tool — and build it properly.",
+      "ar": "أخبرنا بالمشكلة، وسنقترح الأداة المناسبة — ونبنيها بإتقان."
+    },
+    "items": [
+      {
+        "icon": "globe",
+        "href": "/services#website-development",
+        "title": {
+          "en": "Websites",
+          "ar": "المواقع الإلكترونية"
+        },
+        "description": {
+          "en": "Company websites, online stores and portfolios that look professional and load fast on phones.",
+          "ar": "مواقع شركات ومتاجر إلكترونية ومواقع شخصية بمظهر احترافي وتحميل سريع على الهاتف."
+        }
+      },
+      {
+        "icon": "appWindow",
+        "href": "/services#web-applications",
+        "title": {
+          "en": "Web applications",
+          "ar": "تطبيقات الويب"
+        },
+        "description": {
+          "en": "Booking systems, dashboards and internal tools that replace spreadsheets and paperwork.",
+          "ar": "أنظمة حجز ولوحات متابعة وأدوات داخلية تحلّ محل الجداول والأوراق."
+        }
+      },
+      {
+        "icon": "bot",
+        "href": "/ai-automation",
+        "title": {
+          "en": "AI agents & automation",
+          "ar": "وكلاء الذكاء الاصطناعي والأتمتة"
+        },
+        "description": {
+          "en": "Assistants that answer customers and workflows that handle follow-ups, reminders and reports.",
+          "ar": "مساعدون يجيبون العملاء، وإجراءات تلقائية للمتابعات والتذكيرات والتقارير."
+        }
+      },
+      {
+        "icon": "code",
+        "href": "/services#custom-software",
+        "title": {
+          "en": "Custom software",
+          "ar": "البرمجيات المخصّصة"
+        },
+        "description": {
+          "en": "Software made for your exact way of working — on the web, the desktop or both.",
+          "ar": "برمجيات مصمّمة لطريقة عملك بالضبط — على الويب أو الكمبيوتر أو كليهما."
+        }
+      },
+      {
+        "icon": "plug",
+        "href": "/services#api-integrations",
+        "title": {
+          "en": "Connecting your systems",
+          "ar": "ربط الأنظمة"
+        },
+        "description": {
+          "en": "Payments, messaging and customer tools connected, so information flows without retyping.",
+          "ar": "ربط أنظمة الدفع والمراسلة وأدوات العملاء لتنتقل المعلومات دون إعادة إدخالها."
+        }
+      },
+      {
+        "icon": "wrench",
+        "href": "/services#maintenance-support",
+        "title": {
+          "en": "Maintenance & support",
+          "ar": "الصيانة والدعم"
+        },
+        "description": {
+          "en": "Updates, fixes and improvements that keep your software healthy long after launch.",
+          "ar": "تحديثات وإصلاحات وتحسينات تحافظ على برنامجك سليمًا لفترة طويلة بعد الإطلاق."
+        }
+      }
+    ]
+  },
+  "pos": {
+    "eyebrow": {
+      "en": "Our product",
+      "ar": "منتجنا"
+    },
+    "title": {
+      "en": "Modexa POS: run the counter, the kitchen and the stock from one system.",
+      "ar": "Modexa POS: أدِر الكاشير والمطبخ والمخزون من نظام واحد."
+    },
+    "highlight": {
+      "en": "one system.",
+      "ar": "نظام واحد."
+    },
+    "description": {
+      "en": "Built for restaurants, cafés, bars and shops. Orders print in the right place, stock stays visible, and sales keep going even when the internet doesn't.",
+      "ar": "مصمّم للمطاعم والمقاهي والبارات والمتاجر. تُطبع الطلبات في المكان الصحيح، ويبقى المخزون واضحًا، ويستمر البيع حتى عند انقطاع الإنترنت."
+    },
+    "points": [
+      {
+        "en": "Keeps working without internet",
+        "ar": "يعمل دون إنترنت"
+      },
+      {
+        "en": "Several terminals, one shared system",
+        "ar": "عدة أجهزة ونظام واحد مشترك"
+      },
+      {
+        "en": "Kitchen, bar and receipt printing",
+        "ar": "طباعة للمطبخ والبار والإيصالات"
+      },
+      {
+        "en": "Daily sales and low-stock alerts",
+        "ar": "مبيعات يومية وتنبيهات المخزون المنخفض"
+      }
+    ],
+    "primaryCta": {
+      "en": "See Modexa POS",
+      "ar": "تعرّف على Modexa POS"
+    },
+    "secondaryCta": {
+      "en": "Request a demo",
+      "ar": "اطلب عرضًا تجريبيًا"
+    }
+  },
+  "problems": {
+    "eyebrow": {
+      "en": "Sound familiar?",
+      "ar": "هل يبدو هذا مألوفًا؟"
+    },
+    "title": {
+      "en": "Everyday problems we solve.",
+      "ar": "مشكلات يومية نحلّها."
+    },
+    "description": {
+      "en": "You don't need to know the technical name for what you need. Start with what's getting in the way.",
+      "ar": "لا تحتاج إلى معرفة الاسم التقني لما تحتاجه. ابدأ بما يعيق عملك."
+    },
+    "items": [
+      {
+        "problem": {
+          "en": "“Our website looks outdated and is hard to use on a phone.”",
+          "ar": "«موقعنا يبدو قديمًا ويصعب استخدامه على الهاتف.»"
+        },
+        "solution": {
+          "en": "A modern, fast website that clearly says what you offer.",
+          "ar": "موقع عصري وسريع يوضّح ما تقدّمه."
+        },
+        "linkLabel": {
+          "en": "Website development",
+          "ar": "تطوير المواقع"
+        },
+        "href": "/websites"
+      },
+      {
+        "problem": {
+          "en": "“When the internet drops, we can't sell.”",
+          "ar": "«عندما ينقطع الإنترنت نتوقف عن البيع.»"
+        },
+        "solution": {
+          "en": "Modexa POS runs on your local network and keeps going offline.",
+          "ar": "يعمل Modexa POS على شبكتك المحلية ويستمر دون إنترنت."
+        },
+        "linkLabel": {
+          "en": "Modexa POS",
+          "ar": "Modexa POS"
+        },
+        "href": "/products/modexa-pos"
+      },
+      {
+        "problem": {
+          "en": "“We answer the same questions all day.”",
+          "ar": "«نجيب عن الأسئلة نفسها طوال اليوم.»"
+        },
+        "solution": {
+          "en": "An AI assistant that answers from your own information and hands over to your team.",
+          "ar": "مساعد ذكاء اصطناعي يجيب من معلوماتك ويحوّل المحادثة إلى فريقك عند الحاجة."
+        },
+        "linkLabel": {
+          "en": "AI & automation",
+          "ar": "الذكاء الاصطناعي والأتمتة"
+        },
+        "href": "/ai-automation"
+      },
+      {
+        "problem": {
+          "en": "“Our business runs on spreadsheets and paper.”",
+          "ar": "«عملنا قائم على الجداول والأوراق.»"
+        },
+        "solution": {
+          "en": "A web application built around how you actually work.",
+          "ar": "تطبيق ويب مبني حول طريقة عملك الفعلية."
+        },
+        "linkLabel": {
+          "en": "Web applications",
+          "ar": "تطبيقات الويب"
+        },
+        "href": "/services#web-applications"
+      },
+      {
+        "problem": {
+          "en": "“Our tools don't talk to each other.”",
+          "ar": "«أدواتنا لا تتواصل فيما بينها.»"
+        },
+        "solution": {
+          "en": "Your payments, messaging and customer tools connected automatically.",
+          "ar": "ربط تلقائي بين أنظمة الدفع والمراسلة وأدوات العملاء."
+        },
+        "linkLabel": {
+          "en": "Connecting systems",
+          "ar": "ربط الأنظمة"
+        },
+        "href": "/services#api-integrations"
+      },
+      {
+        "problem": {
+          "en": "“Our software keeps breaking and nobody maintains it.”",
+          "ar": "«برنامجنا يتعطّل باستمرار ولا أحد يتابعه.»"
+        },
+        "solution": {
+          "en": "A support agreement with updates, fixes and monitoring.",
+          "ar": "اتفاقية دعم تشمل التحديثات والإصلاحات والمراقبة."
+        },
+        "linkLabel": {
+          "en": "Maintenance & support",
+          "ar": "الصيانة والدعم"
+        },
+        "href": "/services#maintenance-support"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": {
+      "en": "How we work",
+      "ar": "كيف نعمل"
+    },
+    "title": {
+      "en": "Clear steps, no surprises.",
+      "ar": "خطوات واضحة، دون مفاجآت."
+    },
+    "description": {
+      "en": "You always know what is being built, what it costs and what happens next.",
+      "ar": "تعرف دائمًا ما الذي يُبنى، وكم يكلّف، وما الخطوة التالية."
+    }
+  },
+  "work": {
+    "eyebrow": {
+      "en": "Our work",
+      "ar": "أعمالنا"
+    },
+    "title": {
+      "en": "Recent projects.",
+      "ar": "مشاريع حديثة."
+    },
+    "description": {
+      "en": "A selection of what we've built. More projects are published as clients approve them.",
+      "ar": "مختارات مما بنيناه. ننشر المزيد من المشاريع بعد موافقة أصحابها."
+    },
+    "cta": {
+      "en": "See all work",
+      "ar": "شاهد كل الأعمال"
+    }
+  },
+  "why": {
+    "eyebrow": {
+      "en": "Why Modexa",
+      "ar": "لماذا Modexa"
+    },
+    "title": {
+      "en": "Technology that fits your business — and people who explain it.",
+      "ar": "تقنية تناسب عملك — وفريق يشرحها لك."
+    },
+    "points": [
+      {
+        "title": {
+          "en": "One team, start to finish",
+          "ar": "فريق واحد من البداية حتى النهاية"
+        },
+        "description": {
+          "en": "The people who plan your project are the people who build and support it.",
+          "ar": "من يخطّط لمشروعك هم أنفسهم من يبنونه ويدعمونه."
+        }
+      },
+      {
+        "title": {
+          "en": "Plain language",
+          "ar": "لغة واضحة"
+        },
+        "description": {
+          "en": "No jargon. We explain options, costs and trade-offs so you can decide with confidence.",
+          "ar": "دون مصطلحات معقّدة. نشرح الخيارات والتكاليف والمفاضلات لتقرّر بثقة."
+        }
+      },
+      {
+        "title": {
+          "en": "Built around how you work",
+          "ar": "مبني حول طريقة عملك"
+        },
+        "description": {
+          "en": "No templates forced onto your business. The software adapts to you.",
+          "ar": "لا قوالب جاهزة تُفرض على عملك. البرنامج يتكيّف معك."
+        }
+      },
+      {
+        "title": {
+          "en": "Arabic and English",
+          "ar": "بالعربية والإنجليزية"
+        },
+        "description": {
+          "en": "Websites and software in Arabic, English or both — with proper right-to-left layouts.",
+          "ar": "مواقع وبرمجيات بالعربية أو الإنجليزية أو كلتيهما — مع اتجاه صحيح من اليمين إلى اليسار."
+        }
+      },
+      {
+        "title": {
+          "en": "Honest quotes",
+          "ar": "عروض أسعار صادقة"
+        },
+        "description": {
+          "en": "Every project is reviewed by a person and priced for what it actually needs.",
+          "ar": "يراجع كل مشروع شخصٌ من فريقنا ويُسعَّر حسب ما يحتاجه فعلًا."
+        }
+      },
+      {
+        "title": {
+          "en": "We stay after launch",
+          "ar": "نبقى معك بعد الإطلاق"
+        },
+        "description": {
+          "en": "Maintenance and support agreements keep your software current and reliable.",
+          "ar": "اتفاقيات الصيانة والدعم تُبقي برنامجك محدّثًا وموثوقًا."
+        }
+      }
+    ],
+    "customersTitle": {
+      "en": "Businesses we work with",
+      "ar": "شركات نعمل معها"
+    },
+    "testimonialsTitle": {
+      "en": "What clients say",
+      "ar": "ماذا يقول عملاؤنا"
+    }
+  },
+  "faq": {
+    "eyebrow": {
+      "en": "Questions",
+      "ar": "أسئلة شائعة"
+    },
+    "title": {
+      "en": "Good questions to ask before you start.",
+      "ar": "أسئلة مهمة قبل أن تبدأ."
+    },
+    "description": {
+      "en": "Can't find your answer? Ask us directly — a person will reply.",
+      "ar": "لم تجد إجابتك؟ اسألنا مباشرة — وسيرد عليك شخص من الفريق."
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "Have something in mind? Tell us in your own words.",
+      "ar": "لديك فكرة؟ أخبرنا بها بكلماتك الخاصة."
+    },
+    "highlight": {
+      "en": "in your own words.",
+      "ar": "بكلماتك الخاصة."
+    },
+    "description": {
+      "en": "Describe what you'd like to improve. We'll reply with a clear recommendation and a custom quote — no obligation.",
+      "ar": "صِف ما تودّ تحسينه، وسنرد عليك بتوصية واضحة وعرض سعر مخصّص — دون أي التزام."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

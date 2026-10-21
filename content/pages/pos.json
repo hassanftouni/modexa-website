@@ -1,0 +1,206 @@
+{
+  "seo": {
+    "title": {
+      "en": "Modexa POS — point of sale for restaurants, cafés and shops",
+      "ar": "Modexa POS — نظام نقاط بيع للمطاعم والمقاهي والمتاجر"
+    },
+    "description": {
+      "en": "Modexa POS brings checkout, kitchen and bar printing, stock, staff and sales reports into one system — and keeps working when the internet goes down.",
+      "ar": "يجمع Modexa POS البيع وطباعة المطبخ والبار والمخزون والموظفين وتقارير المبيعات في نظام واحد — ويواصل العمل عند انقطاع الإنترنت."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "en": "Modexa POS",
+      "ar": "Modexa POS"
+    },
+    "title": {
+      "en": "Sell, print and track stock from one simple system.",
+      "ar": "بِع واطبع وتابع مخزونك من نظام واحد بسيط."
+    },
+    "highlight": {
+      "en": "one simple system.",
+      "ar": "نظام واحد بسيط."
+    },
+    "description": {
+      "en": "A point-of-sale system for restaurants, cafés, bars and shops. Orders print where they should, owners see the numbers that matter, and selling continues even when the internet doesn't.",
+      "ar": "نظام نقاط بيع للمطاعم والمقاهي والبارات والمتاجر. تُطبع الطلبات حيث يجب، ويرى أصحاب العمل الأرقام المهمة، ويستمر البيع حتى عند انقطاع الإنترنت."
+    },
+    "primaryCta": {
+      "en": "Request a demo",
+      "ar": "اطلب عرضًا تجريبيًا"
+    },
+    "secondaryCta": {
+      "en": "Try the interactive demo",
+      "ar": "جرّب العرض التفاعلي"
+    }
+  },
+  "demo": {
+    "eyebrow": {
+      "en": "Try it",
+      "ar": "جرّبه"
+    },
+    "title": {
+      "en": "Follow one order from the counter to the report.",
+      "ar": "تابع طلبًا واحدًا من الكاشير حتى التقرير."
+    },
+    "description": {
+      "en": "Add items, send the order to the kitchen, charge it and watch it appear in today's sales. Switch the internet off to see what happens.",
+      "ar": "أضف أصنافًا، وأرسل الطلب إلى المطبخ، وحصّل قيمته، ثم شاهده يظهر في مبيعات اليوم. افصل الإنترنت لترى ماذا يحدث."
+    },
+    "screenshots": {
+      "order": "",
+      "kitchen": "",
+      "sales": "",
+      "stock": ""
+    }
+  },
+  "industries": {
+    "eyebrow": {
+      "en": "Who it's for",
+      "ar": "لمن صُمّم"
+    },
+    "title": {
+      "en": "Made for businesses that serve customers all day.",
+      "ar": "مصمّم للأعمال التي تخدم العملاء طوال اليوم."
+    },
+    "items": [
+      {
+        "icon": "utensils",
+        "name": {
+          "en": "Restaurants",
+          "ar": "المطاعم"
+        }
+      },
+      {
+        "icon": "clock",
+        "name": {
+          "en": "Cafés",
+          "ar": "المقاهي"
+        }
+      },
+      {
+        "icon": "star",
+        "name": {
+          "en": "Bars",
+          "ar": "البارات"
+        }
+      },
+      {
+        "icon": "store",
+        "name": {
+          "en": "Retail stores",
+          "ar": "محلات البيع بالتجزئة"
+        }
+      },
+      {
+        "icon": "cart",
+        "name": {
+          "en": "Shops & mini-markets",
+          "ar": "المتاجر والميني ماركت"
+        }
+      },
+      {
+        "icon": "building",
+        "name": {
+          "en": "Multi-branch businesses",
+          "ar": "الشركات متعددة الفروع"
+        }
+      }
+    ]
+  },
+  "offline": {
+    "eyebrow": {
+      "en": "Built for real conditions",
+      "ar": "مصمّم لظروف العمل الحقيقية"
+    },
+    "title": {
+      "en": "The internet goes down. Your sales don't.",
+      "ar": "قد ينقطع الإنترنت، لكن مبيعاتك لا تتوقف."
+    },
+    "description": {
+      "en": "Your terminals, printers and a local server talk to each other over your own network. Daily work never depends on the internet connection.",
+      "ar": "تتواصل أجهزة البيع والطابعات والخادم المحلي فيما بينها عبر شبكتك الخاصة، فلا يعتمد عملك اليومي على اتصال الإنترنت."
+    },
+    "points": [
+      {
+        "en": "Several terminals share products, orders and reports",
+        "ar": "عدة أجهزة تتشارك المنتجات والطلبات والتقارير"
+      },
+      {
+        "en": "Orders print in the kitchen and bar automatically",
+        "ar": "تُطبع الطلبات تلقائيًا في المطبخ والبار"
+      },
+      {
+        "en": "Secure backups protect your sales data",
+        "ar": "نسخ احتياطي آمن يحمي بيانات مبيعاتك"
+      }
+    ],
+    "terminalsLabel": {
+      "en": "POS terminals",
+      "ar": "أجهزة البيع"
+    },
+    "serverLabel": {
+      "en": "Local server & backups",
+      "ar": "الخادم المحلي والنسخ الاحتياطي"
+    },
+    "serverNote": {
+      "en": "On your own network — no internet needed",
+      "ar": "على شبكتك الخاصة — دون حاجة للإنترنت"
+    },
+    "printersLabel": {
+      "en": "Kitchen · Bar · Receipts",
+      "ar": "المطبخ · البار · الإيصالات"
+    }
+  },
+  "features": {
+    "eyebrow": {
+      "en": "Everything included",
+      "ar": "كل ما تحتاجه"
+    },
+    "title": {
+      "en": "From the first order to the end-of-day report.",
+      "ar": "من أول طلب حتى تقرير نهاية اليوم."
+    },
+    "description": {
+      "en": "Here is what Modexa POS covers. Terminals, printers and staff roles are set up for your business.",
+      "ar": "هذا ما يغطيه Modexa POS. ونُعدّ أجهزة البيع والطابعات وصلاحيات الموظفين بما يناسب عملك."
+    }
+  },
+  "faq": {
+    "eyebrow": {
+      "en": "Questions",
+      "ar": "أسئلة شائعة"
+    },
+    "title": {
+      "en": "What owners ask us most.",
+      "ar": "أكثر ما يسألنا عنه أصحاب الأعمال."
+    },
+    "description": {
+      "en": "Anything else? Ask us — we'll answer in plain language.",
+      "ar": "لديك سؤال آخر؟ اسألنا وسنجيبك بلغة واضحة."
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "See Modexa POS with your own menu.",
+      "ar": "شاهد Modexa POS مع قائمتك الخاصة."
+    },
+    "highlight": {
+      "en": "your own menu.",
+      "ar": "قائمتك الخاصة."
+    },
+    "description": {
+      "en": "Request a personal demo. We'll show you how it fits your counter, your kitchen and your team.",
+      "ar": "اطلب عرضًا تجريبيًا خاصًا، وسنريك كيف يناسب الكاشير والمطبخ وفريق عملك."
+    },
+    "primaryCta": {
+      "en": "Request a demo",
+      "ar": "اطلب عرضًا تجريبيًا"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

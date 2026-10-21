@@ -7,7 +7,7 @@ import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/icons";
 import { PosMockup } from "@/components/products/PosMockup";
-import { posFaqs } from "@/content/faqs";
+import { getFaqs } from "@/lib/content";
 import { posFeatureGroups, posIndustries } from "@/content/posFeatures";
 import { siteConfig } from "@/lib/site";
 
@@ -211,7 +211,7 @@ export default function ModexaPosPage() {
           description="Answers to the questions business owners ask most about Modexa POS."
         />
         <AnimatedContainer className="mt-10">
-          <FaqAccordion faqs={posFaqs} />
+          <FaqAccordion faqs={getFaqs("pos", "en")} />
         </AnimatedContainer>
       </section>
 
