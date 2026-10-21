@@ -9,7 +9,7 @@ import { useLayoutEffect, useRef, useSyncExternalStore } from "react";
  *
  *   t 0.02–0.08  section header fades in
  *   t 0.06–0.84  slab i (bottom → top) drops 380px along Z into its slot in
- *                a staggered window, firing a brief violet lock pulse as it
+ *                a staggered window, firing a brief cyan lock pulse as it
  *                lands and lighting its checklist row
  *   t 0.92–1.00  "STACK ONLINE" caption + under-glow fade in, then the
  *                sticky releases into the rest of the page
@@ -86,7 +86,7 @@ function SectionHeader() {
     <>
       <p className="font-label flex items-center justify-center gap-3 text-[11px] tracking-[0.34em] text-muted">
         <span
-          className="inline-block h-px w-8 bg-[linear-gradient(90deg,#a855f7,#38bdf8)]"
+          className="inline-block h-px w-8 bg-brand"
           aria-hidden="true"
         />
         02 — HOW WE BUILD
@@ -101,7 +101,7 @@ function SectionHeader() {
 function OnlineCaption() {
   return (
     <>
-      <p className="font-label text-gradient text-sm tracking-[0.4em]">
+      <p className="font-label text-emphasis text-sm tracking-[0.4em]">
         STACK ONLINE
       </p>
       <p className="font-copy mt-3 text-sm leading-relaxed text-muted sm:text-base">
@@ -433,7 +433,7 @@ export function StackBuildSection() {
                 className="stack-lit font-label absolute inset-0 flex items-center gap-3 text-[10px] tracking-[0.26em] text-foreground"
                 style={{ opacity: 0 }}
               >
-                <span className="size-1.5 rounded-full bg-[linear-gradient(90deg,#a855f7,#38bdf8)]" />
+                <span className="size-1.5 rounded-full bg-brand" />
                 {layer}
               </span>
             </li>
@@ -464,7 +464,7 @@ export function StackBuildSection() {
           <span className="block h-px w-28 bg-white/10">
             <span
               ref={hudTickRef}
-              className="block h-full w-full origin-left bg-[linear-gradient(90deg,#a855f7,#38bdf8)]"
+              className="block h-full w-full origin-left bg-brand"
               style={{ transform: "scaleX(0)" }}
             />
           </span>

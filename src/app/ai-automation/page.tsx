@@ -54,7 +54,7 @@ export default function AiAutomationPage() {
         title={
           <>
             Practical AI that works{" "}
-            <span className="text-gradient">the way your business works.</span>
+            <span className="text-emphasis">the way your business works.</span>
           </>
         }
         description="Modexa designs every AI agent and automation around the customer's actual business process. AI handles the repetitive work — your team keeps the judgment, relationships and control."
@@ -75,7 +75,7 @@ export default function AiAutomationPage() {
               className="h-full"
             >
               <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                   <Icon name={agent.icon} className="size-5" />
                 </span>
                 <h3 className="font-semibold">{agent.name}</h3>
@@ -108,7 +108,7 @@ export default function AiAutomationPage() {
               className="h-full"
             >
               <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                   <Icon name={useCase.icon} className="size-5" />
                 </span>
                 <h3 className="font-semibold">{useCase.name}</h3>
@@ -128,10 +128,6 @@ export default function AiAutomationPage() {
 
       {/* How a project works */}
       <section className="relative overflow-hidden py-16">
-        <div
-          className="pointer-events-none absolute top-0 -left-40 h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(closest-side,rgba(168,85,247,0.14),transparent)] blur-3xl"
-          aria-hidden="true"
-        />
         <div className="relative mx-auto w-full max-w-7xl px-6">
           <SectionHeading
             eyebrow="Process"
@@ -146,7 +142,7 @@ export default function AiAutomationPage() {
                 className="h-full"
               >
                 <li className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                     <Icon name={step.icon} className="size-5" />
                   </span>
                   <h3 className="font-semibold">

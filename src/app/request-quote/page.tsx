@@ -45,7 +45,7 @@ export default function RequestQuotePage() {
         title={
           <>
             Tell us about{" "}
-            <span className="text-gradient">your project.</span>
+            <span className="text-emphasis">your project.</span>
           </>
         }
         description="The more we understand about your business and goals, the better the recommendation and quote we can prepare. Prices are never calculated automatically — every project is reviewed personally."
@@ -64,7 +64,7 @@ export default function RequestQuotePage() {
             <ol className="flex flex-col gap-5">
               {steps.map((step, index) => (
                 <li key={step.title} className="flex gap-4">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-brand">
                     <Icon name={step.icon} className="size-4.5" />
                   </span>
                   <div>

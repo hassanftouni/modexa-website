@@ -18,10 +18,6 @@ export function PageHeader({
   return (
     <header className="relative overflow-hidden pt-36 pb-16 sm:pt-44 sm:pb-20">
       <div className="bg-grid absolute inset-0" aria-hidden="true" />
-      <div
-        className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[52rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(139,92,246,0.22),transparent)] blur-3xl"
-        aria-hidden="true"
-      />
       <AnimatedContainer className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-6 text-center">
         {eyebrow ? (
           <p className="text-sm font-medium tracking-widest text-brand-accent uppercase">
@@ -32,7 +28,7 @@ export function PageHeader({
           {title}
         </h1>
         {description ? (
-          <p className="max-w-2xl text-lg leading-relaxed text-muted">
+          <p className="max-w-2xl text-lg leading-relaxed text-soft/80">
             {description}
           </p>
         ) : null}

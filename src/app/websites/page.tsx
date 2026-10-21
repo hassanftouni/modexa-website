@@ -28,7 +28,7 @@ export default function WebsitesPage() {
         title={
           <>
             Websites designed to{" "}
-            <span className="text-gradient">represent and convert.</span>
+            <span className="text-emphasis">represent and convert.</span>
           </>
         }
         description="Every Modexa website is responsive, fast, accessible and SEO-ready — built with modern tools and deployed securely."
@@ -49,7 +49,7 @@ export default function WebsitesPage() {
               className="h-full"
             >
               <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                   <Icon name={type.icon} className="size-5" />
                 </span>
                 <h3 className="font-semibold">{type.name}</h3>
@@ -86,10 +86,6 @@ export default function WebsitesPage() {
 
       {/* Process */}
       <section className="relative overflow-hidden py-16">
-        <div
-          className="pointer-events-none absolute top-0 right-0 h-[26rem] w-[26rem] translate-x-1/3 rounded-full bg-[radial-gradient(closest-side,rgba(63,162,247,0.13),transparent)] blur-3xl"
-          aria-hidden="true"
-        />
         <div className="relative mx-auto w-full max-w-7xl px-6">
           <SectionHeading
             eyebrow="Process"
@@ -104,7 +100,7 @@ export default function WebsitesPage() {
                 className="h-full"
               >
                 <li className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                     <Icon name={step.icon} className="size-5" />
                   </span>
                   <h3 className="font-semibold">
@@ -125,7 +121,7 @@ export default function WebsitesPage() {
         title={
           <>
             Ready for a website that{" "}
-            <span className="text-gradient">works as hard as you do?</span>
+            works as hard as you do?
           </>
         }
         description="Tell Modexa about your business and get a custom quote — no templates, no fixed price lists, no obligation."

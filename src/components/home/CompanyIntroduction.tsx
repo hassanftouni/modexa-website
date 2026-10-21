@@ -23,7 +23,7 @@ export function CompanyIntroduction() {
         {pillars.map((pillar, index) => (
           <AnimatedContainer key={pillar.name} delay={index * 0.05}>
             <div className="card-surface flex h-full flex-col items-center gap-3 rounded-2xl p-5 text-center transition-colors hover:border-white/20">
-              <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+              <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                 <Icon name={pillar.icon} className="size-5" />
               </span>
               <p className="text-sm font-medium">{pillar.name}</p>

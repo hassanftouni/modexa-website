@@ -40,7 +40,7 @@ export default function ServicesPage() {
         title={
           <>
             Complete digital solutions,{" "}
-            <span className="text-gradient">built around your business.</span>
+            <span className="text-emphasis">built around your business.</span>
           </>
         }
         description="Every Modexa service starts with a real business problem and ends with a reliable, well-designed solution. No fixed templates — and no fixed price lists: every project receives a custom quote."
@@ -57,7 +57,7 @@ export default function ServicesPage() {
             <article className="card-surface grid gap-10 rounded-3xl p-8 sm:p-10 lg:grid-cols-2">
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-4">
-                  <span className="flex size-12 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                  <span className="flex size-12 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                     <Icon name={service.icon} className="size-6" />
                   </span>
                   <h2 className="text-2xl font-semibold tracking-tight">

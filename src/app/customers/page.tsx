@@ -32,7 +32,7 @@ export default function CustomersPage() {
         title={
           <>
             Trusted by businesses{" "}
-            <span className="text-gradient">and professionals.</span>
+            <span className="text-emphasis">and professionals.</span>
           </>
         }
         description="The customers below are temporary placeholders — real, approved customer logos and stories will appear here as they are published through the CMS."

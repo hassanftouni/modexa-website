@@ -27,7 +27,7 @@ export function ServicesOverview() {
         title={
           <>
             Everything your business needs,{" "}
-            <span className="text-gradient">under one roof.</span>
+            under one roof.
           </>
         }
         description="Websites, web applications, AI agents, automation and custom software — designed and built by one team."

@@ -8,7 +8,7 @@ import { Badge } from "./Badge";
 
 export function ProjectCard({ project }: { project: PortfolioProject }) {
   return (
-    <article className="card-surface group flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_20px_50px_-24px_rgba(124,93,247,0.45)]">
+    <article className="card-surface group flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-edge-strong hover:shadow-card">
       <div className="relative aspect-[16/10] overflow-hidden border-b border-edge">
         <Image
           src={project.thumbnail}

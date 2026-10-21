@@ -33,7 +33,7 @@ export default function PortfolioPage() {
         title={
           <>
             Work that shows{" "}
-            <span className="text-gradient">what Modexa can build.</span>
+            <span className="text-emphasis">what Modexa can build.</span>
           </>
         }
         description="The projects below are concept placeholders illustrating the kind of work Modexa delivers — real customer projects will be published here as they are approved."

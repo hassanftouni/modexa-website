@@ -5,7 +5,7 @@ export function FinalCallToAction() {
     <CtaBanner
       title={
         <>
-          Have an idea? <span className="text-gradient">Let’s build it.</span>
+          Have an idea? <span className="text-emphasis">Let’s build it.</span>
         </>
       }
       description="Whether you need a professional website, custom software, an AI agent, business automation or a complete POS solution, Modexa can help turn your idea into a reliable digital product."

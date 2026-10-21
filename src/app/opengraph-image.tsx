@@ -4,7 +4,7 @@ export const alt = "Modexa — Technology built for modern businesses.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-/** Default Open Graph image: the Modexa monogram + wordmark on brand black. */
+/** Default Open Graph image: the Modexa monogram + wordmark on brand midnight. */
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
@@ -17,32 +17,16 @@ export default function OpenGraphImage() {
           alignItems: "center",
           justifyContent: "center",
           gap: 36,
-          background: "#05060b",
-          backgroundImage:
-            "radial-gradient(circle at 50% 20%, rgba(99,102,241,0.25), transparent 60%)",
+          background: "#0b1220",
         }}
       >
         <svg width="180" height="180" viewBox="0 0 512 512" fill="none">
-          <defs>
-            <linearGradient
-              id="g"
-              x1="132"
-              y1="116"
-              x2="380"
-              y2="396"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#A855F7" />
-              <stop offset="0.5" stopColor="#6366F1" />
-              <stop offset="1" stopColor="#3FA2F7" />
-            </linearGradient>
-          </defs>
           <line
             x1="148"
             y1="132"
             x2="364"
             y2="380"
-            stroke="url(#g)"
+            stroke="#06B6D4"
             strokeWidth="64"
             strokeLinecap="round"
           />
@@ -62,7 +46,7 @@ export default function OpenGraphImage() {
             fontSize: 84,
             fontWeight: 700,
             letterSpacing: 18,
-            color: "#f5f7fc",
+            color: "#ffffff",
           }}
         >
           MODEXA
@@ -71,7 +55,7 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             fontSize: 32,
-            color: "#9aa3b8",
+            color: "#e7edf3",
           }}
         >
           Technology built for modern businesses.

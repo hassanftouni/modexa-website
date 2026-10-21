@@ -4,7 +4,7 @@ type Tone = "brand" | "neutral" | "outline";
 
 const tones: Record<Tone, string> = {
   brand:
-    "border border-brand/40 bg-brand/10 text-[#d8b4fe]",
+    "border border-brand/40 bg-brand/10 text-brand",
   neutral: "border border-edge bg-white/[0.05] text-muted",
   outline: "border border-edge-strong text-foreground",
 };

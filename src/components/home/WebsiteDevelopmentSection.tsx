@@ -7,17 +7,13 @@ import { websiteQualities, websiteTypes } from "@/content/websiteTypes";
 export function WebsiteDevelopmentSection() {
   return (
     <section className="relative overflow-hidden py-24">
-      <div
-        className="pointer-events-none absolute top-0 right-0 h-[26rem] w-[26rem] translate-x-1/3 rounded-full bg-[radial-gradient(closest-side,rgba(63,162,247,0.14),transparent)] blur-3xl"
-        aria-hidden="true"
-      />
       <div className="relative mx-auto w-full max-w-7xl px-6">
         <SectionHeading
           eyebrow="Websites"
           title={
             <>
               Websites that make businesses{" "}
-              <span className="text-gradient">look world-class.</span>
+              look world-class.
             </>
           }
           description="From focused landing pages to complete web platforms — every Modexa website is responsive, fast and built to convert."
@@ -31,7 +27,7 @@ export function WebsiteDevelopmentSection() {
               className="h-full"
             >
               <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-9 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                <span className="flex size-9 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-brand">
                   <Icon name={type.icon} className="size-4.5" />
                 </span>
                 <h3 className="text-sm font-semibold sm:text-base">{type.name}</h3>

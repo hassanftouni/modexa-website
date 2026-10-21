@@ -32,7 +32,7 @@ export function SectionHeading({
         {title}
       </h2>
       {description ? (
-        <p className="text-lg leading-relaxed text-muted">{description}</p>
+        <p className="text-lg leading-relaxed text-soft/80">{description}</p>
       ) : null}
     </AnimatedContainer>
   );

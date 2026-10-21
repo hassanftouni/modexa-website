@@ -25,7 +25,7 @@ export function ProcessSection() {
               >
                 {String(step.step).padStart(2, "0")}
               </span>
-              <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+              <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                 <Icon name={step.icon} className="size-5" />
               </span>
               <h3 className="font-semibold">

@@ -81,7 +81,7 @@ export function WhyModexa() {
             className="h-full"
           >
             <article className="card-surface flex h-full flex-col gap-2.5 rounded-2xl p-5 transition-colors hover:border-white/20">
-              <span className="flex size-9 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+              <span className="flex size-9 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 text-brand">
                 <Icon name={reason.icon} className="size-4.5" />
               </span>
               <h3 className="text-sm font-semibold">{reason.title}</h3>

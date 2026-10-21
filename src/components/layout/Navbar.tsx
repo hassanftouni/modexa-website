@@ -100,7 +100,7 @@ export function Navbar() {
                     {item.label}
                     {active ? (
                       <span
-                        className="absolute inset-x-3 -bottom-0.5 h-px bg-[linear-gradient(90deg,#a855f7,#3fa2f7)]"
+                        className="absolute inset-x-3 -bottom-0.5 h-px bg-brand"
                         aria-hidden="true"
                       />
                     ) : null}

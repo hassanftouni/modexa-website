@@ -147,7 +147,7 @@ function FinaleContent() {
   return (
     <>
       <p className="hero-display text-2xl tracking-[0.04em] sm:text-3xl">
-        Software, <span className="text-gradient">assembled.</span>
+        Software, <span className="text-emphasis">assembled.</span>
       </p>
       <p className="font-copy max-w-xl text-base leading-relaxed text-muted">
         Six disciplines, one team. Modexa designs, builds and runs the systems
@@ -549,7 +549,7 @@ export function AssemblyHero() {
                 className="absolute inset-x-6 bottom-0 text-center"
                 style={{ opacity: 0, visibility: "hidden" }}
               >
-                <span className="mx-auto mb-4 block h-px w-10 bg-[linear-gradient(90deg,#a855f7,#38bdf8)]" />
+                <span className="mx-auto mb-4 block h-px w-10 bg-brand" />
                 <p className="font-label text-[11px] tracking-[0.34em] text-muted">
                   {part.tag}
                 </p>
@@ -599,7 +599,7 @@ export function AssemblyHero() {
           <span className="block h-px w-28 bg-white/10">
             <span
               ref={hudTickRef}
-              className="block h-full w-full origin-left bg-[linear-gradient(90deg,#a855f7,#38bdf8)]"
+              className="block h-full w-full origin-left bg-brand"
               style={{ transform: "scaleX(0)" }}
             />
           </span>

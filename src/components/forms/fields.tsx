@@ -149,7 +149,7 @@ export function CheckboxField({ id, label, error, ...props }: CheckboxFieldProps
           type="checkbox"
           aria-invalid={error ? true : undefined}
           aria-describedby={error ? `${id}-error` : undefined}
-          className="mt-0.5 size-4 shrink-0 accent-[#6366f1]"
+          className="mt-0.5 size-4 shrink-0 accent-[#06b6d4]"
           {...props}
         />
         <span>{label}</span>

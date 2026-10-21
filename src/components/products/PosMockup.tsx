@@ -22,7 +22,7 @@ export function PosMockup({ className = "" }: { className?: string }) {
         <span className="size-2.5 rounded-full bg-white/15" />
         <span className="size-2.5 rounded-full bg-white/15" />
         <span className="ml-3 text-xs text-muted">Modexa POS — Dashboard</span>
-        <span className="ml-auto rounded-full border border-brand/40 bg-brand/10 px-2 py-0.5 text-[10px] font-medium text-[#d8b4fe]">
+        <span className="ml-auto rounded-full border border-brand/40 bg-brand/10 px-2 py-0.5 text-[10px] font-medium text-brand">
           Offline-ready
         </span>
       </div>
@@ -36,7 +36,7 @@ export function PosMockup({ className = "" }: { className?: string }) {
                 key={label}
                 className={`rounded-lg px-3 py-1.5 text-xs ${
                   index === 0
-                    ? "bg-[linear-gradient(110deg,rgba(168,85,247,0.25),rgba(63,162,247,0.25))] text-foreground"
+                    ? "bg-brand/15 text-foreground"
                     : "text-muted"
                 }`}
               >
@@ -74,7 +74,7 @@ export function PosMockup({ className = "" }: { className?: string }) {
               {weeklySales.map((value, index) => (
                 <div
                   key={index}
-                  className="flex-1 rounded-t-sm bg-[linear-gradient(180deg,#a855f7,#3fa2f7)] opacity-80"
+                  className="flex-1 rounded-t-sm bg-brand/70"
                   style={{ height: `${value}%` }}
                 />
               ))}

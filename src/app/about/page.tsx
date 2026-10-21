@@ -61,7 +61,7 @@ export default function AboutPage() {
         title={
           <>
             A technology company built on{" "}
-            <span className="text-gradient">craft and honesty.</span>
+            <span className="text-emphasis">craft and honesty.</span>
           </>
         }
         description="Modexa builds digital products, business software and intelligent automation for companies that want to work smarter."
@@ -103,7 +103,7 @@ export default function AboutPage() {
           title="Great technology shouldn't be reserved for big companies"
           align="center"
         />
-        <AnimatedContainer className="mt-8 flex flex-col gap-5 text-lg leading-relaxed text-muted">
+        <AnimatedContainer className="mt-8 flex flex-col gap-5 text-lg leading-relaxed text-soft/80">
           <p>
             Modexa was created from a simple observation: most restaurants,
             shops and growing businesses run on tools that are outdated,
@@ -134,7 +134,7 @@ export default function AboutPage() {
               className="h-full"
             >
               <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa]">
+                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
                   <Icon name={value.icon} className="size-5" />
                 </span>
                 <h3 className="font-semibold">{value.title}</h3>
@@ -199,7 +199,7 @@ export default function AboutPage() {
         title={
           <>
             Let’s build something{" "}
-            <span className="text-gradient">worth using.</span>
+            worth using.
           </>
         }
         description="Tell Modexa about your business and goals — and get a clear, honest recommendation on where technology can help."

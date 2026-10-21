@@ -27,7 +27,7 @@ export default function ContactPage() {
         title={
           <>
             Let’s talk about{" "}
-            <span className="text-gradient">your project.</span>
+            <span className="text-emphasis">your project.</span>
           </>
         }
         description="Tell Modexa what you need — a website, a POS system, an AI agent or automation — and get a clear, personal reply."

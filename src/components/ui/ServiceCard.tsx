@@ -12,8 +12,8 @@ export function ServiceCard({ service, href }: ServiceCardProps) {
   const target = href ?? `/services#${service.slug}`;
 
   return (
-    <article className="card-surface group relative flex h-full flex-col gap-4 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_20px_50px_-24px_rgba(124,93,247,0.45)]">
-      <div className="flex size-11 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-[#c4a1fa] transition-colors group-hover:text-white">
+    <article className="card-surface group relative flex h-full flex-col gap-4 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-edge-strong hover:shadow-card">
+      <div className="flex size-11 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand transition-colors group-hover:text-white">
         <Icon name={service.icon} className="size-5" />
       </div>
       <h3 className="text-lg font-semibold">{service.name}</h3>

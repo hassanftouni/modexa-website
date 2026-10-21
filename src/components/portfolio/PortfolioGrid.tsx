@@ -38,7 +38,7 @@ export function PortfolioGrid({ projects }: { projects: PortfolioProject[] }) {
             onClick={() => setActive(filter.value)}
             className={`rounded-full border px-4 py-2 text-sm transition-colors ${
               active === filter.value
-                ? "border-brand/50 bg-[linear-gradient(110deg,rgba(168,85,247,0.2),rgba(63,162,247,0.2))] text-foreground"
+                ? "border-brand/50 bg-brand/15 text-foreground"
                 : "border-edge bg-white/[0.03] text-muted hover:border-white/25 hover:text-foreground"
             }`}
           >

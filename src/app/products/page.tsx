@@ -35,7 +35,7 @@ export default function ProductsPage() {
         title={
           <>
             Software products built for{" "}
-            <span className="text-gradient">real operations.</span>
+            <span className="text-emphasis">real operations.</span>
           </>
         }
         description="Modexa POS is our main active product. Additional products are developed by request, shaped around each customer's business."
@@ -51,7 +51,7 @@ export default function ProductsPage() {
                 <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                   Modexa POS
                 </h2>
-                <p className="text-lg leading-relaxed text-muted">
+                <p className="text-lg leading-relaxed text-soft/80">
                   {pos.shortDescription}
                 </p>
                 <ul className="flex flex-col gap-2">
