@@ -1,237 +1,218 @@
 import type { Metadata } from "next";
-import { CtaBanner } from "@/components/shared/CtaBanner";
+import { notFound } from "next/navigation";
+import { PageHeader } from "@/components/layout/PageHeader";
+import { PosDemo } from "@/components/products/PosDemo";
+import { FinalCta } from "@/components/shared/FinalCta";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/icons";
-import { PosMockup } from "@/components/products/PosMockup";
-import { getFaqs } from "@/lib/content";
-import { posFeatureGroups, posIndustries } from "@/content/posFeatures";
+import { isLocale } from "@/i18n/config";
+import { getFaqs, getPage, getPosFeatures } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Modexa POS — The smarter way to manage sales and operations",
-  description:
-    "Modexa POS brings checkout, inventory, employees, customers, printing and business insights into one modern platform — with offline local-network operation and multi-terminal support.",
-  alternates: { canonical: "/products/modexa-pos" },
-  openGraph: {
-    title: "Modexa POS",
-    description:
-      "A complete point-of-sale platform for restaurants, cafés, bars and retail.",
-    url: "/products/modexa-pos",
-  },
-};
+const path = "/products/modexa-pos";
 
-const posJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Modexa POS",
-  applicationCategory: "BusinessApplication",
-  description:
-    "A complete point-of-sale platform that brings checkout, inventory, employees, customers, printing and business insights into one modern system.",
-  publisher: { "@type": "Organization", name: "Modexa", url: siteConfig.url },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/products/modexa-pos">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("pos", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description, absoluteTitle: true });
+}
 
-const architectureNodes = [
-  { label: "POS Terminal 1", icon: "monitor" },
-  { label: "POS Terminal 2", icon: "monitor" },
-  { label: "POS Terminal 3", icon: "monitor" },
-] as const;
+export default async function ModexaPosPage({ params }: PageProps<"/[lang]/products/modexa-pos">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
 
-const architectureOutputs = [
-  { label: "Kitchen printer", icon: "printer" },
-  { label: "Bar printer", icon: "printer" },
-  { label: "Receipt printer", icon: "receipt" },
-] as const;
+  const page = getPage("pos", lang);
+  const features = getPosFeatures(lang);
+  const faqs = getFaqs("pos", lang);
 
-export default function ModexaPosPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Modexa POS",
+    applicationCategory: "BusinessApplication",
+    description: page.seo.description,
+    inLanguage: lang,
+    publisher: { "@type": "Organization", name: "Modexa", url: siteConfig.url },
+  };
+
   return (
     <>
-      {/* Product hero */}
-      <header className="relative overflow-hidden pt-36 pb-20 sm:pt-44">
-        <div className="bg-grid absolute inset-0" aria-hidden="true" />
-        <AnimatedContainer className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-6 text-center">
-          <Badge tone="brand">Modexa POS</Badge>
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-            The smarter way to manage{" "}
-            <span className="text-emphasis">sales and operations.</span>
-          </h1>
-          <p className="max-w-2xl text-lg leading-relaxed text-soft/80">
-            Modexa POS brings checkout, inventory, employees, customers,
-            printing and business insights into one modern platform.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button href="/request-quote" size="lg">
-              Request a Demo
-              <Icon name="arrowRight" className="size-4" />
-            </Button>
-            <Button href="/contact" variant="secondary" size="lg">
-              Talk to Modexa
-            </Button>
-          </div>
-        </AnimatedContainer>
-
-        {/* Dashboard preview */}
-        <AnimatedContainer delay={0.2} className="relative mx-auto mt-16 w-full max-w-4xl px-6">
-          <div className="relative">
-            <PosMockup />
-          </div>
-          <p className="mt-4 text-center text-xs text-muted">
-            Interface preview — real product screenshots coming soon.
-          </p>
-        </AnimatedContainer>
-      </header>
-
-      {/* Industries */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20">
-        <SectionHeading
-          eyebrow="Industries"
-          title="Built for businesses that serve customers every day"
-          description="From single-location cafés to growing multi-branch operations."
-        />
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {posIndustries.map((industry, index) => (
-            <AnimatedContainer key={industry.name} delay={index * 0.05}>
-              <div className="card-surface flex h-full flex-col items-center gap-3 rounded-2xl p-5 text-center transition-colors hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                  <Icon name={industry.icon} className="size-5" />
-                </span>
-                <p className="text-sm font-medium">{industry.name}</p>
-              </div>
-            </AnimatedContainer>
-          ))}
+      <PageHeader
+        eyebrow={page.hero.eyebrow}
+        title={page.hero.title}
+        highlight={page.hero.highlight}
+        description={page.hero.description}
+      >
+        <div className="flex w-full flex-col gap-3 pt-2 sm:w-auto sm:flex-row">
+          <Button href="/request-quote" size="lg">
+            {page.hero.primaryCta}
+            <Icon name="arrowRight" className="size-4" />
+          </Button>
+          <Button href="#demo" variant="secondary" size="lg">
+            {page.hero.secondaryCta}
+          </Button>
         </div>
-      </section>
+      </PageHeader>
 
-      {/* Core features */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20">
+      {/* Interactive demo */}
+      <Section id="demo">
         <SectionHeading
-          eyebrow="Features"
-          title={
-            <>
-              Everything your operation needs,{" "}
-              in one system.
-            </>
-          }
-          description="Modexa POS covers the full daily flow — from the first order to the end-of-day report."
+          eyebrow={page.demo.eyebrow}
+          title={page.demo.title}
+          description={page.demo.description}
         />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {posFeatureGroups.map((group, index) => (
-            <AnimatedContainer
-              key={group.title}
-              delay={(index % 3) * 0.06}
-              className="h-full"
-            >
-              <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                  <Icon name={group.icon} className="size-5" />
-                </span>
-                <h3 className="font-semibold">{group.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  {group.description}
+        <AnimatedContainer delay={0.1} className="mt-12">
+          <PosDemo screenshots={page.demo.screenshots} />
+        </AnimatedContainer>
+      </Section>
+
+      {/* Who it's for */}
+      <Section tone="light" className="py-16! lg:py-20!">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="flex flex-col gap-4 lg:col-span-4">
+            <p className="eyebrow">{page.industries.eyebrow}</p>
+            <h2 className="display text-3xl sm:text-4xl">{page.industries.title}</h2>
+          </div>
+          <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-edge bg-edge sm:grid-cols-3 lg:col-span-8">
+            {page.industries.items.map((industry) => (
+              <li key={industry.name} className="flex items-center gap-3 bg-background px-5 py-5">
+                <Icon name={industry.icon} className="size-5 shrink-0 text-brand-accent" />
+                <span className="font-medium">{industry.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* Offline, local-network operation */}
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
+          <div className="flex flex-col gap-8">
+            <SectionHeading
+              eyebrow={page.offline.eyebrow}
+              title={page.offline.title}
+              description={page.offline.description}
+            />
+            <ul className="flex flex-col gap-3">
+              {page.offline.points.map((point) => (
+                <li key={point} className="flex items-start gap-3 text-soft">
+                  <Icon name="check" className="mt-1 size-4 shrink-0 text-brand-accent" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <AnimatedContainer delay={0.1}>
+            <figure className="card-surface flex flex-col items-stretch gap-3 rounded-2xl p-6 sm:p-8">
+              <div className="grid grid-cols-3 gap-3">
+                {[1, 2, 3].map((n) => (
+                  <div
+                    key={n}
+                    className="flex flex-col items-center gap-2 rounded-lg border border-edge bg-background px-2 py-4"
+                  >
+                    <Icon name="monitor" className="size-6 text-soft" />
+                    <span className="text-xs text-muted tabular-nums">#{n}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-center text-xs text-muted">{page.offline.terminalsLabel}</p>
+              <Connector />
+              <div className="flex flex-col items-center gap-1.5 rounded-lg border border-brand/40 bg-brand/10 px-4 py-5 text-center">
+                <Icon name="database" className="size-6 text-brand-accent" />
+                <p className="font-medium">{page.offline.serverLabel}</p>
+                <p className="flex items-center gap-1.5 text-xs text-brand-accent">
+                  <Icon name="wifiOff" className="size-3.5" />
+                  {page.offline.serverNote}
                 </p>
-                <ul className="mt-auto flex flex-col gap-1.5 pt-2">
-                  {group.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-2 text-sm text-muted"
-                    >
-                      <Icon
-                        name="check"
-                        className="mt-0.5 size-4 shrink-0 text-brand-accent"
-                      />
-                      {feature}
+              </div>
+              <Connector />
+              <div className="grid grid-cols-3 gap-3">
+                {(["printer", "printer", "receipt"] as const).map((icon, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center rounded-lg border border-edge bg-background py-4"
+                  >
+                    <Icon name={icon} className="size-6 text-soft" />
+                  </div>
+                ))}
+              </div>
+              <figcaption className="text-center text-xs text-muted">{page.offline.printersLabel}</figcaption>
+            </figure>
+          </AnimatedContainer>
+        </div>
+      </Section>
+
+      {/* Features */}
+      <Section tone="light">
+        <SectionHeading
+          eyebrow={page.features.eyebrow}
+          title={page.features.title}
+          description={page.features.description}
+        />
+        <ul className="mt-14 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <li key={feature.slug} className="border-t border-edge">
+              <AnimatedContainer delay={(index % 3) * 0.05} className="flex flex-col gap-3 py-7">
+                <h3 className="flex items-center gap-3 text-lg font-semibold">
+                  <Icon name={feature.icon} className="size-5 text-brand-accent" />
+                  {feature.title}
+                </h3>
+                <p className="leading-relaxed text-soft/80">{feature.description}</p>
+                <ul className="flex flex-col gap-1.5 text-sm text-muted">
+                  {feature.features.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-2 size-1 shrink-0 rounded-full bg-current" aria-hidden="true" />
+                      {item}
                     </li>
                   ))}
                 </ul>
-              </article>
-            </AnimatedContainer>
+              </AnimatedContainer>
+            </li>
           ))}
-        </div>
-      </section>
-
-      {/* Multi-terminal architecture */}
-      <section className="relative overflow-hidden py-20">
-        <div className="relative mx-auto w-full max-w-7xl px-6">
-          <SectionHeading
-            eyebrow="Architecture"
-            title="Multiple terminals. One local network. Zero downtime."
-            description="Terminals, printers and the local server work together on your network — so daily operations never depend on your internet connection."
-          />
-          <AnimatedContainer className="mt-12">
-            <div className="card-surface mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl p-8 sm:p-10">
-              <div className="grid w-full grid-cols-3 gap-3">
-                {architectureNodes.map((node) => (
-                  <div
-                    key={node.label}
-                    className="flex flex-col items-center gap-2 rounded-xl border border-edge bg-white/[0.03] p-4 text-center"
-                  >
-                    <Icon name={node.icon} className="size-6 text-brand-accent" />
-                    <p className="text-xs text-muted">{node.label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-col items-center gap-1" aria-hidden="true">
-                <span className="h-6 w-px bg-brand/50" />
-                <Icon name="wifiOff" className="size-4 text-muted" />
-              </div>
-              <div className="flex w-full max-w-xs flex-col items-center gap-2 rounded-xl border border-brand/40 bg-brand/10 p-5 text-center">
-                <Icon name="database" className="size-7 text-brand" />
-                <p className="text-sm font-medium">Local server & secure backups</p>
-                <p className="text-xs text-muted">
-                  Works offline on your local network
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-1" aria-hidden="true">
-                <span className="h-6 w-px bg-brand/50" />
-              </div>
-              <div className="grid w-full grid-cols-3 gap-3">
-                {architectureOutputs.map((output) => (
-                  <div
-                    key={output.label}
-                    className="flex flex-col items-center gap-2 rounded-xl border border-edge bg-white/[0.03] p-4 text-center"
-                  >
-                    <Icon name={output.icon} className="size-6 text-brand-accent" />
-                    <p className="text-xs text-muted">{output.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedContainer>
-        </div>
-      </section>
+        </ul>
+      </Section>
 
       {/* FAQ */}
-      <section className="mx-auto w-full max-w-3xl px-6 py-20">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Frequently asked questions"
-          description="Answers to the questions business owners ask most about Modexa POS."
-        />
-        <AnimatedContainer className="mt-10">
-          <FaqAccordion faqs={getFaqs("pos", "en")} />
-        </AnimatedContainer>
-      </section>
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <SectionHeading
+            eyebrow={page.faq.eyebrow}
+            title={page.faq.title}
+            description={page.faq.description}
+            className="lg:col-span-5"
+          />
+          <div className="lg:col-span-7">
+            <FaqAccordion faqs={faqs} />
+          </div>
+        </div>
+      </Section>
 
-      <CtaBanner
-        title={
-          <>
-            See Modexa POS in action.
-          </>
-        }
-        description="Request a personal demo and see how Modexa POS fits your restaurant, café, bar or store — with your workflow, your printers and your team."
-        primaryLabel="Request a Demo"
-        primaryHref="/request-quote"
-        secondaryLabel="Contact Modexa"
-        secondaryHref="/contact"
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(posJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
+  );
+}
+
+function Connector() {
+  return (
+    <div className="flex justify-center" aria-hidden="true">
+      <span className="h-6 w-px bg-brand/60" />
+    </div>
   );
 }

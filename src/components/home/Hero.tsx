@@ -1,4 +1,4 @@
-import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
+import type { CSSProperties } from "react";
 import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 import { Container } from "@/components/ui/Section";
@@ -13,7 +13,7 @@ export function Hero({ content }: { content: Localized<HomePage["hero"]> }) {
     <header className="relative overflow-hidden pt-28 pb-20 sm:pt-36 lg:pt-40 lg:pb-28">
       <div className="bg-grid absolute inset-0" aria-hidden="true" />
       <Container className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
-        <AnimatedContainer className="flex flex-col items-start gap-7">
+        <div className="intro flex flex-col items-start gap-7">
           <p className="eyebrow">{content.eyebrow}</p>
           <h1 className="display text-[2.6rem] sm:text-6xl lg:text-[4.25rem]">
             <Highlight text={content.title} highlight={content.highlight} />
@@ -38,11 +38,11 @@ export function Hero({ content }: { content: Localized<HomePage["hero"]> }) {
               </li>
             ))}
           </ul>
-        </AnimatedContainer>
+        </div>
 
-        <AnimatedContainer delay={0.12}>
+        <div className="intro" style={{ "--intro-delay": "0.15s" } as CSSProperties}>
           <HeroShowcase content={content.showcase} />
-        </AnimatedContainer>
+        </div>
       </Container>
     </header>
   );

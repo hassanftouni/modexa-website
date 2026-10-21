@@ -76,7 +76,9 @@ export function MobileMenu({ open, pathname, onNavigate }: MobileMenuProps) {
               <Button href="/request-quote" size="lg" className="w-full">
                 {dict.nav.cta}
               </Button>
-              <LanguageSwitcher className="h-12 w-full sm:hidden" />
+              <div className="sm:hidden">
+                <LanguageSwitcher className="h-12 w-full" />
+              </div>
             </div>
           </nav>
         </motion.div>

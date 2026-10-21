@@ -1,109 +1,124 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CtaBanner } from "@/components/shared/CtaBanner";
+import { FinalCta } from "@/components/shared/FinalCta";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ProductCard } from "@/components/ui/ProductCard";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/icons";
-import { PosMockup } from "@/components/products/PosMockup";
-import { products } from "@/content/products";
+import { isLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
+import { getPage, getProducts } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Products",
-  description:
-    "Modexa products: Modexa POS — a complete point-of-sale platform — plus business dashboards, booking systems and custom software available by request.",
-  alternates: { canonical: "/products" },
-  openGraph: {
-    title: "Modexa Products",
-    description:
-      "Modexa POS and business software products built for modern operations.",
-    url: "/products",
-  },
-};
+const path = "/products";
 
-export default function ProductsPage() {
-  const pos = products.find((product) => product.slug === "modexa-pos");
-  const otherProducts = products.filter(
-    (product) => product.slug !== "modexa-pos"
-  );
+export async function generateMetadata({ params }: PageProps<"/[lang]/products">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("products", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description });
+}
+
+export default async function ProductsPage({ params }: PageProps<"/[lang]/products">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const dict = getDictionary(lang);
+  const page = getPage("products", lang);
+  const products = getProducts(lang);
+  const flagship = products.find((product) => product.slug === "modexa-pos");
+  const others = products.filter((product) => product.slug !== "modexa-pos");
 
   return (
     <>
       <PageHeader
-        eyebrow="Products"
-        title={
-          <>
-            Software products built for{" "}
-            <span className="text-emphasis">real operations.</span>
-          </>
-        }
-        description="Modexa POS is our main active product. Additional products are developed by request, shaped around each customer's business."
+        eyebrow={page.header.eyebrow}
+        title={page.header.title}
+        highlight={page.header.highlight}
+        description={page.header.description}
       />
 
-      {/* Featured: Modexa POS */}
-      {pos ? (
-        <section className="mx-auto w-full max-w-7xl px-6 pb-20">
+      {flagship ? (
+        <Section>
           <AnimatedContainer>
-            <article className="card-surface grid items-center gap-10 rounded-3xl p-8 sm:p-10 lg:grid-cols-2">
+            <article className="card-surface relative grid gap-10 overflow-hidden rounded-2xl p-8 sm:p-12 lg:grid-cols-2 lg:gap-16">
+              <div className="accent-rule absolute inset-x-0 top-0 h-px" aria-hidden="true" />
               <div className="flex flex-col items-start gap-5">
-                <Badge tone="brand">Main product — Available</Badge>
-                <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Modexa POS
-                </h2>
-                <p className="text-lg leading-relaxed text-soft/80">
-                  {pos.shortDescription}
+                <p className="eyebrow">{page.flagshipLabel}</p>
+                <h2 className="display text-4xl sm:text-5xl">{flagship.name}</h2>
+                <p className="text-sm font-medium text-brand-accent">
+                  {dict.products.status[flagship.status]}
                 </p>
-                <ul className="flex flex-col gap-2">
-                  {pos.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="flex items-center gap-2.5 text-sm text-foreground/90"
-                    >
-                      <Icon name="check" className="size-4 text-brand-accent" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-2 flex flex-wrap gap-4">
-                  <Button href="/products/modexa-pos" size="lg">
-                    Explore Modexa POS
+                <p className="text-lg leading-relaxed text-soft/85">{flagship.summary}</p>
+                <div className="flex w-full flex-col gap-3 pt-2 sm:w-auto sm:flex-row">
+                  <Button href={flagship.href || "/products/modexa-pos"} size="lg">
+                    {dict.common.seePos}
                     <Icon name="arrowRight" className="size-4" />
                   </Button>
                   <Button href="/request-quote" variant="secondary" size="lg">
-                    Request a Demo
+                    {dict.common.requestDemo}
                   </Button>
                 </div>
               </div>
-              <PosMockup />
+              <ul className="flex flex-col justify-center border-t border-edge lg:border-t-0">
+                {flagship.highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="flex items-center gap-4 border-b border-edge py-5 text-lg"
+                  >
+                    <Icon name="check" className="size-5 shrink-0 text-brand-accent" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
             </article>
           </AnimatedContainer>
-        </section>
+        </Section>
       ) : null}
 
-      {/* Other products */}
-      <section className="mx-auto w-full max-w-7xl px-6 pb-24">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {otherProducts.map((product, index) => (
-            <AnimatedContainer
-              key={product.slug}
-              id={product.slug}
-              delay={(index % 3) * 0.07}
-              className="h-full scroll-mt-24"
-            >
-              <ProductCard product={product} />
-            </AnimatedContainer>
-          ))}
-        </div>
-      </section>
+      {others.length > 0 ? (
+        <Section tone="light">
+          <SectionHeading title={page.otherTitle} description={page.otherDescription} />
+          <ul className="mt-12 border-t border-edge">
+            {others.map((product, index) => (
+              <li key={product.slug} id={product.slug} className="scroll-mt-28 border-b border-edge">
+                <AnimatedContainer
+                  delay={index * 0.05}
+                  className="grid gap-6 py-10 lg:grid-cols-12 lg:gap-10"
+                >
+                  <div className="flex flex-col gap-3 lg:col-span-5">
+                    <h3 className="flex items-center gap-3 text-2xl font-semibold tracking-tight">
+                      <Icon name={product.icon} className="size-6 text-brand-accent" />
+                      {product.name}
+                    </h3>
+                    <p className="text-sm font-medium text-muted">{dict.products.status[product.status]}</p>
+                  </div>
+                  <div className="flex flex-col gap-5 lg:col-span-7">
+                    <p className="text-lg leading-relaxed text-soft/85">{product.summary}</p>
+                    <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
+                      {product.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2.5 text-soft/80">
+                          <Icon name="check" className="mt-1 size-4 shrink-0 text-brand-accent" />
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AnimatedContainer>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
 
-      <CtaBanner
-        title="Need a product that doesn't exist yet?"
-        description="Modexa builds custom software products by request — describe what your business needs and we'll design it together."
-        primaryLabel="Request a Quote"
-        primaryHref="/request-quote"
-        secondaryLabel="Contact Modexa"
-        secondaryHref="/contact"
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
     </>
   );

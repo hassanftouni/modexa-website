@@ -1,39 +1,35 @@
 import type { ReactNode } from "react";
-import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
+import { Highlight } from "@/components/ui/Highlight";
+import { Container } from "@/components/ui/Section";
 
 interface PageHeaderProps {
   eyebrow?: string;
   title: ReactNode;
+  highlight?: string;
   description?: ReactNode;
+  /** Actions or extra content under the description. */
   children?: ReactNode;
 }
 
-/** Shared hero header for subpages. */
-export function PageHeader({
-  eyebrow,
-  title,
-  description,
-  children,
-}: PageHeaderProps) {
+/** Shared header for inner pages: aligned to the reading edge, no decoration. */
+export function PageHeader({ eyebrow, title, highlight, description, children }: PageHeaderProps) {
   return (
-    <header className="relative overflow-hidden pt-36 pb-16 sm:pt-44 sm:pb-20">
+    <header className="relative overflow-hidden border-b border-edge pt-32 pb-16 sm:pt-40 sm:pb-20 lg:pb-24">
       <div className="bg-grid absolute inset-0" aria-hidden="true" />
-      <AnimatedContainer className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-6 text-center">
-        {eyebrow ? (
-          <p className="text-sm font-medium tracking-widest text-brand-accent uppercase">
-            {eyebrow}
-          </p>
-        ) : null}
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-          {title}
-        </h1>
-        {description ? (
-          <p className="max-w-2xl text-lg leading-relaxed text-soft/80">
-            {description}
-          </p>
-        ) : null}
-        {children}
-      </AnimatedContainer>
+      <Container className="relative">
+        <div className="intro flex max-w-3xl flex-col items-start gap-6">
+          {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+          <h1 className="display text-[2.5rem] sm:text-6xl lg:text-[4rem]">
+            {typeof title === "string" ? <Highlight text={title} highlight={highlight} /> : title}
+          </h1>
+          {description ? (
+            <p className="max-w-2xl text-lg leading-relaxed text-soft/85 sm:text-xl sm:leading-relaxed">
+              {description}
+            </p>
+          ) : null}
+          {children}
+        </div>
+      </Container>
     </header>
   );
 }

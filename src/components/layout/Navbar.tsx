@@ -82,10 +82,13 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2.5">
-          <LanguageSwitcher className="hidden sm:inline-flex" />
-          <Button href="/request-quote" className="hidden lg:inline-flex">
-            {dict.nav.cta}
-          </Button>
+          {/* Wrappers own the visibility so it can't clash with the controls' own display. */}
+          <div className="hidden sm:block">
+            <LanguageSwitcher />
+          </div>
+          <div className="hidden lg:block">
+            <Button href="/request-quote">{dict.nav.cta}</Button>
+          </div>
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-lg border border-edge text-foreground lg:hidden"
