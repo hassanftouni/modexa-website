@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Modexa — Technology built for modern businesses.";
+export const alt = "Modexa — Websites, business software, automation and Modexa POS.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -58,7 +58,7 @@ export default function OpenGraphImage() {
             color: "#e7edf3",
           }}
         >
-          Technology built for modern businesses.
+          Websites · Business software · Automation · Modexa POS
         </div>
       </div>
     ),

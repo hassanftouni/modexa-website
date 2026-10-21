@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": {
+      "en": "Customers",
+      "ar": "عملاؤنا"
+    },
+    "description": {
+      "en": "Businesses and professionals that work with Modexa.",
+      "ar": "شركات ومهنيون يعملون مع Modexa."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Customers",
+      "ar": "عملاؤنا"
+    },
+    "title": {
+      "en": "The businesses we work with.",
+      "ar": "الأعمال التي نعمل معها."
+    },
+    "highlight": {
+      "en": "we work with.",
+      "ar": "نعمل معها."
+    },
+    "description": {
+      "en": "We only list customers who have agreed to appear here.",
+      "ar": "لا نعرض إلا العملاء الذين وافقوا على الظهور هنا."
+    }
+  },
+  "emptyTitle": {
+    "en": "Customer stories are on their way.",
+    "ar": "قصص عملائنا في الطريق."
+  },
+  "emptyText": {
+    "en": "We're collecting approval from the businesses we work with before showing their names and logos. In the meantime, we're happy to tell you about relevant projects directly.",
+    "ar": "نحصل على موافقة الأعمال التي نعمل معها قبل عرض أسمائها وشعاراتها. وحتى ذلك الحين، يسعدنا أن نحدّثك مباشرة عن مشاريع مشابهة لما تحتاجه."
+  },
+  "testimonialsTitle": {
+    "en": "What clients say",
+    "ar": "ماذا يقول عملاؤنا"
+  },
+  "cta": {
+    "title": {
+      "en": "Become one of them.",
+      "ar": "كن واحدًا منهم."
+    },
+    "highlight": {
+      "en": "one of them.",
+      "ar": "واحدًا منهم."
+    },
+    "description": {
+      "en": "Whether you run a restaurant, a shop or a growing company — let's talk about what would help.",
+      "ar": "سواء كنت تدير مطعمًا أو متجرًا أو شركة نامية — لنتحدث عمّا يمكن أن يساعدك."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "seo": {
+    "title": {
+      "en": "Privacy policy",
+      "ar": "سياسة الخصوصية"
+    },
+    "description": {
+      "en": "How Modexa handles personal information on this website.",
+      "ar": "كيف تتعامل Modexa مع المعلومات الشخصية على هذا الموقع."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Legal",
+      "ar": "قانوني"
+    },
+    "title": {
+      "en": "Privacy policy",
+      "ar": "سياسة الخصوصية"
+    },
+    "highlight": {
+      "en": "",
+      "ar": ""
+    },
+    "description": {
+      "en": "How Modexa handles personal information on this website.",
+      "ar": "كيف تتعامل Modexa مع المعلومات الشخصية على هذا الموقع."
+    }
+  },
+  "updated": {
+    "en": "Last updated: October 2026",
+    "ar": "آخر تحديث: تشرين الأول/أكتوبر 2026"
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "What information we collect",
+        "ar": "ما المعلومات التي نجمعها"
+      },
+      "body": {
+        "en": "When you use the contact or quote forms, you may give us your name, business name, email address, phone number, country and a description of your project. We only collect what you choose to send.",
+        "ar": "عند استخدام نموذج التواصل أو نموذج طلب عرض السعر، قد تزوّدنا باسمك واسم نشاطك وبريدك الإلكتروني ورقم هاتفك وبلدك ووصف لمشروعك. لا نجمع إلا ما تختار إرساله."
+      }
+    },
+    {
+      "title": {
+        "en": "How we use it",
+        "ar": "كيف نستخدمها"
+      },
+      "body": {
+        "en": "We use the information to reply to your request, prepare quotes and talk with you about your project. We do not sell personal information, and we do not use it for unrelated marketing without your consent.",
+        "ar": "نستخدم هذه المعلومات للرد على طلبك وإعداد عروض الأسعار والتواصل معك بخصوص مشروعك. لا نبيع المعلومات الشخصية، ولا نستخدمها في تسويق غير ذي صلة دون موافقتك."
+      }
+    },
+    {
+      "title": {
+        "en": "Cookies",
+        "ar": "ملفات تعريف الارتباط"
+      },
+      "body": {
+        "en": "This website uses one small cookie to remember your language choice. It does not use tracking or advertising cookies. If analytics are added later, this policy will be updated.",
+        "ar": "يستخدم هذا الموقع ملف تعريف ارتباط صغيرًا واحدًا لتذكّر اللغة التي اخترتها، ولا يستخدم ملفات تتبّع أو إعلانات. وإذا أُضيفت أدوات إحصاء لاحقًا فسيتم تحديث هذه السياسة."
+      }
+    },
+    {
+      "title": {
+        "en": "Storage and security",
+        "ar": "التخزين والأمان"
+      },
+      "body": {
+        "en": "Form messages are delivered through a secure form service (Formspree). We take reasonable technical and organisational measures to protect the information you share with us.",
+        "ar": "تُرسل رسائل النماذج عبر خدمة نماذج آمنة (Formspree). ونتخذ تدابير تقنية وتنظيمية معقولة لحماية المعلومات التي تشاركها معنا."
+      }
+    },
+    {
+      "title": {
+        "en": "Your rights",
+        "ar": "حقوقك"
+      },
+      "body": {
+        "en": "You can ask what information we hold about you, ask us to correct it, or ask us to delete it. Email us and we will respond as soon as possible.",
+        "ar": "يمكنك أن تسألنا عن المعلومات التي نحتفظ بها عنك، أو تطلب تصحيحها أو حذفها. راسلنا عبر البريد الإلكتروني وسنرد في أقرب وقت ممكن."
+      }
+    }
+  ],
+  "contactLabel": {
+    "en": "Questions about privacy:",
+    "ar": "لأي سؤال حول الخصوصية:"
+  }
+}

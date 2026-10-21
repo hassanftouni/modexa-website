@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { HomePage } from "@/content/pages";
 import type { Customer, Testimonial } from "@/content/schema";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import type { Localized } from "@/lib/content";
 
 interface WhyModexaProps {
@@ -65,17 +66,7 @@ export function WhyModexa({ content, customers, testimonials }: WhyModexaProps) 
           <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.slice(0, 3).map((testimonial) => (
               <li key={testimonial.slug}>
-                <figure className="card-surface flex h-full flex-col gap-5 rounded-xl p-6">
-                  <blockquote className="flex-1 leading-relaxed text-soft">“{testimonial.quote}”</blockquote>
-                  <figcaption className="text-sm">
-                    <span className="font-semibold">{testimonial.author}</span>
-                    <span className="text-muted">
-                      {[testimonial.role, testimonial.company].filter(Boolean).join(", ")
-                        ? ` — ${[testimonial.role, testimonial.company].filter(Boolean).join(", ")}`
-                        : ""}
-                    </span>
-                  </figcaption>
-                </figure>
+                <TestimonialCard testimonial={testimonial} />
               </li>
             ))}
           </ul>

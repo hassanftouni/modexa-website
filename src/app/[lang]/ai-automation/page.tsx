@@ -1,178 +1,99 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CtaBanner } from "@/components/shared/CtaBanner";
+import { FinalCta } from "@/components/shared/FinalCta";
+import { ProcessTimeline } from "@/components/shared/ProcessTimeline";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
+import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Icon, type IconName } from "@/components/ui/icons";
-import { aiAgents, automationUseCases } from "@/content/automation";
+import { Icon } from "@/components/ui/icons";
+import { isLocale } from "@/i18n/config";
+import { getPage } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "AI & Automation",
-  description:
-    "AI agents, customer support automation, lead automation, booking automation, email workflows and reporting automation — designed around your business process by Modexa.",
-  alternates: { canonical: "/ai-automation" },
-  openGraph: {
-    title: "AI & Automation by Modexa",
-    description:
-      "Practical AI agents and automated workflows, designed around each customer's business process.",
-    url: "/ai-automation",
-  },
-};
+const path = "/ai-automation";
 
-const projectSteps: { title: string; description: string; icon: IconName }[] = [
-  {
-    title: "Map the process",
-    description:
-      "We study how the work happens today — where time is lost and what should stay human.",
-    icon: "search",
-  },
-  {
-    title: "Design the automation",
-    description:
-      "We define exactly what the agent or workflow will do, with clear boundaries and fallbacks.",
-    icon: "layers",
-  },
-  {
-    title: "Build & integrate",
-    description:
-      "We implement the solution and connect it to your website, tools and data.",
-    icon: "code",
-  },
-  {
-    title: "Monitor & improve",
-    description:
-      "We measure results, refine behaviour and expand the automation as it proves itself.",
-    icon: "chart",
-  },
-];
+export async function generateMetadata({ params }: PageProps<"/[lang]/ai-automation">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("ai-automation", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description });
+}
 
-export default function AiAutomationPage() {
+export default async function AiAutomationPage({ params }: PageProps<"/[lang]/ai-automation">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const page = getPage("ai-automation", lang);
+
   return (
     <>
       <PageHeader
-        eyebrow="AI & Automation"
-        title={
-          <>
-            Practical AI that works{" "}
-            <span className="text-emphasis">the way your business works.</span>
-          </>
-        }
-        description="Modexa designs every AI agent and automation around the customer's actual business process. AI handles the repetitive work — your team keeps the judgment, relationships and control."
+        eyebrow={page.header.eyebrow}
+        title={page.header.title}
+        highlight={page.header.highlight}
+        description={page.header.description}
       />
 
-      {/* AI agents */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16">
-        <SectionHeading
-          eyebrow="AI agents"
-          title="Intelligent agents for everyday business work"
-          description="Agents that answer, qualify, assist and organize — trained on your business knowledge."
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {aiAgents.map((agent, index) => (
-            <AnimatedContainer
-              key={agent.name}
-              delay={(index % 4) * 0.06}
-              className="h-full"
-            >
-              <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                  <Icon name={agent.icon} className="size-5" />
-                </span>
-                <h3 className="font-semibold">{agent.name}</h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  {agent.description}
-                </p>
-                {agent.availability ? (
-                  <p className="mt-auto text-xs text-muted/80 italic">
-                    {agent.availability}
-                  </p>
-                ) : null}
-              </article>
-            </AnimatedContainer>
-          ))}
-        </div>
-      </section>
-
-      {/* Automation services */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16">
-        <SectionHeading
-          eyebrow="Automation"
-          title="Workflows that run themselves"
-          description="From lead capture to reporting — repetitive processes automated end to end."
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {automationUseCases.map((useCase, index) => (
-            <AnimatedContainer
-              key={useCase.name}
-              delay={(index % 4) * 0.06}
-              className="h-full"
-            >
-              <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                  <Icon name={useCase.icon} className="size-5" />
-                </span>
-                <h3 className="font-semibold">{useCase.name}</h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  {useCase.description}
-                </p>
-                {useCase.availability ? (
-                  <p className="mt-auto text-xs text-muted/80 italic">
-                    {useCase.availability}
-                  </p>
-                ) : null}
-              </article>
-            </AnimatedContainer>
-          ))}
-        </div>
-      </section>
-
-      {/* How a project works */}
-      <section className="relative overflow-hidden py-16">
-        <div className="relative mx-auto w-full max-w-7xl px-6">
+      {/* AI assistants — few items, given room as a two-column list */}
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <SectionHeading
-            eyebrow="Process"
-            title="How an automation project works"
-            description="Every automation is designed based on the customer's business process — not the other way around."
+            eyebrow={page.agents.eyebrow}
+            title={page.agents.title}
+            description={page.agents.description}
+            className="lg:col-span-5"
           />
-          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {projectSteps.map((step, index) => (
-              <AnimatedContainer
-                key={step.title}
-                delay={index * 0.07}
-                className="h-full"
-              >
-                <li className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                    <Icon name={step.icon} className="size-5" />
-                  </span>
-                  <h3 className="font-semibold">
-                    <span className="mr-2 text-brand-accent">{index + 1}.</span>
-                    {step.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </li>
-              </AnimatedContainer>
+          <ul className="grid gap-x-10 sm:grid-cols-2 lg:col-span-7">
+            {page.agents.items.map((agent, index) => (
+              <li key={agent.name} className="border-t border-edge">
+                <AnimatedContainer delay={(index % 2) * 0.06} className="flex h-full flex-col gap-3 py-7">
+                  <Icon name={agent.icon} className="size-5 text-brand-accent" />
+                  <h3 className="text-lg font-semibold">{agent.name}</h3>
+                  <p className="leading-relaxed text-soft/80">{agent.description}</p>
+                  {agent.note ? <p className="mt-auto text-sm text-muted">{agent.note}</p> : null}
+                </AnimatedContainer>
+              </li>
             ))}
-          </ol>
-          <AnimatedContainer className="mx-auto mt-10 max-w-2xl text-center">
-            <p className="text-sm leading-relaxed text-muted">
-              A note on honesty: AI is a powerful assistant, not a replacement
-              for your team. Modexa automates the repetitive work so people can
-              focus on the parts of the business only people can do.
-            </p>
-          </AnimatedContainer>
+          </ul>
         </div>
-      </section>
+      </Section>
 
-      <CtaBanner
-        title="Curious what could be automated in your business?"
-        description="Request a consultation — Modexa will look at your workflow and show you where AI and automation can realistically save time."
-        primaryLabel="Request a Consultation"
-        primaryHref="/request-quote"
-        secondaryLabel="Contact Modexa"
-        secondaryHref="/contact"
+      {/* Automations — a compact, scannable table of use cases */}
+      <Section tone="light">
+        <SectionHeading
+          eyebrow={page.automations.eyebrow}
+          title={page.automations.title}
+          description={page.automations.description}
+        />
+        <ul className="mt-12 grid overflow-hidden rounded-xl border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "1px" }}>
+          {page.automations.items.map((item) => (
+            <li key={item.name} className="flex flex-col gap-3 bg-background p-6">
+              <Icon name={item.icon} className="size-5 text-brand-accent" />
+              <h3 className="font-semibold">{item.name}</h3>
+              <p className="text-sm leading-relaxed text-soft/80">{item.description}</p>
+              {item.note ? <p className="mt-auto text-xs text-muted">{item.note}</p> : null}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section>
+        <SectionHeading eyebrow={page.process.eyebrow} title={page.process.title} />
+        <div className="mt-14">
+          <ProcessTimeline steps={page.process.steps} />
+        </div>
+        <p className="mt-14 max-w-2xl border-s-2 border-brand ps-5 leading-relaxed text-soft/80">
+          {page.process.note}
+        </p>
+      </Section>
+
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
     </>
   );

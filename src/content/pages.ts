@@ -97,10 +97,107 @@ export interface ProductsPage {
   cta: CtaBlock;
 }
 
+interface IconItem {
+  icon: IconName;
+  name: T;
+  description: T;
+}
+
+export interface ServicesPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  jumpLabel: T;
+  labels: { problem: T; solution: T; benefits: T; features: T; examples: T; cta: T };
+  cta: CtaBlock;
+}
+
+export interface WebsitesPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  types: { eyebrow: T; title: T; items: IconItem[] };
+  standards: Heading & { items: T[] };
+  process: Heading;
+  cta: CtaBlock;
+}
+
+export interface AiAutomationPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  agents: Heading & { items: (IconItem & { note: T })[] };
+  automations: Heading & { items: (IconItem & { note: T })[] };
+  process: {
+    eyebrow: T;
+    title: T;
+    steps: { slug: string; icon: IconName; title: T; description: T }[];
+    note: T;
+  };
+  cta: CtaBlock;
+}
+
+export interface AboutPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  mission: { label: T; text: T };
+  vision: { label: T; text: T };
+  story: { eyebrow: T; title: T; paragraphs: T[] };
+  values: { eyebrow: T; title: T; items: { title: T; description: T }[] };
+  approach: { eyebrow: T; title: T; items: T[] };
+  cta: CtaBlock;
+}
+
+export interface PortfolioPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  cta: CtaBlock;
+}
+
+export interface CustomersPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  emptyTitle: T;
+  emptyText: T;
+  testimonialsTitle: T;
+  cta: CtaBlock;
+}
+
+export interface ContactPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  directTitle: T;
+  quoteHint: T;
+  quoteLink: T;
+  faqTitle: T;
+}
+
+export interface RequestQuotePage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  stepsTitle: T;
+  steps: { icon: IconName; title: T; description: T }[];
+}
+
+export interface LegalPage {
+  seo: Seo;
+  header: PageHeaderBlock;
+  updated: T;
+  sections: { title: T; body: T }[];
+  contactLabel: T;
+}
+
 export interface PageContent {
   home: HomePage;
   pos: PosPage;
   products: ProductsPage;
+  services: ServicesPage;
+  websites: WebsitesPage;
+  "ai-automation": AiAutomationPage;
+  about: AboutPage;
+  portfolio: PortfolioPage;
+  customers: CustomersPage;
+  contact: ContactPage;
+  "request-quote": RequestQuotePage;
+  privacy: LegalPage;
+  terms: LegalPage;
 }
 
 export type PageName = keyof PageContent;

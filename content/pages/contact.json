@@ -1,0 +1,46 @@
+{
+  "seo": {
+    "title": {
+      "en": "Contact",
+      "ar": "تواصل معنا"
+    },
+    "description": {
+      "en": "Contact Modexa about a website, Modexa POS, an AI assistant, automation or custom software. A person reads every message.",
+      "ar": "تواصل مع Modexa بخصوص موقع إلكتروني أو Modexa POS أو مساعد ذكاء اصطناعي أو أتمتة أو برمجيات مخصّصة. يقرأ رسالتك شخص من الفريق."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Contact",
+      "ar": "تواصل معنا"
+    },
+    "title": {
+      "en": "Let's talk about your project.",
+      "ar": "لنتحدث عن مشروعك."
+    },
+    "highlight": {
+      "en": "your project.",
+      "ar": "مشروعك."
+    },
+    "description": {
+      "en": "Tell us what you need in your own words — a website, a POS system, an AI assistant or something else — and get a personal reply.",
+      "ar": "أخبرنا بما تحتاجه بكلماتك الخاصة — موقعًا أو نظام نقاط بيع أو مساعد ذكاء اصطناعي أو غير ذلك — واحصل على رد شخصي."
+    }
+  },
+  "directTitle": {
+    "en": "Prefer email?",
+    "ar": "تفضّل البريد الإلكتروني؟"
+  },
+  "quoteHint": {
+    "en": "Have a project in mind? The quote form asks a few more questions so we can prepare a proper proposal.",
+    "ar": "لديك مشروع محدّد؟ نموذج طلب عرض السعر يطرح أسئلة إضافية لنتمكن من إعداد عرض مناسب."
+  },
+  "quoteLink": {
+    "en": "Request a quote instead",
+    "ar": "اطلب عرض سعر بدلًا من ذلك"
+  },
+  "faqTitle": {
+    "en": "Common questions",
+    "ar": "أسئلة شائعة"
+  }
+}

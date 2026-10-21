@@ -1,116 +1,74 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/layout/PageHeader";
-import { CtaBanner } from "@/components/shared/CtaBanner";
-import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { TestimonialCard } from "@/components/ui/TestimonialCard";
-import { Icon } from "@/components/ui/icons";
+import { notFound } from "next/navigation";
 import { CustomerExplorer } from "@/components/customers/CustomerExplorer";
-import { getCustomers, getTestimonials } from "@/lib/content";
+import { PageHeader } from "@/components/layout/PageHeader";
+import { FinalCta } from "@/components/shared/FinalCta";
+import { Section } from "@/components/ui/Section";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { isLocale } from "@/i18n/config";
+import { getCustomers, getPage, getTestimonials } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Customers",
-  description:
-    "The businesses and professionals Modexa works with — across restaurants, retail, services and more.",
-  alternates: { canonical: "/customers" },
-  openGraph: {
-    title: "Modexa Customers",
-    description: "Trusted by businesses and professionals across industries.",
-    url: "/customers",
-  },
-};
+const path = "/customers";
 
-export default function CustomersPage() {
-  const customers = getCustomers("en");
-  const featured = customers.filter((c) => c.featured);
-  const testimonials = getTestimonials("en");
+export async function generateMetadata({ params }: PageProps<"/[lang]/customers">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("customers", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description });
+}
+
+/*
+ * Only customers and testimonials published in Pages CMS appear here. Never
+ * publish a customer, logo or quote without that customer's approval.
+ */
+export default async function CustomersPage({ params }: PageProps<"/[lang]/customers">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const page = getPage("customers", lang);
+  const customers = getCustomers(lang);
+  const testimonials = getTestimonials(lang);
 
   return (
     <>
       <PageHeader
-        eyebrow="Customers"
-        title={
-          <>
-            Trusted by businesses{" "}
-            <span className="text-emphasis">and professionals.</span>
-          </>
-        }
-        description="The customers below are temporary placeholders — real, approved customer logos and stories will appear here as they are published through the CMS."
+        eyebrow={page.header.eyebrow}
+        title={page.header.title}
+        highlight={page.header.highlight}
+        description={page.header.description}
       />
 
-      {/* Explorer: search + filters + logo grid */}
-      <section className="mx-auto w-full max-w-7xl px-6 pb-20">
-        <AnimatedContainer>
+      <Section>
+        {customers.length > 0 ? (
           <CustomerExplorer customers={customers} />
-        </AnimatedContainer>
-      </section>
-
-      {/* Featured customer projects */}
-      {featured.length > 0 ? (
-        <section className="mx-auto w-full max-w-7xl px-6 py-16">
-          <SectionHeading
-            eyebrow="Featured"
-            title="Featured customer projects"
-            description="Success stories are being prepared — details coming soon."
-          />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((customer, index) => (
-              <AnimatedContainer
-                key={customer.slug}
-                delay={(index % 3) * 0.07}
-                className="h-full"
-              >
-                <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                  <p className="text-sm font-medium tracking-widest text-brand-accent uppercase">
-                    {customer.projectType}
-                  </p>
-                  <h3 className="text-lg font-semibold">{customer.name}</h3>
-                  <p className="text-sm text-muted">{customer.industry}</p>
-                  {customer.testimonial ? (
-                    <blockquote className="border-l-2 border-brand/40 pl-4 text-sm leading-relaxed text-foreground/90">
-                      “{customer.testimonial}”
-                    </blockquote>
-                  ) : null}
-                  <p className="mt-auto flex items-center gap-2 pt-2 text-xs text-muted italic">
-                    <Icon name="clock" className="size-3.5" />
-                    Success story coming soon
-                  </p>
-                </article>
-              </AnimatedContainer>
-            ))}
+        ) : (
+          <div className="flex max-w-2xl flex-col gap-4 border-s-2 border-brand ps-6">
+            <h2 className="text-2xl font-semibold">{page.emptyTitle}</h2>
+            <p className="text-lg leading-relaxed text-soft/80">{page.emptyText}</p>
           </div>
-        </section>
-      ) : null}
+        )}
 
-      {/* Testimonials */}
-      {testimonials.length > 0 ? (
-        <section className="mx-auto w-full max-w-7xl px-6 py-16">
-          <SectionHeading
-            eyebrow="Testimonials"
-            title="What customers say"
-            description="Temporary placeholder feedback — to be replaced with real, approved testimonials."
-          />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedContainer
-                key={testimonial.slug}
-                delay={(index % 3) * 0.07}
-                className="h-full"
-              >
-                <TestimonialCard testimonial={testimonial} />
-              </AnimatedContainer>
-            ))}
+        {testimonials.length > 0 ? (
+          <div className="mt-20">
+            <h2 className="text-sm font-medium text-muted">{page.testimonialsTitle}</h2>
+            <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((testimonial) => (
+                <li key={testimonial.slug}>
+                  <TestimonialCard testimonial={testimonial} />
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
-      ) : null}
+        ) : null}
+      </Section>
 
-      <CtaBanner
-        title="Become the next Modexa success story"
-        description="Whether you run a restaurant, a store or a growing company — Modexa builds the technology that helps you work smarter."
-        primaryLabel="Start Your Project"
-        primaryHref="/request-quote"
-        secondaryLabel="Contact Modexa"
-        secondaryHref="/contact"
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
     </>
   );

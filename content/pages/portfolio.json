@@ -1,0 +1,52 @@
+{
+  "seo": {
+    "title": {
+      "en": "Our work",
+      "ar": "أعمالنا"
+    },
+    "description": {
+      "en": "Projects built by Modexa — point-of-sale software, websites and more.",
+      "ar": "مشاريع بنتها Modexa — برمجيات نقاط بيع ومواقع إلكترونية وغيرها."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Our work",
+      "ar": "أعمالنا"
+    },
+    "title": {
+      "en": "Work we've built.",
+      "ar": "أعمال قمنا ببنائها."
+    },
+    "highlight": {
+      "en": "we've built.",
+      "ar": "قمنا ببنائها."
+    },
+    "description": {
+      "en": "A selection of Modexa projects. We publish client work once the client has approved it, so this page grows over time.",
+      "ar": "مختارات من مشاريع Modexa. ننشر أعمال العملاء بعد موافقتهم، لذلك تتوسع هذه الصفحة مع الوقت."
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "Want your project here?",
+      "ar": "تريد أن يكون مشروعك هنا؟"
+    },
+    "highlight": {
+      "en": "your project",
+      "ar": "مشروعك"
+    },
+    "description": {
+      "en": "Start with a conversation. We'll scope your idea and turn it into something worth showing.",
+      "ar": "ابدأ بمحادثة، وسنحدّد نطاق فكرتك ونحوّلها إلى عمل يستحق العرض."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

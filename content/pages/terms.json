@@ -1,0 +1,90 @@
+{
+  "seo": {
+    "title": {
+      "en": "Terms of service",
+      "ar": "شروط الاستخدام"
+    },
+    "description": {
+      "en": "The terms for using the Modexa website.",
+      "ar": "شروط استخدام موقع Modexa."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Legal",
+      "ar": "قانوني"
+    },
+    "title": {
+      "en": "Terms of service",
+      "ar": "شروط الاستخدام"
+    },
+    "highlight": {
+      "en": "",
+      "ar": ""
+    },
+    "description": {
+      "en": "The terms for using the Modexa website.",
+      "ar": "شروط استخدام موقع Modexa."
+    }
+  },
+  "updated": {
+    "en": "Last updated: October 2026",
+    "ar": "آخر تحديث: تشرين الأول/أكتوبر 2026"
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "About this website",
+        "ar": "عن هذا الموقع"
+      },
+      "body": {
+        "en": "This website presents the services and products of Modexa, a software company building websites, business software, AI and automation solutions. Its content is general information about what Modexa offers.",
+        "ar": "يعرض هذا الموقع خدمات ومنتجات Modexa، وهي شركة برمجيات تبني المواقع الإلكترونية وبرمجيات الأعمال وحلول الذكاء الاصطناعي والأتمتة. ومحتواه معلومات عامة عمّا تقدّمه Modexa."
+      }
+    },
+    {
+      "title": {
+        "en": "Quotes and projects",
+        "ar": "عروض الأسعار والمشاريع"
+      },
+      "body": {
+        "en": "Information sent through the contact and quote forms is a request for a proposal, not a binding order. Every project is governed by its own agreement and quote, including scope, price, timeline and support terms.",
+        "ar": "المعلومات المرسلة عبر نموذجَي التواصل وطلب عرض السعر هي طلب لعرض، وليست طلبًا ملزمًا. يخضع كل مشروع لاتفاقيته وعرض سعره الخاصين، بما في ذلك النطاق والسعر والجدول الزمني وشروط الدعم."
+      }
+    },
+    {
+      "title": {
+        "en": "Intellectual property",
+        "ar": "الملكية الفكرية"
+      },
+      "body": {
+        "en": "The Modexa name, logo and the content of this website belong to Modexa and may not be copied or reused without permission. Other trademarks mentioned belong to their owners.",
+        "ar": "اسم Modexa وشعارها ومحتوى هذا الموقع ملك لـ Modexa، ولا يجوز نسخها أو إعادة استخدامها دون إذن. والعلامات التجارية الأخرى المذكورة ملك لأصحابها."
+      }
+    },
+    {
+      "title": {
+        "en": "Accuracy of information",
+        "ar": "دقة المعلومات"
+      },
+      "body": {
+        "en": "We work to keep this website accurate and up to date. Product features, including those of Modexa POS, may change over time; the exact scope of any delivery is set out in the project agreement. The interactive POS demonstration uses sample data.",
+        "ar": "نحرص على إبقاء هذا الموقع دقيقًا ومحدّثًا. قد تتغيّر ميزات المنتجات، بما فيها Modexa POS، مع الوقت، ويُحدَّد النطاق الدقيق لأي تسليم في اتفاقية المشروع. ويستخدم العرض التفاعلي لنظام نقاط البيع بيانات تجريبية."
+      }
+    },
+    {
+      "title": {
+        "en": "Liability",
+        "ar": "المسؤولية"
+      },
+      "body": {
+        "en": "This website is provided as is. Modexa is not liable for damages arising from the use of the website itself. Responsibilities for delivered projects are defined in each project's agreement.",
+        "ar": "يُقدَّم هذا الموقع كما هو، ولا تتحمّل Modexa مسؤولية أي أضرار ناتجة عن استخدام الموقع نفسه. وتُحدَّد المسؤوليات المتعلقة بالمشاريع المسلَّمة في اتفاقية كل مشروع."
+      }
+    }
+  ],
+  "contactLabel": {
+    "en": "Questions about these terms:",
+    "ar": "لأي سؤال حول هذه الشروط:"
+  }
+}

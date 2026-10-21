@@ -1,134 +1,91 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CtaBanner } from "@/components/shared/CtaBanner";
+import { FinalCta } from "@/components/shared/FinalCta";
+import { ProcessTimeline } from "@/components/shared/ProcessTimeline";
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
+import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/icons";
-import { processSteps } from "@/content/process";
-import { websiteQualities, websiteTypes } from "@/content/websiteTypes";
+import { isLocale } from "@/i18n/config";
+import { getPage, getProcessSteps } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Website Development",
-  description:
-    "Business websites, portfolio websites, landing pages, e-commerce, restaurant websites, SaaS websites and custom web platforms — designed and built by Modexa.",
-  alternates: { canonical: "/websites" },
-  openGraph: {
-    title: "Website Development by Modexa",
-    description:
-      "Responsive, fast, SEO-ready websites with modern design and secure deployment.",
-    url: "/websites",
-  },
-};
+const path = "/websites";
 
-export default function WebsitesPage() {
+export async function generateMetadata({ params }: PageProps<"/[lang]/websites">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("websites", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description });
+}
+
+export default async function WebsitesPage({ params }: PageProps<"/[lang]/websites">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const page = getPage("websites", lang);
+
   return (
     <>
       <PageHeader
-        eyebrow="Websites"
-        title={
-          <>
-            Websites designed to{" "}
-            <span className="text-emphasis">represent and convert.</span>
-          </>
-        }
-        description="Every Modexa website is responsive, fast, accessible and SEO-ready — built with modern tools and deployed securely."
+        eyebrow={page.header.eyebrow}
+        title={page.header.title}
+        highlight={page.header.highlight}
+        description={page.header.description}
       />
 
-      {/* Website types */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16">
-        <SectionHeading
-          eyebrow="What we build"
-          title="A website for every kind of business"
-          description="From focused landing pages to complete custom web platforms."
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {websiteTypes.map((type, index) => (
-            <AnimatedContainer
-              key={type.name}
-              delay={(index % 4) * 0.06}
-              className="h-full"
-            >
-              <article className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                  <Icon name={type.icon} className="size-5" />
-                </span>
-                <h3 className="font-semibold">{type.name}</h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  {type.description}
-                </p>
-              </article>
-            </AnimatedContainer>
+      <Section>
+        <SectionHeading eyebrow={page.types.eyebrow} title={page.types.title} />
+        <ul className="mt-14 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+          {page.types.items.map((type, index) => (
+            <li key={type.name} className="border-t border-edge">
+              <AnimatedContainer delay={(index % 4) * 0.05} className="flex flex-col gap-3 py-7">
+                <Icon name={type.icon} className="size-5 text-brand-accent" />
+                <h3 className="text-lg font-semibold">{type.name}</h3>
+                <p className="leading-relaxed text-soft/75">{type.description}</p>
+              </AnimatedContainer>
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
+      </Section>
 
-      {/* Qualities */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16">
-        <SectionHeading
-          eyebrow="Standards"
-          title="What every Modexa website includes"
-          description="These aren't optional extras — they're the baseline of every website we deliver."
-        />
-        <AnimatedContainer className="mt-10">
-          <ul className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
-            {websiteQualities.map((quality) => (
-              <li
-                key={quality}
-                className="card-surface flex items-center gap-3 rounded-xl px-5 py-3.5 text-sm"
-              >
-                <Icon name="check" className="size-4 shrink-0 text-brand-accent" />
-                {quality}
+      <Section tone="light">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <SectionHeading
+            eyebrow={page.standards.eyebrow}
+            title={page.standards.title}
+            description={page.standards.description}
+            className="lg:col-span-5"
+          />
+          <ul className="grid content-start gap-x-8 border-t border-edge sm:grid-cols-2 lg:col-span-7">
+            {page.standards.items.map((item) => (
+              <li key={item} className="flex items-start gap-3 border-b border-edge py-4 text-soft">
+                <Icon name="check" className="mt-1 size-4 shrink-0 text-brand-accent" />
+                {item}
               </li>
             ))}
           </ul>
-        </AnimatedContainer>
-      </section>
-
-      {/* Process */}
-      <section className="relative overflow-hidden py-16">
-        <div className="relative mx-auto w-full max-w-7xl px-6">
-          <SectionHeading
-            eyebrow="Process"
-            title="From first conversation to launch"
-            description="A structured development process keeps your project clear, predictable and on track."
-          />
-          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step, index) => (
-              <AnimatedContainer
-                key={step.step}
-                delay={(index % 4) * 0.06}
-                className="h-full"
-              >
-                <li className="card-surface flex h-full flex-col gap-3 rounded-2xl p-6">
-                  <span className="flex size-10 items-center justify-center rounded-xl border border-brand/30 bg-brand/10 text-brand">
-                    <Icon name={step.icon} className="size-5" />
-                  </span>
-                  <h3 className="font-semibold">
-                    <span className="mr-2 text-brand-accent">{step.step}.</span>
-                    {step.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </li>
-              </AnimatedContainer>
-            ))}
-          </ol>
         </div>
-      </section>
+      </Section>
 
-      <CtaBanner
-        title={
-          <>
-            Ready for a website that{" "}
-            works as hard as you do?
-          </>
-        }
-        description="Tell Modexa about your business and get a custom quote — no templates, no fixed price lists, no obligation."
-        primaryLabel="Request a Quote"
-        primaryHref="/request-quote"
-        secondaryLabel="See Our Services"
-        secondaryHref="/services"
+      <Section>
+        <SectionHeading
+          eyebrow={page.process.eyebrow}
+          title={page.process.title}
+          description={page.process.description}
+        />
+        <div className="mt-14">
+          <ProcessTimeline steps={getProcessSteps(lang)} />
+        </div>
+      </Section>
+
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
     </>
   );

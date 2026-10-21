@@ -1,0 +1,69 @@
+{
+  "seo": {
+    "title": {
+      "en": "Request a quote",
+      "ar": "اطلب عرض سعر"
+    },
+    "description": {
+      "en": "Describe your project and receive a custom quote from Modexa. Every request is reviewed by a person — nothing is priced automatically.",
+      "ar": "صِف مشروعك واحصل على عرض سعر مخصّص من Modexa. يراجع كل طلب شخصٌ من الفريق — لا يُحتسب أي سعر آليًا."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Request a quote",
+      "ar": "اطلب عرض سعر"
+    },
+    "title": {
+      "en": "Tell us about your project.",
+      "ar": "أخبرنا عن مشروعك."
+    },
+    "highlight": {
+      "en": "your project.",
+      "ar": "مشروعك."
+    },
+    "description": {
+      "en": "The more we understand about your business and goals, the better our recommendation. Prices are never calculated automatically — a person reviews every request.",
+      "ar": "كلما فهمنا عملك وأهدافك أكثر، كانت توصيتنا أفضل. لا تُحتسب الأسعار آليًا أبدًا — يراجع كل طلب شخصٌ من الفريق."
+    }
+  },
+  "stepsTitle": {
+    "en": "What happens next",
+    "ar": "ماذا يحدث بعد ذلك"
+  },
+  "steps": [
+    {
+      "icon": "search",
+      "title": {
+        "en": "We read your request",
+        "ar": "نقرأ طلبك"
+      },
+      "description": {
+        "en": "A real person reviews your project details.",
+        "ar": "يراجع شخص حقيقي تفاصيل مشروعك."
+      }
+    },
+    {
+      "icon": "message",
+      "title": {
+        "en": "We ask what's missing",
+        "ar": "نسأل عمّا ينقص"
+      },
+      "description": {
+        "en": "If anything is unclear, we follow up to understand your goals properly.",
+        "ar": "إن كان هناك ما هو غير واضح، نتواصل معك لفهم أهدافك جيدًا."
+      }
+    },
+    {
+      "icon": "fileText",
+      "title": {
+        "en": "You receive a proposal",
+        "ar": "تتلقّى عرضًا"
+      },
+      "description": {
+        "en": "A clear proposal with scope, approach and price — with no obligation.",
+        "ar": "عرض واضح يتضمن النطاق والطريقة والسعر — دون أي التزام."
+      }
+    }
+  ]
+}

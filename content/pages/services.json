@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": {
+      "en": "Services",
+      "ar": "الخدمات"
+    },
+    "description": {
+      "en": "Websites, online stores, web applications, AI agents, business automation, custom software, system integrations and support — from one team at Modexa.",
+      "ar": "مواقع إلكترونية ومتاجر وتطبيقات ويب ووكلاء ذكاء اصطناعي وأتمتة أعمال وبرمجيات مخصّصة وربط أنظمة ودعم — من فريق واحد في Modexa."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Services",
+      "ar": "الخدمات"
+    },
+    "title": {
+      "en": "Technology built around your business.",
+      "ar": "تقنية مبنية حول عملك."
+    },
+    "highlight": {
+      "en": "around your business.",
+      "ar": "حول عملك."
+    },
+    "description": {
+      "en": "Every service starts with a real problem and ends with something that works. No fixed packages and no price lists — each project gets its own quote.",
+      "ar": "كل خدمة تبدأ بمشكلة حقيقية وتنتهي بحلّ يعمل فعلًا. لا باقات جاهزة ولا قوائم أسعار — لكل مشروع عرض سعر خاص به."
+    }
+  },
+  "jumpLabel": {
+    "en": "Jump to a service",
+    "ar": "انتقل إلى خدمة"
+  },
+  "labels": {
+    "problem": {
+      "en": "The problem",
+      "ar": "المشكلة"
+    },
+    "solution": {
+      "en": "How we help",
+      "ar": "كيف نساعدك"
+    },
+    "benefits": {
+      "en": "What you get",
+      "ar": "ما الذي تحصل عليه"
+    },
+    "features": {
+      "en": "Can include",
+      "ar": "قد يشمل"
+    },
+    "examples": {
+      "en": "Typical projects",
+      "ar": "مشاريع نموذجية"
+    },
+    "cta": {
+      "en": "Ask about this",
+      "ar": "اسأل عن هذه الخدمة"
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "Not sure which service fits?",
+      "ar": "لست متأكدًا أي خدمة تناسبك؟"
+    },
+    "highlight": {
+      "en": "which service fits?",
+      "ar": "أي خدمة تناسبك؟"
+    },
+    "description": {
+      "en": "Describe your goal in your own words. We'll recommend the right solution — a website, an application, automation or a mix.",
+      "ar": "صِف هدفك بكلماتك الخاصة، وسنقترح الحل المناسب — موقعًا أو تطبيقًا أو أتمتة أو مزيجًا منها."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

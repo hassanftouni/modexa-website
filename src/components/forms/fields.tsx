@@ -9,7 +9,7 @@ import type {
 /** Shared, accessible form controls used by ContactForm and QuoteForm. */
 
 const controlClasses =
-  "w-full rounded-xl border border-edge bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted/70 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent aria-[invalid=true]:border-red-400/60";
+  "w-full rounded-lg border border-edge bg-background px-4 py-3 text-[0.9375rem] text-foreground placeholder:text-muted/80 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent aria-[invalid=true]:border-red-400/60";
 
 interface FieldWrapperProps {
   id: string;
@@ -25,7 +25,7 @@ function FieldWrapper({ id, label, required, error, children }: FieldWrapperProp
       <label htmlFor={id} className="text-sm font-medium">
         {label}
         {required ? (
-          <span className="ml-1 text-brand-accent" aria-hidden="true">
+          <span className="ms-1 text-brand-accent" aria-hidden="true">
             *
           </span>
         ) : null}
@@ -95,8 +95,8 @@ interface SelectFieldProps extends SelectHTMLAttributes<HTMLSelectElement> {
   id: string;
   label: string;
   error?: string;
-  options: string[];
-  placeholder?: string;
+  options: { value: string; label: string }[];
+  placeholder: string;
 }
 
 export function SelectField({
@@ -105,7 +105,7 @@ export function SelectField({
   error,
   required,
   options,
-  placeholder = "Select an option",
+  placeholder,
   ...props
 }: SelectFieldProps) {
   return (
@@ -124,8 +124,8 @@ export function SelectField({
           {placeholder}
         </option>
         {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
+          <option key={option.value} value={option.value}>
+            {option.label}
           </option>
         ))}
       </select>
@@ -162,38 +162,6 @@ export function CheckboxField({ id, label, error, ...props }: CheckboxFieldProps
     </div>
   );
 }
-
-/** Service options shared by both forms. */
-export const serviceOptions = [
-  "Modexa POS",
-  "Business Website",
-  "Portfolio Website",
-  "E-commerce Website",
-  "Web Application",
-  "AI Agent",
-  "Business Automation",
-  "Custom Software",
-  "API Integration",
-  "Other",
-];
-
-export const budgetOptions = [
-  "To be discussed",
-  "Under $1,000",
-  "$1,000 – $5,000",
-  "$5,000 – $15,000",
-  "$15,000+",
-];
-
-export const timelineOptions = [
-  "Flexible",
-  "Within 1 month",
-  "1 – 3 months",
-  "3 – 6 months",
-  "6+ months",
-];
-
-export const contactMethodOptions = ["Email", "Phone", "WhatsApp"];
 
 export function isValidEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);

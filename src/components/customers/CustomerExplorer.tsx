@@ -1,138 +1,84 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Icon } from "@/components/ui/icons";
-import type { Customer as RawCustomer } from "@/content/schema";
+import { useI18n } from "@/i18n/client";
+import type { Customer } from "@/content/schema";
 import type { Localized } from "@/lib/content";
-type Customer = Localized<RawCustomer>;
 
 /*
- * Customer records come from content/customers/ (managed via Pages CMS).
- * Current entries are neutral placeholders — replace them with real, approved
- * customers through the CMS before launch.
+ * Published customers from content/customers/ (Pages CMS). The search box
+ * only appears once the list is long enough to need it.
  */
-export function CustomerExplorer({ customers }: { customers: Customer[] }) {
+export function CustomerExplorer({ customers }: { customers: Localized<Customer>[] }) {
+  const { dict } = useI18n();
   const [query, setQuery] = useState("");
-  const [industry, setIndustry] = useState("all");
-  const [projectType, setProjectType] = useState("all");
 
-  const industries = useMemo(
-    () => [...new Set(customers.map((customer) => customer.industry))].sort(),
-    [customers]
+  const needle = query.trim().toLowerCase();
+  const visible = customers.filter(
+    (customer) =>
+      !needle ||
+      customer.name.toLowerCase().includes(needle) ||
+      customer.industry.toLowerCase().includes(needle)
   );
-  const projectTypes = useMemo(
-    () => [...new Set(customers.map((customer) => customer.projectType))].sort(),
-    [customers]
-  );
-
-  const visible = customers.filter((customer) => {
-    const matchesQuery = customer.name
-      .toLowerCase()
-      .includes(query.trim().toLowerCase());
-    const matchesIndustry =
-      industry === "all" || customer.industry === industry;
-    const matchesType =
-      projectType === "all" || customer.projectType === projectType;
-    return matchesQuery && matchesIndustry && matchesType;
-  });
-
-  const selectClasses =
-    "rounded-full border border-edge bg-surface px-4 py-2 text-sm text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent";
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <div className="relative w-full max-w-xs">
+      {customers.length > 8 ? (
+        <div className="relative max-w-sm">
           <Icon
             name="search"
-            className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted"
+            className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-muted"
           />
           <label htmlFor="customer-search" className="sr-only">
-            Search customers
+            {dict.customers.searchLabel}
           </label>
           <input
             id="customer-search"
             type="search"
-            placeholder="Search customers…"
+            placeholder={dict.customers.searchPlaceholder}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            className="w-full rounded-full border border-edge bg-surface py-2 pr-4 pl-10 text-sm placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent"
+            className="h-11 w-full rounded-lg border border-edge bg-surface ps-11 pe-4 text-sm placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent"
           />
         </div>
-        <label htmlFor="industry-filter" className="sr-only">
-          Filter by industry
-        </label>
-        <select
-          id="industry-filter"
-          value={industry}
-          onChange={(event) => setIndustry(event.target.value)}
-          className={selectClasses}
-        >
-          <option value="all">All industries</option>
-          {industries.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="project-type-filter" className="sr-only">
-          Filter by project type
-        </label>
-        <select
-          id="project-type-filter"
-          value={projectType}
-          onChange={(event) => setProjectType(event.target.value)}
-          className={selectClasses}
-        >
-          <option value="all">All project types</option>
-          {projectTypes.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-      </div>
+      ) : null}
 
       {visible.length > 0 ? (
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <ul className="grid gap-px overflow-hidden rounded-xl border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((customer) => (
-            <li
-              key={customer.slug}
-              className="card-surface flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-colors hover:border-white/20"
-            >
-              <Image
-                src={customer.logo}
-                alt={`${customer.name} logo`}
-                width={140}
-                height={70}
-                className="h-10 w-auto object-contain opacity-80"
-              />
-              <div>
-                <p className="text-sm font-medium">{customer.name}</p>
-                <p className="mt-0.5 text-xs text-muted">
-                  {customer.industry} · {customer.projectType}
-                </p>
-              </div>
-              {customer.website ? (
-                <a
-                  href={customer.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs text-brand-accent hover:text-white"
-                >
-                  Visit website
-                  <Icon name="arrowUpRight" className="size-3" />
-                  <span className="sr-only"> of {customer.name}</span>
-                </a>
+            <li key={customer.slug} className="flex items-center gap-5 bg-background p-6">
+              {customer.logo ? (
+                <Image
+                  src={customer.logo}
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="size-14 shrink-0 rounded-lg border border-edge object-contain"
+                />
               ) : null}
+              <div className="flex min-w-0 flex-col gap-1">
+                <p className="font-semibold">{customer.name}</p>
+                <p className="text-sm text-muted">{customer.industry}</p>
+                {customer.website ? (
+                  <a
+                    href={customer.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-1 text-sm text-brand-accent underline-offset-4 hover:underline"
+                  >
+                    {dict.common.visitWebsite}
+                    <Icon name="arrowUpRight" className="size-3.5" />
+                    <span className="sr-only"> — {customer.name}</span>
+                  </a>
+                ) : null}
+              </div>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="py-12 text-center text-muted">
-          No customers match your filters yet.
-        </p>
+        <p className="py-12 text-center text-muted">{dict.customers.empty}</p>
       )}
     </div>
   );

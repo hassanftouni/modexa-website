@@ -1,57 +1,46 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CtaBanner } from "@/components/shared/CtaBanner";
-import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
 import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
-import { getPortfolioProjects } from "@/lib/content";
+import { FinalCta } from "@/components/shared/FinalCta";
+import { Section } from "@/components/ui/Section";
+import { isLocale } from "@/i18n/config";
+import { getPage, getPortfolioProjects } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description:
-    "A preview of the kind of work Modexa delivers — POS systems, business websites, portfolio websites, AI solutions, automation systems and web applications.",
-  alternates: { canonical: "/portfolio" },
-  openGraph: {
-    title: "Modexa Portfolio",
-    description:
-      "POS systems, websites, AI solutions and web applications built by Modexa.",
-    url: "/portfolio",
-  },
-};
+const path = "/portfolio";
 
-/*
- * Projects are managed through Pages CMS in content/portfolio/.
- * Current entries are clearly-labelled concept placeholders; real projects
- * replace them without any code changes.
- */
-export default function PortfolioPage() {
-  const projects = getPortfolioProjects("en");
+export async function generateMetadata({ params }: PageProps<"/[lang]/portfolio">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { seo } = getPage("portfolio", lang);
+  return pageMetadata({ locale: lang, path, title: seo.title, description: seo.description });
+}
+
+/* Projects are managed in Pages CMS (content/portfolio/); only published ones appear. */
+export default async function PortfolioPage({ params }: PageProps<"/[lang]/portfolio">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const page = getPage("portfolio", lang);
 
   return (
     <>
       <PageHeader
-        eyebrow="Portfolio"
-        title={
-          <>
-            Work that shows{" "}
-            <span className="text-emphasis">what Modexa can build.</span>
-          </>
-        }
-        description="The projects below are concept placeholders illustrating the kind of work Modexa delivers — real customer projects will be published here as they are approved."
+        eyebrow={page.header.eyebrow}
+        title={page.header.title}
+        highlight={page.header.highlight}
+        description={page.header.description}
       />
-
-      <section className="mx-auto w-full max-w-7xl px-6 pb-24">
-        <AnimatedContainer>
-          <PortfolioGrid projects={projects} />
-        </AnimatedContainer>
-      </section>
-
-      <CtaBanner
-        title="Want your project on this page?"
-        description="Start with a conversation. Modexa will scope your idea and turn it into a product worth showing off."
-        primaryLabel="Start Your Project"
-        primaryHref="/request-quote"
-        secondaryLabel="Contact Modexa"
-        secondaryHref="/contact"
+      <Section>
+        <PortfolioGrid projects={getPortfolioProjects(lang)} />
+      </Section>
+      <FinalCta
+        title={page.cta.title}
+        highlight={page.cta.highlight}
+        description={page.cta.description}
+        primaryLabel={page.cta.primaryCta}
+        secondaryLabel={page.cta.secondaryCta}
       />
     </>
   );

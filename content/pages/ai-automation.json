@@ -1,0 +1,328 @@
+{
+  "seo": {
+    "title": {
+      "en": "AI & automation",
+      "ar": "الذكاء الاصطناعي والأتمتة"
+    },
+    "description": {
+      "en": "AI assistants that answer customers and automated workflows for follow-ups, bookings, reminders and reports — designed around how your business works.",
+      "ar": "مساعدو ذكاء اصطناعي يجيبون العملاء، وإجراءات تلقائية للمتابعات والحجوزات والتذكيرات والتقارير — مصمّمة حول طريقة عملك."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "AI & automation",
+      "ar": "الذكاء الاصطناعي والأتمتة"
+    },
+    "title": {
+      "en": "Let software handle the repetitive work.",
+      "ar": "دع البرمجيات تتولّى العمل المتكرر."
+    },
+    "highlight": {
+      "en": "the repetitive work.",
+      "ar": "العمل المتكرر."
+    },
+    "description": {
+      "en": "We design AI assistants and automations around how your business already works. They take care of the routine — your team keeps the judgment, the relationships and the final say.",
+      "ar": "نصمّم مساعدي الذكاء الاصطناعي والأتمتة حول طريقة عملك الحالية. يتولّون الأعمال الروتينية، ويبقى لفريقك التقدير والعلاقات والقرار الأخير."
+    }
+  },
+  "agents": {
+    "eyebrow": {
+      "en": "AI assistants",
+      "ar": "مساعدو الذكاء الاصطناعي"
+    },
+    "title": {
+      "en": "Assistants for everyday business work.",
+      "ar": "مساعدون للعمل اليومي."
+    },
+    "description": {
+      "en": "They learn from your own business information and hand over to a person when needed.",
+      "ar": "يتعلّمون من معلومات عملك، ويحوّلون الأمر إلى أحد موظفيك عند الحاجة."
+    },
+    "items": [
+      {
+        "icon": "message",
+        "name": {
+          "en": "Customer support assistant",
+          "ar": "مساعد دعم العملاء"
+        },
+        "description": {
+          "en": "Answers customer questions from your information, around the clock.",
+          "ar": "يجيب عن أسئلة العملاء من معلوماتك، على مدار الساعة."
+        },
+        "note": {
+          "en": "Built to your requirements.",
+          "ar": "يُبنى حسب متطلباتك."
+        }
+      },
+      {
+        "icon": "users",
+        "name": {
+          "en": "Enquiry assistant",
+          "ar": "مساعد الاستفسارات"
+        },
+        "description": {
+          "en": "Collects details, asks the right questions and passes serious enquiries to your team.",
+          "ar": "يجمع التفاصيل ويطرح الأسئلة الصحيحة ويحوّل الاستفسارات الجادة إلى فريقك."
+        },
+        "note": {
+          "en": "Built to your requirements.",
+          "ar": "يُبنى حسب متطلباتك."
+        }
+      },
+      {
+        "icon": "calendar",
+        "name": {
+          "en": "Booking assistant",
+          "ar": "مساعد الحجوزات"
+        },
+        "description": {
+          "en": "Helps customers find a time and request a booking without waiting for a reply.",
+          "ar": "يساعد العملاء على إيجاد موعد وطلب الحجز دون انتظار الرد."
+        },
+        "note": {
+          "en": "Built to your requirements.",
+          "ar": "يُبنى حسب متطلباتك."
+        }
+      },
+      {
+        "icon": "bot",
+        "name": {
+          "en": "Website or WhatsApp chat",
+          "ar": "محادثة على الموقع أو واتساب"
+        },
+        "description": {
+          "en": "Chat on your website, with messaging channels such as WhatsApp available depending on the project.",
+          "ar": "محادثة على موقعك، مع إمكانية قنوات مراسلة مثل واتساب حسب المشروع."
+        },
+        "note": {
+          "en": "Built to your requirements.",
+          "ar": "يُبنى حسب متطلباتك."
+        }
+      }
+    ]
+  },
+  "automations": {
+    "eyebrow": {
+      "en": "Automation",
+      "ar": "الأتمتة"
+    },
+    "title": {
+      "en": "Workflows that run themselves.",
+      "ar": "إجراءات تعمل من تلقاء نفسها."
+    },
+    "description": {
+      "en": "Repetitive steps handled automatically, from the first enquiry to the weekly report.",
+      "ar": "خطوات متكررة تُنجز تلقائيًا، من أول استفسار حتى التقرير الأسبوعي."
+    },
+    "items": [
+      {
+        "icon": "message",
+        "name": {
+          "en": "Customer support",
+          "ar": "دعم العملاء"
+        },
+        "description": {
+          "en": "Common questions answered instantly and requests routed to the right person.",
+          "ar": "إجابة فورية عن الأسئلة الشائعة وتوجيه الطلبات إلى الشخص المناسب."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "zap",
+        "name": {
+          "en": "Enquiry follow-up",
+          "ar": "متابعة الاستفسارات"
+        },
+        "description": {
+          "en": "New enquiries saved in one place and followed up automatically.",
+          "ar": "حفظ الاستفسارات الجديدة في مكان واحد ومتابعتها تلقائيًا."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "calendar",
+        "name": {
+          "en": "Bookings",
+          "ar": "الحجوزات"
+        },
+        "description": {
+          "en": "Requests, confirmations and reminders without the back-and-forth.",
+          "ar": "الطلبات والتأكيدات والتذكيرات دون مراسلات متكررة."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "mail",
+        "name": {
+          "en": "Email sequences",
+          "ar": "رسائل البريد التلقائية"
+        },
+        "description": {
+          "en": "Welcome messages, follow-ups and notices sent at the right moment.",
+          "ar": "رسائل الترحيب والمتابعة والتنبيهات تُرسل في الوقت المناسب."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "database",
+        "name": {
+          "en": "Data entry",
+          "ar": "إدخال البيانات"
+        },
+        "description": {
+          "en": "Copying and formatting between systems done for you.",
+          "ar": "النسخ والتنسيق بين الأنظمة يتم نيابةً عنك."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "chart",
+        "name": {
+          "en": "Reports",
+          "ar": "التقارير"
+        },
+        "description": {
+          "en": "Sales and operations reports prepared and delivered on schedule.",
+          "ar": "تقارير المبيعات والعمليات تُعدّ وتُرسل في موعدها."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "bot",
+        "name": {
+          "en": "Team notifications",
+          "ar": "تنبيهات الفريق"
+        },
+        "description": {
+          "en": "The right people alerted when an order, enquiry or issue needs attention.",
+          "ar": "تنبيه الأشخاص المعنيين عندما يحتاج طلب أو استفسار أو مشكلة إلى متابعة."
+        },
+        "note": {
+          "en": "",
+          "ar": ""
+        }
+      },
+      {
+        "icon": "cpu",
+        "name": {
+          "en": "AI in your existing tools",
+          "ar": "الذكاء الاصطناعي في أدواتك الحالية"
+        },
+        "description": {
+          "en": "AI features added to the tools and processes you already use.",
+          "ar": "ميزات ذكاء اصطناعي تُضاف إلى الأدوات والإجراءات التي تستخدمها حاليًا."
+        },
+        "note": {
+          "en": "Built to your requirements.",
+          "ar": "يُبنى حسب متطلباتك."
+        }
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": {
+      "en": "How it works",
+      "ar": "كيف نعمل"
+    },
+    "title": {
+      "en": "Automation that fits — not the other way round.",
+      "ar": "أتمتة تناسبك — لا العكس."
+    },
+    "steps": [
+      {
+        "slug": "map",
+        "icon": "search",
+        "title": {
+          "en": "Look at the work",
+          "ar": "ندرس العمل"
+        },
+        "description": {
+          "en": "We see how the work happens today, where time is lost and what should stay human.",
+          "ar": "نرى كيف يتم العمل اليوم، وأين يضيع الوقت، وما الذي يجب أن يبقى بيد الإنسان."
+        }
+      },
+      {
+        "slug": "design",
+        "icon": "layers",
+        "title": {
+          "en": "Agree what it does",
+          "ar": "نتفق على مهامه"
+        },
+        "description": {
+          "en": "We define exactly what the assistant or workflow will do, with clear limits.",
+          "ar": "نحدّد بدقة ما سيقوم به المساعد أو الإجراء التلقائي، مع حدود واضحة."
+        }
+      },
+      {
+        "slug": "build",
+        "icon": "code",
+        "title": {
+          "en": "Build and connect",
+          "ar": "نبني ونربط"
+        },
+        "description": {
+          "en": "We build it and connect it to your website, tools and information.",
+          "ar": "نبنيه ونربطه بموقعك وأدواتك ومعلوماتك."
+        }
+      },
+      {
+        "slug": "improve",
+        "icon": "chart",
+        "title": {
+          "en": "Measure and improve",
+          "ar": "نقيس ونطوّر"
+        },
+        "description": {
+          "en": "We check the results, refine it and extend it as it proves itself.",
+          "ar": "نراجع النتائج ونحسّنه ونوسّعه كلما أثبت فاعليته."
+        }
+      }
+    ],
+    "note": {
+      "en": "A note on honesty: AI is a helpful assistant, not a replacement for your team. We automate the repetitive parts so people can focus on what only people can do.",
+      "ar": "ملاحظة صادقة: الذكاء الاصطناعي مساعد مفيد، لا بديل عن فريقك. نؤتمت الأجزاء المتكررة ليتفرّغ الناس لما لا يستطيع غيرهم القيام به."
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "Curious what could be automated in your business?",
+      "ar": "هل تتساءل عمّا يمكن أتمتته في عملك؟"
+    },
+    "highlight": {
+      "en": "automated in your business?",
+      "ar": "أتمتته في عملك؟"
+    },
+    "description": {
+      "en": "Tell us how a typical day works. We'll show you where AI and automation can realistically save time.",
+      "ar": "حدّثنا عن يوم عمل عادي، وسنريك أين يمكن للذكاء الاصطناعي والأتمتة توفير الوقت فعلًا."
+    },
+    "primaryCta": {
+      "en": "Ask for a consultation",
+      "ar": "اطلب استشارة"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

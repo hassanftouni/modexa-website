@@ -1,30 +1,19 @@
-import type { Testimonial as RawTestimonial } from "@/content/schema";
+import type { Testimonial } from "@/content/schema";
 import type { Localized } from "@/lib/content";
-type Testimonial = Localized<RawTestimonial>;
-import { Icon } from "./icons";
 
 /*
- * IMPORTANT: All testimonials currently in content/testimonials/ are temporary
- * placeholders. They MUST be replaced with real, approved customer testimonials
- * (managed through Pages CMS) before the website launches. Never publish
- * fabricated claims attributed to real people or companies.
+ * Testimonials come from content/testimonials/ (Pages CMS). Only publish
+ * real quotes, with the customer's approval.
  */
-export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+export function TestimonialCard({ testimonial }: { testimonial: Localized<Testimonial> }) {
+  const attribution = [testimonial.role, testimonial.company].filter(Boolean).join(", ");
+
   return (
-    <figure className="card-surface flex h-full flex-col gap-4 rounded-2xl p-6">
-      <div className="flex gap-1 text-brand-accent" aria-hidden="true">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Icon key={i} name="star" className="size-4 fill-current" />
-        ))}
-      </div>
-      <blockquote className="flex-1 text-sm leading-relaxed text-foreground/90">
-        “{testimonial.quote}”
-      </blockquote>
-      <figcaption className="border-t border-edge pt-4 text-sm">
-        <p className="font-medium">{testimonial.author}</p>
-        <p className="text-muted">
-          {testimonial.role}, {testimonial.company}
-        </p>
+    <figure className="card-surface flex h-full flex-col gap-5 rounded-xl p-6">
+      <blockquote className="flex-1 leading-relaxed text-soft">“{testimonial.quote}”</blockquote>
+      <figcaption className="text-sm">
+        <span className="font-semibold">{testimonial.author}</span>
+        {attribution ? <span className="text-muted"> — {attribution}</span> : null}
       </figcaption>
     </figure>
   );

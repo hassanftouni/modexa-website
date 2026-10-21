@@ -1,0 +1,218 @@
+{
+  "seo": {
+    "title": {
+      "en": "Website development",
+      "ar": "تطوير المواقع الإلكترونية"
+    },
+    "description": {
+      "en": "Business websites, online stores, portfolios, landing pages and booking websites — fast, clear, comfortable on phones and easy to find on Google.",
+      "ar": "مواقع شركات ومتاجر إلكترونية ومواقع شخصية وصفحات هبوط ومواقع حجز — سريعة وواضحة ومريحة على الهاتف وسهلة الظهور على Google."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "Websites",
+      "ar": "المواقع الإلكترونية"
+    },
+    "title": {
+      "en": "A website that explains what you do — and brings customers in.",
+      "ar": "موقع يشرح ما تقدّمه — ويجلب لك العملاء."
+    },
+    "highlight": {
+      "en": "brings customers in.",
+      "ar": "يجلب لك العملاء."
+    },
+    "description": {
+      "en": "Fast, clear and comfortable on any phone. Built to be found on Google, in Arabic, English or both.",
+      "ar": "سريع وواضح ومريح على أي هاتف، ومهيّأ للظهور على Google، بالعربية أو الإنجليزية أو كلتيهما."
+    }
+  },
+  "types": {
+    "eyebrow": {
+      "en": "What we build",
+      "ar": "ماذا نبني"
+    },
+    "title": {
+      "en": "A website for every kind of business.",
+      "ar": "موقع لكل نوع من الأعمال."
+    },
+    "items": [
+      {
+        "icon": "building",
+        "name": {
+          "en": "Business websites",
+          "ar": "مواقع الشركات"
+        },
+        "description": {
+          "en": "Present your services clearly and build trust before the first call.",
+          "ar": "اعرض خدماتك بوضوح وابنِ الثقة قبل أول اتصال."
+        }
+      },
+      {
+        "icon": "cart",
+        "name": {
+          "en": "Online stores",
+          "ar": "المتاجر الإلكترونية"
+        },
+        "description": {
+          "en": "Product catalogues, secure checkout and easy order management.",
+          "ar": "كتالوج منتجات ودفع آمن وإدارة سهلة للطلبات."
+        }
+      },
+      {
+        "icon": "utensils",
+        "name": {
+          "en": "Restaurant websites",
+          "ar": "مواقع المطاعم"
+        },
+        "description": {
+          "en": "Menu, location, opening hours and reservations — on every phone.",
+          "ar": "القائمة والموقع وساعات العمل والحجوزات — على كل هاتف."
+        }
+      },
+      {
+        "icon": "calendar",
+        "name": {
+          "en": "Booking websites",
+          "ar": "مواقع الحجز"
+        },
+        "description": {
+          "en": "Appointments and reservations built right into the site.",
+          "ar": "المواعيد والحجوزات مدمجة مباشرة في الموقع."
+        }
+      },
+      {
+        "icon": "layout",
+        "name": {
+          "en": "Portfolio websites",
+          "ar": "المواقع الشخصية"
+        },
+        "description": {
+          "en": "For professionals who want their work to speak for them.",
+          "ar": "للمهنيين الذين يريدون أن تتحدث أعمالهم عنهم."
+        }
+      },
+      {
+        "icon": "zap",
+        "name": {
+          "en": "Landing pages",
+          "ar": "صفحات الهبوط"
+        },
+        "description": {
+          "en": "One focused page for a product, service or campaign.",
+          "ar": "صفحة واحدة مركّزة لمنتج أو خدمة أو حملة."
+        }
+      },
+      {
+        "icon": "cloud",
+        "name": {
+          "en": "Software product websites",
+          "ar": "مواقع المنتجات البرمجية"
+        },
+        "description": {
+          "en": "Clear feature presentation with strong calls to action.",
+          "ar": "عرض واضح للميزات مع دعوات قوية لاتخاذ إجراء."
+        }
+      },
+      {
+        "icon": "appWindow",
+        "name": {
+          "en": "Custom web platforms",
+          "ar": "منصات ويب مخصّصة"
+        },
+        "description": {
+          "en": "Accounts, dashboards and workflows tailored to your business.",
+          "ar": "حسابات ولوحات متابعة وإجراءات مصمّمة لعملك."
+        }
+      }
+    ]
+  },
+  "standards": {
+    "eyebrow": {
+      "en": "Included as standard",
+      "ar": "مشمول دائمًا"
+    },
+    "title": {
+      "en": "What every Modexa website includes.",
+      "ar": "ما يتضمنه كل موقع من Modexa."
+    },
+    "description": {
+      "en": "Not optional extras — the baseline of everything we deliver.",
+      "ar": "ليست إضافات اختيارية، بل الحد الأدنى لكل ما نسلّمه."
+    },
+    "items": [
+      {
+        "en": "Works on phones, tablets and computers",
+        "ar": "يعمل على الهاتف والجهاز اللوحي والكمبيوتر"
+      },
+      {
+        "en": "Loads fast",
+        "ar": "تحميل سريع"
+      },
+      {
+        "en": "Set up to be found on Google",
+        "ar": "مهيّأ للظهور على Google"
+      },
+      {
+        "en": "Design that matches your brand",
+        "ar": "تصميم يناسب علامتك"
+      },
+      {
+        "en": "Easy for everyone to use, including people with disabilities",
+        "ar": "سهل الاستخدام للجميع، بمن فيهم ذوو الإعاقة"
+      },
+      {
+        "en": "Secure hosting setup",
+        "ar": "إعداد استضافة آمنة"
+      },
+      {
+        "en": "Arabic, English or both",
+        "ar": "بالعربية أو الإنجليزية أو كلتيهما"
+      },
+      {
+        "en": "Visitor statistics (optional)",
+        "ar": "إحصاءات الزوّار (اختياري)"
+      },
+      {
+        "en": "Content you can update yourself (optional)",
+        "ar": "محتوى يمكنك تحديثه بنفسك (اختياري)"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": {
+      "en": "How it works",
+      "ar": "كيف نعمل"
+    },
+    "title": {
+      "en": "From first conversation to launch.",
+      "ar": "من أول محادثة حتى الإطلاق."
+    },
+    "description": {
+      "en": "A clear process keeps your project predictable and on track.",
+      "ar": "عملية واضحة تُبقي مشروعك متوقعًا وفي مساره الصحيح."
+    }
+  },
+  "cta": {
+    "title": {
+      "en": "Ready for a website that works as hard as you do?",
+      "ar": "جاهز لموقع يعمل بجدّ مثلك؟"
+    },
+    "highlight": {
+      "en": "works as hard as you do?",
+      "ar": "يعمل بجدّ مثلك؟"
+    },
+    "description": {
+      "en": "Tell us about your business and get a custom quote — no templates, no obligation.",
+      "ar": "حدّثنا عن عملك واحصل على عرض سعر مخصّص — دون قوالب جاهزة ودون أي التزام."
+    },
+    "primaryCta": {
+      "en": "Start a project",
+      "ar": "ابدأ مشروعك"
+    },
+    "secondaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    }
+  }
+}

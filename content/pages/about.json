@@ -1,0 +1,176 @@
+{
+  "seo": {
+    "title": {
+      "en": "About",
+      "ar": "من نحن"
+    },
+    "description": {
+      "en": "Modexa is a software company that builds websites, business software, AI and automation — and Modexa POS — with clear communication and honest quotes.",
+      "ar": "Modexa شركة برمجيات تبني المواقع الإلكترونية وبرمجيات الأعمال وحلول الذكاء الاصطناعي والأتمتة ونظام Modexa POS، بتواصل واضح وعروض أسعار صادقة."
+    }
+  },
+  "header": {
+    "eyebrow": {
+      "en": "About Modexa",
+      "ar": "عن Modexa"
+    },
+    "title": {
+      "en": "A software company built on craft and honesty.",
+      "ar": "شركة برمجيات قائمة على الإتقان والصدق."
+    },
+    "highlight": {
+      "en": "craft and honesty.",
+      "ar": "الإتقان والصدق."
+    },
+    "description": {
+      "en": "We build digital products, business software and practical automation for companies that want to work better.",
+      "ar": "نبني منتجات رقمية وبرمجيات أعمال وأتمتة عملية للشركات التي تريد أن تعمل بشكل أفضل."
+    }
+  },
+  "mission": {
+    "label": {
+      "en": "Our mission",
+      "ar": "مهمّتنا"
+    },
+    "text": {
+      "en": "To make good software, practical automation and modern technology accessible to businesses of every size.",
+      "ar": "أن نجعل البرمجيات الجيدة والأتمتة العملية والتقنية الحديثة في متناول الأعمال بجميع أحجامها."
+    }
+  },
+  "vision": {
+    "label": {
+      "en": "Our vision",
+      "ar": "رؤيتنا"
+    },
+    "text": {
+      "en": "Businesses that run more smoothly because their technology simply works — and is explained clearly.",
+      "ar": "أعمال تسير بسلاسة أكبر لأن تقنيتها تعمل ببساطة — ويُشرح لها كل شيء بوضوح."
+    }
+  },
+  "story": {
+    "eyebrow": {
+      "en": "Why Modexa exists",
+      "ar": "لماذا وُجدت Modexa"
+    },
+    "title": {
+      "en": "Good technology shouldn't be only for big companies.",
+      "ar": "التقنية الجيدة ليست حكرًا على الشركات الكبيرة."
+    },
+    "paragraphs": [
+      {
+        "en": "Modexa started from a simple observation: many restaurants, shops and growing businesses run on tools that are outdated, overpriced or simply not made for them — while software, AI and automation keep getting more capable every year.",
+        "ar": "انطلقت Modexa من ملاحظة بسيطة: كثير من المطاعم والمتاجر والأعمال النامية تعتمد على أدوات قديمة أو باهظة الثمن أو غير مصمّمة لها أصلًا، بينما تزداد البرمجيات والذكاء الاصطناعي والأتمتة قدرةً عامًا بعد عام."
+      },
+      {
+        "en": "We close that gap. One team that designs and builds websites, business software, POS systems, AI assistants and automations — shaped around how each business actually works, and explained in plain language.",
+        "ar": "نحن نسدّ هذه الفجوة: فريق واحد يصمّم ويبني المواقع الإلكترونية وبرمجيات الأعمال وأنظمة نقاط البيع ومساعدي الذكاء الاصطناعي والأتمتة — بما يناسب طريقة عمل كل نشاط فعلًا، ويشرح كل شيء بلغة بسيطة."
+      }
+    ]
+  },
+  "values": {
+    "eyebrow": {
+      "en": "Values",
+      "ar": "قيمنا"
+    },
+    "title": {
+      "en": "What we stand for.",
+      "ar": "ما نؤمن به."
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Craft",
+          "ar": "الإتقان"
+        },
+        "description": {
+          "en": "We build things properly — clean design, solid engineering and care for the details people notice.",
+          "ar": "نبني الأشياء كما يجب — تصميم نظيف وهندسة متينة واهتمام بالتفاصيل التي يلاحظها الناس."
+        }
+      },
+      {
+        "title": {
+          "en": "Honesty",
+          "ar": "الصدق"
+        },
+        "description": {
+          "en": "Clear scope, realistic timelines and no overpromising. What we say is what we deliver.",
+          "ar": "نطاق واضح وجداول زمنية واقعية ودون وعود مبالغ فيها. ما نقوله هو ما نسلّمه."
+        }
+      },
+      {
+        "title": {
+          "en": "Practicality",
+          "ar": "العملية"
+        },
+        "description": {
+          "en": "Technology must solve a real problem. We recommend what works, not what's fashionable.",
+          "ar": "يجب أن تحلّ التقنية مشكلة حقيقية. نوصي بما ينجح، لا بما هو رائج."
+        }
+      },
+      {
+        "title": {
+          "en": "Partnership",
+          "ar": "الشراكة"
+        },
+        "description": {
+          "en": "We treat every project as a long-term relationship, not a one-off transaction.",
+          "ar": "نتعامل مع كل مشروع كعلاقة طويلة الأمد، لا كصفقة لمرة واحدة."
+        }
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": {
+      "en": "Approach",
+      "ar": "نهجنا"
+    },
+    "title": {
+      "en": "How we think about technology.",
+      "ar": "كيف ننظر إلى التقنية."
+    },
+    "items": [
+      {
+        "en": "Understand the business before writing any code",
+        "ar": "نفهم العمل قبل كتابة أي سطر برمجي"
+      },
+      {
+        "en": "Choose reliable, well-supported technology",
+        "ar": "نختار تقنيات موثوقة ومدعومة جيدًا"
+      },
+      {
+        "en": "Design for the people who will actually use it",
+        "ar": "نصمّم للأشخاص الذين سيستخدمونها فعلًا"
+      },
+      {
+        "en": "Automate what's repetitive, keep people in control",
+        "ar": "نؤتمت المتكرر ونُبقي القرار بيد الناس"
+      },
+      {
+        "en": "Launch, measure and keep improving",
+        "ar": "نطلق ونقيس ونواصل التحسين"
+      }
+    ]
+  },
+  "cta": {
+    "title": {
+      "en": "Let's build something worth using.",
+      "ar": "لنبنِ شيئًا يستحق الاستخدام."
+    },
+    "highlight": {
+      "en": "worth using.",
+      "ar": "يستحق الاستخدام."
+    },
+    "description": {
+      "en": "Tell us about your business and goals, and get a clear, honest recommendation on where technology can help.",
+      "ar": "حدّثنا عن عملك وأهدافك، واحصل على توصية واضحة وصادقة حول المجالات التي يمكن للتقنية أن تساعدك فيها."
+    },
+    "primaryCta": {
+      "en": "Contact us",
+      "ar": "تواصل معنا"
+    },
+    "secondaryCta": {
+      "en": "Request a quote",
+      "ar": "اطلب عرض سعر"
+    }
+  }
+}
