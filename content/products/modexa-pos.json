@@ -1,0 +1,34 @@
+{
+  "slug": "modexa-pos",
+  "icon": "monitor",
+  "status": "available",
+  "href": "/products/modexa-pos",
+  "name": {
+    "en": "Modexa POS",
+    "ar": "Modexa POS"
+  },
+  "summary": {
+    "en": "A point-of-sale system for restaurants, cafés, bars and shops: checkout, printing, stock, staff and reports in one place — and it keeps working when the internet drops.",
+    "ar": "نظام نقاط بيع للمطاعم والمقاهي والبارات والمتاجر: البيع والطباعة والمخزون والموظفون والتقارير في مكان واحد — ويواصل العمل حتى عند انقطاع الإنترنت."
+  },
+  "highlights": [
+    {
+      "en": "Fast checkout on several terminals",
+      "ar": "بيع سريع على عدة أجهزة"
+    },
+    {
+      "en": "Keeps working without internet",
+      "ar": "يعمل دون إنترنت"
+    },
+    {
+      "en": "Kitchen, bar and receipt printing",
+      "ar": "طباعة للمطبخ والبار والإيصالات"
+    },
+    {
+      "en": "Stock, staff and sales reports",
+      "ar": "المخزون والموظفون وتقارير المبيعات"
+    }
+  ],
+  "published": true,
+  "displayOrder": 1
+}

@@ -1,9 +1,18 @@
 {
-  "title": "Business Website",
+  "title": {
+    "en": "Business Website",
+    "ar": "موقع إلكتروني لشركة"
+  },
   "slug": "concept-business-website",
   "category": "websites",
-  "shortDescription": "Concept Project — a modern, responsive company website with an SEO-ready structure.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa business website: custom branding, responsive layouts, fast performance and a clear structure that presents services and builds customer trust.",
+  "shortDescription": {
+    "en": "a modern, responsive company website with an SEO-ready structure.",
+    "ar": ""
+  },
+  "fullDescription": {
+    "en": "This placeholder illustrates a typical Modexa business website: custom branding, responsive layouts, fast performance and a clear structure that presents services and builds customer trust.",
+    "ar": ""
+  },
   "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_56_17 PM.png",
   "technologies": [
     "Next.js",
@@ -14,5 +23,8 @@
   "projectStatus": "concept",
   "featured": true,
   "published": false,
-  "displayOrder": 2
+  "displayOrder": 2,
+  "galleryImages": [],
+  "customerName": "",
+  "websiteUrl": ""
 }

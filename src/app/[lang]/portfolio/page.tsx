@@ -24,7 +24,7 @@ export const metadata: Metadata = {
  * replace them without any code changes.
  */
 export default function PortfolioPage() {
-  const projects = getPortfolioProjects();
+  const projects = getPortfolioProjects("en");
 
   return (
     <>

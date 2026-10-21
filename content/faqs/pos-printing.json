@@ -1,0 +1,14 @@
+{
+  "slug": "pos-printing",
+  "group": "pos",
+  "question": {
+    "en": "Does it print to the kitchen and print receipts?",
+    "ar": "هل يطبع للمطبخ ويطبع الإيصالات؟"
+  },
+  "answer": {
+    "en": "Yes. Orders are sent to kitchen and bar printers automatically, and customer receipts print at the counter. Each printer is assigned to its station.",
+    "ar": "نعم. تُرسل الطلبات تلقائيًا إلى طابعات المطبخ والبار، وتُطبع إيصالات العملاء عند الكاشير. لكل طابعة دور مخصّص حسب المحطة."
+  },
+  "published": true,
+  "displayOrder": 9
+}

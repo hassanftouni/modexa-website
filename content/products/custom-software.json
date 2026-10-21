@@ -1,0 +1,34 @@
+{
+  "slug": "custom-software",
+  "icon": "code",
+  "status": "by-request",
+  "href": "",
+  "name": {
+    "en": "Custom software",
+    "ar": "برمجيات مخصّصة"
+  },
+  "summary": {
+    "en": "Software built from your requirements — internal tools, management systems and industry-specific platforms.",
+    "ar": "برمجيات مبنية حسب متطلباتك — أدوات داخلية وأنظمة إدارة ومنصات لقطاعات محددة."
+  },
+  "highlights": [
+    {
+      "en": "Designed around your workflow",
+      "ar": "مصمّمة حول سير عملك"
+    },
+    {
+      "en": "Web, desktop or both",
+      "ar": "ويب أو كمبيوتر أو كلاهما"
+    },
+    {
+      "en": "Connects to your tools",
+      "ar": "تتصل بأدواتك"
+    },
+    {
+      "en": "Long-term support available",
+      "ar": "دعم طويل الأمد متاح"
+    }
+  ],
+  "published": true,
+  "displayOrder": 4
+}

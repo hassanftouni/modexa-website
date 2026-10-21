@@ -1,0 +1,32 @@
+{
+  "slug": "multi-branch",
+  "icon": "building",
+  "title": {
+    "en": "Multiple branches",
+    "ar": "عدة فروع"
+  },
+  "description": {
+    "en": "Grow from one location to several — Modexa POS is designed with multi-branch businesses in mind.",
+    "ar": "توسّع من فرع واحد إلى عدة فروع — صُمّم Modexa POS مع مراعاة الشركات متعددة الفروع."
+  },
+  "features": [
+    {
+      "en": "Settings per branch",
+      "ar": "إعدادات لكل فرع"
+    },
+    {
+      "en": "Reports per branch",
+      "ar": "تقارير لكل فرع"
+    },
+    {
+      "en": "Consistent product data",
+      "ar": "بيانات منتجات موحّدة"
+    },
+    {
+      "en": "Ready to grow with you",
+      "ar": "جاهز للنمو معك"
+    }
+  ],
+  "published": true,
+  "displayOrder": 9
+}

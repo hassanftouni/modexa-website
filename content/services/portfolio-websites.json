@@ -1,0 +1,76 @@
+{
+  "slug": "portfolio-websites",
+  "icon": "layout",
+  "name": {
+    "en": "Portfolio websites",
+    "ar": "المواقع الشخصية (بورتفوليو)"
+  },
+  "summary": {
+    "en": "Personal websites for professionals who want their work to speak for them.",
+    "ar": "مواقع شخصية للمهنيين الذين يريدون أن تتحدث أعمالهم عنهم."
+  },
+  "problem": {
+    "en": "A CV alone rarely shows what you can really do. Professionals without a strong online presence lose opportunities to people who present their work well.",
+    "ar": "السيرة الذاتية وحدها نادرًا ما تُظهر قدراتك الحقيقية. ومن لا يملك حضورًا قويًا على الإنترنت يخسر فرصًا لصالح من يعرض أعماله جيدًا."
+  },
+  "solution": {
+    "en": "We build elegant personal websites that present your work, skills and experience in a way employers and clients remember.",
+    "ar": "نبني مواقع شخصية أنيقة تعرض أعمالك ومهاراتك وخبراتك بطريقة يتذكرها أصحاب العمل والعملاء."
+  },
+  "benefits": [
+    {
+      "en": "Stand out from other candidates",
+      "ar": "تميّز عن غيرك من المتقدمين"
+    },
+    {
+      "en": "Show your projects visually",
+      "ar": "اعرض مشاريعك بصريًا"
+    },
+    {
+      "en": "One professional link for your CV and profiles",
+      "ar": "رابط احترافي واحد لسيرتك وحساباتك"
+    },
+    {
+      "en": "A personal brand that feels premium",
+      "ar": "هوية شخصية بمظهر راقٍ"
+    }
+  ],
+  "features": [
+    {
+      "en": "Personal branding and custom design",
+      "ar": "هوية شخصية وتصميم خاص"
+    },
+    {
+      "en": "Project showcase",
+      "ar": "عرض المشاريع"
+    },
+    {
+      "en": "About, skills and experience sections",
+      "ar": "أقسام نبذة ومهارات وخبرات"
+    },
+    {
+      "en": "Contact form and social links",
+      "ar": "نموذج تواصل وروابط حساباتك"
+    },
+    {
+      "en": "Fast and works on phones",
+      "ar": "سريع ويعمل جيدًا على الهاتف"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A developer portfolio with case studies",
+      "ar": "بورتفوليو لمطوّر مع دراسات حالة"
+    },
+    {
+      "en": "A designer portfolio with galleries",
+      "ar": "بورتفوليو لمصمم مع معارض أعمال"
+    },
+    {
+      "en": "A freelancer site with services and contact",
+      "ar": "موقع لمستقل يعرض خدماته وطرق التواصل"
+    }
+  ],
+  "published": true,
+  "displayOrder": 2
+}

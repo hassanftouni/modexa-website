@@ -1,0 +1,14 @@
+{
+  "slug": "support",
+  "icon": "refresh",
+  "title": {
+    "en": "Support & improve",
+    "ar": "ندعم ونطوّر"
+  },
+  "description": {
+    "en": "After launch we stay available for updates, fixes and improvements, based on your agreement.",
+    "ar": "بعد الإطلاق نبقى متاحين للتحديثات والإصلاحات والتحسينات حسب الاتفاق."
+  },
+  "published": true,
+  "displayOrder": 5
+}

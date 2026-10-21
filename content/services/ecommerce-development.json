@@ -1,0 +1,76 @@
+{
+  "slug": "ecommerce-development",
+  "icon": "cart",
+  "name": {
+    "en": "Online stores",
+    "ar": "المتاجر الإلكترونية"
+  },
+  "summary": {
+    "en": "Online shops with clear product pages, easy management and secure checkout.",
+    "ar": "متاجر إلكترونية بصفحات منتجات واضحة وإدارة سهلة ودفع آمن."
+  },
+  "problem": {
+    "en": "Selling only in person — or through a clumsy online shop — limits growth. Customers expect easy browsing, clear product pages and a checkout they trust.",
+    "ar": "البيع في المتجر فقط، أو عبر متجر إلكتروني مربك، يحدّ من النمو. العملاء يتوقعون تصفحًا سهلًا وصفحات منتجات واضحة ودفعًا موثوقًا."
+  },
+  "solution": {
+    "en": "We build online stores with well-organised products and a secure checkout, designed to turn visitors into buyers.",
+    "ar": "نبني متاجر إلكترونية بمنتجات منظّمة ودفع آمن، مصمّمة لتحويل الزوّار إلى مشترين."
+  },
+  "benefits": [
+    {
+      "en": "Sell online around the clock",
+      "ar": "بِع عبر الإنترنت على مدار الساعة"
+    },
+    {
+      "en": "A professional shopping experience",
+      "ar": "تجربة تسوّق احترافية"
+    },
+    {
+      "en": "Products that are easy to manage",
+      "ar": "منتجات سهلة الإدارة"
+    },
+    {
+      "en": "Ready to grow with your catalogue",
+      "ar": "جاهز للتوسع مع زيادة منتجاتك"
+    }
+  ],
+  "features": [
+    {
+      "en": "Product catalogue and categories",
+      "ar": "كتالوج منتجات وتصنيفات"
+    },
+    {
+      "en": "Cart and secure checkout",
+      "ar": "سلة تسوّق ودفع آمن"
+    },
+    {
+      "en": "Order and stock management options",
+      "ar": "خيارات لإدارة الطلبات والمخزون"
+    },
+    {
+      "en": "Payment provider integration",
+      "ar": "ربط مع مزوّدي الدفع"
+    },
+    {
+      "en": "Shopping that works well on phones",
+      "ar": "تسوّق مريح على الهاتف"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A shop selling its products online",
+      "ar": "متجر يبيع منتجاته عبر الإنترنت"
+    },
+    {
+      "en": "A restaurant taking online orders",
+      "ar": "مطعم يستقبل الطلبات عبر الإنترنت"
+    },
+    {
+      "en": "A brand store with a curated catalogue",
+      "ar": "متجر لعلامة تجارية بمنتجات مختارة"
+    }
+  ],
+  "published": true,
+  "displayOrder": 3
+}

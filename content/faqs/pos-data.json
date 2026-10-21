@@ -1,0 +1,14 @@
+{
+  "slug": "pos-data",
+  "group": "pos",
+  "question": {
+    "en": "How is my data protected?",
+    "ar": "كيف تتم حماية بياناتي؟"
+  },
+  "answer": {
+    "en": "Modexa POS includes secure backups, so your sales and business data can be restored if something goes wrong with a device.",
+    "ar": "يتضمن Modexa POS نسخًا احتياطيًا آمنًا، بحيث يمكن استعادة بيانات المبيعات والعمل إذا حدث خلل في أحد الأجهزة."
+  },
+  "published": true,
+  "displayOrder": 10
+}

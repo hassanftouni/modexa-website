@@ -1,0 +1,80 @@
+{
+  "slug": "custom-software",
+  "icon": "code",
+  "name": {
+    "en": "Custom software",
+    "ar": "البرمجيات المخصّصة"
+  },
+  "summary": {
+    "en": "Software made for your exact requirements — for the web, the desktop or both.",
+    "ar": "برمجيات مصمّمة لمتطلباتك بالضبط — على الويب أو على الكمبيوتر أو كليهما."
+  },
+  "problem": {
+    "en": "Generic software forces you to change how you work. Important needs end up handled with workarounds — or not at all.",
+    "ar": "البرامج العامة تجبرك على تغيير طريقة عملك، فتنتهي احتياجاتك المهمة بحلول مؤقتة أو تبقى دون حل."
+  },
+  "solution": {
+    "en": "We build software from your requirements up — for the web, the desktop or both — so the system fits your business instead of the other way around.",
+    "ar": "نبني البرنامج انطلاقًا من متطلباتك — على الويب أو الكمبيوتر أو كليهما — ليتكيّف النظام مع عملك لا العكس."
+  },
+  "benefits": [
+    {
+      "en": "Exactly the features you need",
+      "ar": "الميزات التي تحتاجها بالضبط"
+    },
+    {
+      "en": "No surprise licensing lock-in",
+      "ar": "دون قيود ترخيص مفاجئة"
+    },
+    {
+      "en": "Grows with your business",
+      "ar": "ينمو مع عملك"
+    },
+    {
+      "en": "A direct line to the team that built it",
+      "ar": "تواصل مباشر مع الفريق الذي بناه"
+    }
+  ],
+  "features": [
+    {
+      "en": "Requirements analysis and planning",
+      "ar": "تحليل المتطلبات والتخطيط"
+    },
+    {
+      "en": "Your own business rules and workflows",
+      "ar": "قواعد عملك وإجراءاتك الخاصة"
+    },
+    {
+      "en": "Desktop and web options",
+      "ar": "خيارات للكمبيوتر وللويب"
+    },
+    {
+      "en": "Works on a local network, even offline",
+      "ar": "يعمل على شبكة محلية حتى دون إنترنت"
+    },
+    {
+      "en": "Connections to existing systems",
+      "ar": "ربط مع الأنظمة الحالية"
+    },
+    {
+      "en": "Ongoing support agreements",
+      "ar": "اتفاقيات دعم مستمر"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A POS system shaped around a restaurant's flow",
+      "ar": "نظام نقاط بيع مصمّم حسب سير عمل مطعم"
+    },
+    {
+      "en": "Licence and update management tools",
+      "ar": "أدوات لإدارة التراخيص والتحديثات"
+    },
+    {
+      "en": "Management software for a specific industry",
+      "ar": "برنامج إدارة لقطاع محدد"
+    }
+  ],
+  "published": true,
+  "displayOrder": 7
+}

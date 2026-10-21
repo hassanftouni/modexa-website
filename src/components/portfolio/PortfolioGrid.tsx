@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import type { PortfolioCategory, PortfolioProject } from "@/content/types";
+import type { PortfolioCategory } from "@/content/schema";
+import type { PortfolioProject as RawPortfolioProject } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type PortfolioProject = Localized<RawPortfolioProject>;
 
 const filters: { label: string; value: PortfolioCategory | "all" }[] = [
   { label: "All", value: "all" },

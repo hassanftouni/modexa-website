@@ -1,0 +1,14 @@
+{
+  "slug": "general-existing-systems",
+  "group": "general",
+  "question": {
+    "en": "Can you work with the systems I already use?",
+    "ar": "هل يمكنكم العمل مع الأنظمة التي أستخدمها حاليًا؟"
+  },
+  "answer": {
+    "en": "In most cases, yes. We connect new software with payment systems, messaging services, customer systems, databases and other tools you already rely on.",
+    "ar": "في معظم الحالات نعم. نربط البرامج الجديدة بأنظمة الدفع وخدمات المراسلة وأنظمة العملاء وقواعد البيانات وغيرها من الأدوات التي تعتمد عليها."
+  },
+  "published": true,
+  "displayOrder": 4
+}

@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { Icon } from "@/components/ui/icons";
 import { CustomerExplorer } from "@/components/customers/CustomerExplorer";
-import { getCustomers, getFeaturedCustomers, getTestimonials } from "@/lib/content";
+import { getCustomers, getTestimonials } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Customers",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 };
 
 export default function CustomersPage() {
-  const customers = getCustomers();
-  const featured = getFeaturedCustomers();
-  const testimonials = getTestimonials();
+  const customers = getCustomers("en");
+  const featured = customers.filter((c) => c.featured);
+  const testimonials = getTestimonials("en");
 
   return (
     <>

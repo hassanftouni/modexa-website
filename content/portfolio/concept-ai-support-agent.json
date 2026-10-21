@@ -1,9 +1,18 @@
 {
-  "title": "AI Customer-Support Agent",
+  "title": {
+    "en": "AI Customer-Support Agent",
+    "ar": "وكيل ذكاء اصطناعي لدعم العملاء"
+  },
   "slug": "concept-ai-support-agent",
   "category": "ai",
-  "shortDescription": "Concept Project — an AI agent that answers customer questions from a business knowledge base.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa AI solution: a support agent trained on a company's services and policies, embedded in the website chat, answering common questions instantly and escalating to staff when needed.",
+  "shortDescription": {
+    "en": "an AI agent that answers customer questions from a business knowledge base.",
+    "ar": ""
+  },
+  "fullDescription": {
+    "en": "This placeholder illustrates a typical Modexa AI solution: a support agent trained on a company's services and policies, embedded in the website chat, answering common questions instantly and escalating to staff when needed.",
+    "ar": ""
+  },
   "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_52_32 PM.png",
   "technologies": [
     "AI APIs",
@@ -13,5 +22,8 @@
   "projectStatus": "concept",
   "featured": true,
   "published": false,
-  "displayOrder": 4
+  "displayOrder": 4,
+  "galleryImages": [],
+  "customerName": "",
+  "websiteUrl": ""
 }

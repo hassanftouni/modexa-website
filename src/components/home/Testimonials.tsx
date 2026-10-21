@@ -1,7 +1,9 @@
 import { AnimatedContainer } from "@/components/ui/AnimatedContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
-import type { Testimonial } from "@/content/types";
+import type { Testimonial as RawTestimonial } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type Testimonial = Localized<RawTestimonial>;
 
 /*
  * IMPORTANT: The testimonials rendered here come from content/testimonials/

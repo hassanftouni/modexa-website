@@ -1,8 +1,14 @@
 {
   "slug": "concept-portfolio-moussa-jaffar",
-  "quote": "“Modexa created a modern and professional website that made our supermarket easier to discover and our services clearer to customers. The design looks fresh, works smoothly on mobile, and perfectly represents the Moussa Jaffar brand.”",
+  "quote": {
+    "en": "Modexa created a modern and professional website that made our supermarket easier to discover and our services clearer to customers. The design looks fresh, works smoothly on mobile, and perfectly represents the Moussa Jaffar brand.",
+    "ar": ""
+  },
   "author": "Placeholder Name",
-  "role": "Manager",
+  "role": {
+    "en": "Manager",
+    "ar": "المدير"
+  },
   "company": "supermarket",
   "featured": true,
   "published": false,

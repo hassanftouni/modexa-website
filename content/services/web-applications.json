@@ -1,0 +1,80 @@
+{
+  "slug": "web-applications",
+  "icon": "appWindow",
+  "name": {
+    "en": "Web applications",
+    "ar": "تطبيقات الويب"
+  },
+  "summary": {
+    "en": "Booking systems, dashboards, internal tools and customer portals built around how you work.",
+    "ar": "أنظمة حجز ولوحات متابعة وأدوات داخلية وبوابات عملاء مبنية حسب طريقة عملك."
+  },
+  "problem": {
+    "en": "Spreadsheets and paperwork break down as a business grows, and ready-made tools rarely fit the way your business actually works.",
+    "ar": "الجداول والأوراق لا تصمد مع نمو العمل، والأدوات الجاهزة نادرًا ما تناسب طريقة عملك الفعلية."
+  },
+  "solution": {
+    "en": "We build web applications — dashboards, booking systems, internal tools and customer portals — designed around your real daily workflow.",
+    "ar": "نطوّر تطبيقات ويب — لوحات متابعة وأنظمة حجز وأدوات داخلية وبوابات للعملاء — مصمّمة حول سير عملك اليومي الفعلي."
+  },
+  "benefits": [
+    {
+      "en": "Software that matches your process",
+      "ar": "برنامج يطابق طريقة عملك"
+    },
+    {
+      "en": "All your business data in one place",
+      "ar": "كل بيانات عملك في مكان واحد"
+    },
+    {
+      "en": "Less manual work, fewer mistakes",
+      "ar": "عمل يدوي أقل وأخطاء أقل"
+    },
+    {
+      "en": "Use it from any device",
+      "ar": "استخدمه من أي جهاز"
+    }
+  ],
+  "features": [
+    {
+      "en": "Dashboards and reports",
+      "ar": "لوحات متابعة وتقارير"
+    },
+    {
+      "en": "Booking and scheduling",
+      "ar": "الحجوزات والمواعيد"
+    },
+    {
+      "en": "Inventory and stock tracking",
+      "ar": "متابعة المخزون"
+    },
+    {
+      "en": "Customer and staff management",
+      "ar": "إدارة العملاء والموظفين"
+    },
+    {
+      "en": "Different access for different roles",
+      "ar": "صلاحيات مختلفة لكل دور"
+    },
+    {
+      "en": "Connections to the tools you already use",
+      "ar": "ربط مع الأدوات التي تستخدمها حاليًا"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A booking system for a clinic or salon",
+      "ar": "نظام حجز لعيادة أو صالون"
+    },
+    {
+      "en": "An internal inventory dashboard",
+      "ar": "لوحة داخلية لمتابعة المخزون"
+    },
+    {
+      "en": "A customer portal for a service business",
+      "ar": "بوابة عملاء لشركة خدمات"
+    }
+  ],
+  "published": true,
+  "displayOrder": 4
+}

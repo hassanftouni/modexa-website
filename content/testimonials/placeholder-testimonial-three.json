@@ -1,8 +1,14 @@
 {
   "slug": "placeholder-testimonial-three",
-  "quote": "This is temporary placeholder feedback. Replace it with a real, approved customer testimonial before launch.",
+  "quote": {
+    "en": "This is temporary placeholder feedback. Replace it with a real, approved customer testimonial before launch.",
+    "ar": ""
+  },
   "author": "Placeholder Name",
-  "role": "Founder",
+  "role": {
+    "en": "Founder",
+    "ar": "المؤسس"
+  },
   "company": "Placeholder Studio",
   "featured": true,
   "published": false,

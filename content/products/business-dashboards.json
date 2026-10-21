@@ -1,0 +1,34 @@
+{
+  "slug": "business-dashboards",
+  "icon": "chart",
+  "status": "by-request",
+  "href": "",
+  "name": {
+    "en": "Business dashboards",
+    "ar": "لوحات متابعة الأعمال"
+  },
+  "summary": {
+    "en": "One clear screen that brings your sales, operations and customer numbers together.",
+    "ar": "شاشة واحدة واضحة تجمع أرقام مبيعاتك وعملياتك وعملائك."
+  },
+  "highlights": [
+    {
+      "en": "Live numbers and reports",
+      "ar": "أرقام وتقارير مباشرة"
+    },
+    {
+      "en": "Data from the tools you already use",
+      "ar": "بيانات من أدواتك الحالية"
+    },
+    {
+      "en": "Access by role",
+      "ar": "صلاحيات حسب الدور"
+    },
+    {
+      "en": "Built around what you measure",
+      "ar": "مبنية حول ما تريد قياسه"
+    }
+  ],
+  "published": true,
+  "displayOrder": 2
+}

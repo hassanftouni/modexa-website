@@ -1,5 +1,7 @@
 import Image from "next/image";
-import type { Customer } from "@/content/types";
+import type { Customer as RawCustomer } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type Customer = Localized<RawCustomer>;
 
 /*
  * Customer logos come from the CMS-managed collection in content/customers/.

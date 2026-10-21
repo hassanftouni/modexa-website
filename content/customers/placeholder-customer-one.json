@@ -1,10 +1,18 @@
 {
-  "name": "Supermarket Moussa Jaffar ",
+  "name": "Supermarket Moussa Jaffar",
   "slug": "supermarket",
   "logo": "/images/ChatGPT Image Jul 17, 2026, 10_56_50 PM.png",
-  "industry": "Restaurants & Hospitality",
+  "industry": {
+    "en": "Restaurants & Hospitality",
+    "ar": "المطاعم والضيافة"
+  },
   "projectType": "Modexa POS",
   "featured": true,
   "published": false,
-  "displayOrder": 1
+  "displayOrder": 1,
+  "testimonial": {
+    "en": "",
+    "ar": ""
+  },
+  "website": ""
 }

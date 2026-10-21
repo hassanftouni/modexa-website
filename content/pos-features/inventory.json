@@ -1,0 +1,32 @@
+{
+  "slug": "inventory",
+  "icon": "package",
+  "title": {
+    "en": "Stock management",
+    "ar": "إدارة المخزون"
+  },
+  "description": {
+    "en": "Know your stock levels, organise products and see what is running low before it runs out.",
+    "ar": "اعرف مستويات مخزونك ونظّم منتجاتك وانتبه لما أوشك على النفاد قبل أن ينفد."
+  },
+  "features": [
+    {
+      "en": "Products and categories",
+      "ar": "المنتجات والتصنيفات"
+    },
+    {
+      "en": "Stock level tracking",
+      "ar": "متابعة مستويات المخزون"
+    },
+    {
+      "en": "Stock adjustments",
+      "ar": "تعديلات المخزون"
+    },
+    {
+      "en": "Low-stock watchlist",
+      "ar": "قائمة المخزون المنخفض"
+    }
+  ],
+  "published": true,
+  "displayOrder": 5
+}

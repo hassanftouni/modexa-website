@@ -1,5 +1,7 @@
 import Image from "next/image";
-import type { PortfolioProject } from "@/content/types";
+import type { PortfolioProject as RawPortfolioProject } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type PortfolioProject = Localized<RawPortfolioProject>;
 import {
   portfolioCategoryLabels,
   projectStatusLabels,

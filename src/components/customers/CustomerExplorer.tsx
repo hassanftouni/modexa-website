@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/ui/icons";
-import type { Customer } from "@/content/types";
+import type { Customer as RawCustomer } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type Customer = Localized<RawCustomer>;
 
 /*
  * Customer records come from content/customers/ (managed via Pages CMS).

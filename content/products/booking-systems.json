@@ -1,0 +1,34 @@
+{
+  "slug": "booking-systems",
+  "icon": "calendar",
+  "status": "by-request",
+  "href": "",
+  "name": {
+    "en": "Booking systems",
+    "ar": "أنظمة الحجز"
+  },
+  "summary": {
+    "en": "Online booking for appointments, reservations and resources — with reminders sent for you.",
+    "ar": "حجز إلكتروني للمواعيد والطاولات والموارد — مع إرسال التذكيرات نيابةً عنك."
+  },
+  "highlights": [
+    {
+      "en": "Online appointment booking",
+      "ar": "حجز المواعيد عبر الإنترنت"
+    },
+    {
+      "en": "Automatic reminders",
+      "ar": "تذكيرات تلقائية"
+    },
+    {
+      "en": "Staff and resource scheduling",
+      "ar": "جدولة الموظفين والموارد"
+    },
+    {
+      "en": "Customers manage their own bookings",
+      "ar": "العملاء يديرون حجوزاتهم بأنفسهم"
+    }
+  ],
+  "published": true,
+  "displayOrder": 3
+}

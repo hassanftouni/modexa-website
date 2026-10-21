@@ -2,9 +2,15 @@
   "name": "Placeholder Customer Two",
   "slug": "placeholder-customer-two",
   "logo": "/images/customers/placeholder-customer-2.png",
-  "industry": "Retail",
+  "industry": {
+    "en": "Retail",
+    "ar": "البيع بالتجزئة"
+  },
   "website": "",
-  "testimonial": "",
+  "testimonial": {
+    "en": "",
+    "ar": ""
+  },
   "projectType": "Business Website",
   "featured": true,
   "published": false,

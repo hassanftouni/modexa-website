@@ -1,9 +1,18 @@
 {
-  "title": "Lead Follow-up Automation",
+  "title": {
+    "en": "Lead Follow-up Automation",
+    "ar": "أتمتة متابعة الاستفسارات"
+  },
   "slug": "concept-lead-automation",
   "category": "automation",
-  "shortDescription": "Concept Project — automated lead capture, routing and follow-up email workflows.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa automation project: website leads captured into a central list, qualified and routed to the right person, with automatic follow-up emails and internal notifications.",
+  "shortDescription": {
+    "en": "automated lead capture, routing and follow-up email workflows.",
+    "ar": ""
+  },
+  "fullDescription": {
+    "en": "This placeholder illustrates a typical Modexa automation project: website leads captured into a central list, qualified and routed to the right person, with automatic follow-up emails and internal notifications.",
+    "ar": ""
+  },
   "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_47_44 PM.png",
   "technologies": [
     "Automation workflows",
@@ -13,5 +22,8 @@
   "projectStatus": "concept",
   "featured": false,
   "published": false,
-  "displayOrder": 5
+  "displayOrder": 5,
+  "galleryImages": [],
+  "customerName": "",
+  "websiteUrl": ""
 }

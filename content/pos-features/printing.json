@@ -1,0 +1,32 @@
+{
+  "slug": "printing",
+  "icon": "printer",
+  "title": {
+    "en": "Kitchen, bar & receipt printing",
+    "ar": "طباعة المطبخ والبار والإيصالات"
+  },
+  "description": {
+    "en": "Each order goes to the right place automatically — kitchen tickets, bar tickets and customer receipts.",
+    "ar": "يصل كل طلب إلى مكانه تلقائيًا — تذاكر المطبخ وتذاكر البار وإيصالات العملاء."
+  },
+  "features": [
+    {
+      "en": "Kitchen printing",
+      "ar": "طباعة المطبخ"
+    },
+    {
+      "en": "Bar printing",
+      "ar": "طباعة البار"
+    },
+    {
+      "en": "Receipt printing",
+      "ar": "طباعة الإيصالات"
+    },
+    {
+      "en": "A printer role for each station",
+      "ar": "دور لكل طابعة حسب المحطة"
+    }
+  ],
+  "published": true,
+  "displayOrder": 4
+}

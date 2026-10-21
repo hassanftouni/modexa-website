@@ -1,0 +1,14 @@
+{
+  "slug": "general-timeline",
+  "group": "general",
+  "question": {
+    "en": "How long does a project take?",
+    "ar": "كم يستغرق المشروع؟"
+  },
+  "answer": {
+    "en": "A focused business website can often be ready in a few weeks; larger platforms and custom software take longer. You get a realistic timeline with your quote.",
+    "ar": "يمكن غالبًا تجهيز موقع شركة بسيط خلال بضعة أسابيع، أما المنصات الأكبر والبرمجيات المخصّصة فتحتاج وقتًا أطول. تحصل على جدول زمني واقعي مع عرض السعر."
+  },
+  "published": true,
+  "displayOrder": 2
+}

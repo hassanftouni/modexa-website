@@ -1,0 +1,32 @@
+{
+  "slug": "customers",
+  "icon": "star",
+  "title": {
+    "en": "Customer records",
+    "ar": "سجلات العملاء"
+  },
+  "description": {
+    "en": "Keep track of customers and what they bought, to build better relationships and repeat business.",
+    "ar": "احتفظ بسجل عملائك ومشترياتهم لبناء علاقات أفضل وتشجيع عودتهم."
+  },
+  "features": [
+    {
+      "en": "Customer records",
+      "ar": "سجلات العملاء"
+    },
+    {
+      "en": "Purchase history",
+      "ar": "سجل المشتريات"
+    },
+    {
+      "en": "Orders linked to customers",
+      "ar": "طلبات مرتبطة بالعملاء"
+    },
+    {
+      "en": "A base for loyalty features",
+      "ar": "أساس لميزات الولاء"
+    }
+  ],
+  "published": true,
+  "displayOrder": 7
+}

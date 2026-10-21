@@ -1,0 +1,32 @@
+{
+  "slug": "backups",
+  "icon": "shield",
+  "title": {
+    "en": "Secure backups",
+    "ar": "نسخ احتياطي آمن"
+  },
+  "description": {
+    "en": "Automatic backups protect your sales data, so it can be restored if a device fails.",
+    "ar": "يحمي النسخ الاحتياطي التلقائي بيانات مبيعاتك، ليمكن استعادتها إذا تعطّل أحد الأجهزة."
+  },
+  "features": [
+    {
+      "en": "Automatic backups",
+      "ar": "نسخ احتياطي تلقائي"
+    },
+    {
+      "en": "Safe data restore",
+      "ar": "استعادة آمنة للبيانات"
+    },
+    {
+      "en": "Protection against device failure",
+      "ar": "حماية من أعطال الأجهزة"
+    },
+    {
+      "en": "Peace of mind for owners",
+      "ar": "راحة بال لأصحاب العمل"
+    }
+  ],
+  "published": true,
+  "displayOrder": 10
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "employees",
+  "icon": "users",
+  "title": {
+    "en": "Staff management",
+    "ar": "إدارة الموظفين"
+  },
+  "description": {
+    "en": "Staff accounts, roles and permissions, so everyone sees exactly what they need.",
+    "ar": "حسابات وأدوار وصلاحيات للموظفين، ليرى كل شخص ما يحتاجه فقط."
+  },
+  "features": [
+    {
+      "en": "Staff accounts and roles",
+      "ar": "حسابات وأدوار الموظفين"
+    },
+    {
+      "en": "Permission control",
+      "ar": "التحكم في الصلاحيات"
+    },
+    {
+      "en": "Activity overview",
+      "ar": "نظرة عامة على النشاط"
+    },
+    {
+      "en": "Reports per employee",
+      "ar": "تقارير لكل موظف"
+    }
+  ],
+  "published": true,
+  "displayOrder": 6
+}

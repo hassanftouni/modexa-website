@@ -1,0 +1,80 @@
+{
+  "slug": "maintenance-support",
+  "icon": "wrench",
+  "name": {
+    "en": "Maintenance & support",
+    "ar": "الصيانة والدعم"
+  },
+  "summary": {
+    "en": "Updates, fixes, monitoring and improvements that keep your software healthy after launch.",
+    "ar": "تحديثات وإصلاحات ومراقبة وتحسينات تحافظ على برنامجك سليمًا بعد الإطلاق."
+  },
+  "problem": {
+    "en": "Software is never really finished. Without updates and monitoring, small issues grow, security falls behind and things slow down over time.",
+    "ar": "البرنامج لا يكتمل أبدًا. فمن دون تحديثات ومراقبة تكبر المشكلات الصغيرة ويتراجع الأمان ويبطؤ الأداء مع الوقت."
+  },
+  "solution": {
+    "en": "We offer maintenance and support agreements — updates, fixes, monitoring and ongoing improvements — so your product stays fast, secure and reliable.",
+    "ar": "نقدّم اتفاقيات صيانة ودعم — تحديثات وإصلاحات ومراقبة وتحسينات مستمرة — ليبقى منتجك سريعًا وآمنًا وموثوقًا."
+  },
+  "benefits": [
+    {
+      "en": "A product that keeps improving",
+      "ar": "منتج يتحسّن باستمرار"
+    },
+    {
+      "en": "Problems caught before customers notice",
+      "ar": "اكتشاف المشكلات قبل أن يلاحظها العملاء"
+    },
+    {
+      "en": "Support when you need it",
+      "ar": "دعم عندما تحتاجه"
+    },
+    {
+      "en": "Security kept up to date",
+      "ar": "أمان محدّث دائمًا"
+    }
+  ],
+  "features": [
+    {
+      "en": "Regular updates",
+      "ar": "تحديثات دورية"
+    },
+    {
+      "en": "Bug fixing",
+      "ar": "إصلاح الأعطال"
+    },
+    {
+      "en": "Performance monitoring",
+      "ar": "مراقبة الأداء"
+    },
+    {
+      "en": "Backup checks",
+      "ar": "التحقق من النسخ الاحتياطية"
+    },
+    {
+      "en": "Improvements over time",
+      "ar": "تحسينات مع الوقت"
+    },
+    {
+      "en": "Agreed response times",
+      "ar": "أوقات استجابة متفق عليها"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Monthly maintenance for a business website",
+      "ar": "صيانة شهرية لموقع شركة"
+    },
+    {
+      "en": "A support agreement for a POS installation",
+      "ar": "اتفاقية دعم لنظام نقاط بيع"
+    },
+    {
+      "en": "Ongoing improvement of a web application",
+      "ar": "تطوير مستمر لتطبيق ويب"
+    }
+  ],
+  "published": true,
+  "displayOrder": 9
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "development",
+  "icon": "code",
+  "title": {
+    "en": "Build",
+    "ar": "نبني"
+  },
+  "description": {
+    "en": "We build it with reliable technology and keep you updated with working previews along the way.",
+    "ar": "نبنيه بتقنيات موثوقة ونطلعك على التقدّم عبر نسخ تجريبية قابلة للاستخدام."
+  },
+  "published": true,
+  "displayOrder": 3
+}

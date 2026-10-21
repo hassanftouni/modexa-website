@@ -1,0 +1,32 @@
+{
+  "slug": "multi-terminal",
+  "icon": "monitor",
+  "title": {
+    "en": "Several terminals together",
+    "ar": "عدة أجهزة معًا"
+  },
+  "description": {
+    "en": "Run several POS terminals on the same local network, sharing products, orders and reports.",
+    "ar": "شغّل عدة أجهزة بيع على الشبكة المحلية نفسها، تتشارك المنتجات والطلبات والتقارير."
+  },
+  "features": [
+    {
+      "en": "Multiple terminals per location",
+      "ar": "عدة أجهزة في الموقع الواحد"
+    },
+    {
+      "en": "One shared product list",
+      "ar": "قائمة منتجات مشتركة"
+    },
+    {
+      "en": "Orders kept in sync",
+      "ar": "طلبات متزامنة"
+    },
+    {
+      "en": "Roles per station",
+      "ar": "أدوار لكل محطة"
+    }
+  ],
+  "published": true,
+  "displayOrder": 2
+}

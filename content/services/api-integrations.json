@@ -1,0 +1,80 @@
+{
+  "slug": "api-integrations",
+  "icon": "plug",
+  "name": {
+    "en": "Connecting your systems (API integrations)",
+    "ar": "ربط الأنظمة (تكامل API)"
+  },
+  "summary": {
+    "en": "Your website and software connected to payments, messaging, CRMs and the other tools you use.",
+    "ar": "ربط موقعك وبرامجك بأنظمة الدفع والمراسلة وإدارة العملاء وباقي أدواتك."
+  },
+  "problem": {
+    "en": "When tools don't talk to each other, the same data gets typed twice and never quite matches. Everything slows down.",
+    "ar": "عندما لا تتواصل الأدوات فيما بينها، تُدخل البيانات نفسها مرتين ولا تتطابق أبدًا، فيتباطأ كل شيء."
+  },
+  "solution": {
+    "en": "We connect your website and software to the services you rely on — payments, messaging, customer systems, databases and other platforms — securely and reliably.",
+    "ar": "نربط موقعك وبرامجك بالخدمات التي تعتمد عليها — الدفع والمراسلة وأنظمة العملاء وقواعد البيانات والمنصات الأخرى — بشكل آمن وموثوق."
+  },
+  "benefits": [
+    {
+      "en": "Systems that share data automatically",
+      "ar": "أنظمة تتبادل البيانات تلقائيًا"
+    },
+    {
+      "en": "No more typing things twice",
+      "ar": "لا حاجة لإدخال البيانات مرتين"
+    },
+    {
+      "en": "Up-to-date information everywhere",
+      "ar": "معلومات محدّثة في كل مكان"
+    },
+    {
+      "en": "Secure, maintained connections",
+      "ar": "اتصالات آمنة ومُتابعة"
+    }
+  ],
+  "features": [
+    {
+      "en": "Payment gateways",
+      "ar": "بوابات الدفع"
+    },
+    {
+      "en": "Messaging services",
+      "ar": "خدمات المراسلة"
+    },
+    {
+      "en": "CRM and database sync",
+      "ar": "مزامنة أنظمة العملاء وقواعد البيانات"
+    },
+    {
+      "en": "Third-party platforms",
+      "ar": "منصات خارجية"
+    },
+    {
+      "en": "Custom APIs for your software",
+      "ar": "واجهات API مخصّصة لبرامجك"
+    },
+    {
+      "en": "Event-based automations (webhooks)",
+      "ar": "أتمتة مبنية على الأحداث (Webhooks)"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A payment provider connected to an online store",
+      "ar": "مزوّد دفع مرتبط بمتجر إلكتروني"
+    },
+    {
+      "en": "Website enquiries sent straight to a CRM",
+      "ar": "استفسارات الموقع تصل مباشرة إلى نظام العملاء"
+    },
+    {
+      "en": "Order notifications sent to a messaging channel",
+      "ar": "تنبيهات الطلبات تُرسل إلى قناة مراسلة"
+    }
+  ],
+  "published": true,
+  "displayOrder": 8
+}

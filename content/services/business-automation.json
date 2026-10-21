@@ -1,0 +1,80 @@
+{
+  "slug": "business-automation",
+  "icon": "workflow",
+  "name": {
+    "en": "Business automation",
+    "ar": "أتمتة الأعمال"
+  },
+  "summary": {
+    "en": "Repetitive work — follow-ups, reports, reminders, data entry — done automatically.",
+    "ar": "الأعمال المتكررة — المتابعات والتقارير والتذكيرات وإدخال البيانات — تُنجز تلقائيًا."
+  },
+  "problem": {
+    "en": "Copying data, sending follow-ups and putting reports together by hand quietly eats up hours and lets mistakes slip in.",
+    "ar": "نسخ البيانات وإرسال رسائل المتابعة وإعداد التقارير يدويًا يستهلك الساعات بصمت ويفتح الباب للأخطاء."
+  },
+  "solution": {
+    "en": "We look at how your work happens today and automate the repetitive parts — emails, enquiry handling, notifications and reports — around the way your business runs.",
+    "ar": "ندرس كيف يتم عملك اليوم ونؤتمت الأجزاء المتكررة منه — الرسائل ومعالجة الاستفسارات والتنبيهات والتقارير — بما يناسب طريقة سير عملك."
+  },
+  "benefits": [
+    {
+      "en": "Hours saved every week",
+      "ar": "ساعات توفّرها كل أسبوع"
+    },
+    {
+      "en": "Fewer manual mistakes",
+      "ar": "أخطاء يدوية أقل"
+    },
+    {
+      "en": "Faster follow-ups",
+      "ar": "متابعة أسرع"
+    },
+    {
+      "en": "Processes that grow with you",
+      "ar": "إجراءات تنمو معك"
+    }
+  ],
+  "features": [
+    {
+      "en": "Automatic email sequences",
+      "ar": "رسائل بريد تلقائية"
+    },
+    {
+      "en": "Collecting and routing enquiries",
+      "ar": "جمع الاستفسارات وتوجيهها"
+    },
+    {
+      "en": "Scheduled reports",
+      "ar": "تقارير مجدولة"
+    },
+    {
+      "en": "Internal notifications and alerts",
+      "ar": "تنبيهات داخلية"
+    },
+    {
+      "en": "Customer follow-ups",
+      "ar": "متابعة العملاء"
+    },
+    {
+      "en": "Keeping data in sync between tools",
+      "ar": "مزامنة البيانات بين الأدوات"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Automatic follow-up for new enquiries",
+      "ar": "متابعة تلقائية للاستفسارات الجديدة"
+    },
+    {
+      "en": "A weekly sales report sent automatically",
+      "ar": "تقرير مبيعات أسبوعي يُرسل تلقائيًا"
+    },
+    {
+      "en": "Automatic appointment reminders",
+      "ar": "تذكيرات تلقائية بالمواعيد"
+    }
+  ],
+  "published": true,
+  "displayOrder": 6
+}

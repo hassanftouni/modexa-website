@@ -1,9 +1,18 @@
 {
-  "title": "Booking & Scheduling Platform",
+  "title": {
+    "en": "Booking & Scheduling Platform",
+    "ar": "منصة حجوزات ومواعيد"
+  },
   "slug": "concept-booking-platform",
   "category": "web-applications",
-  "shortDescription": "Concept Project — a web application for appointments, staff scheduling and customer management.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa web application: online appointment booking, staff and resource scheduling, automated reminders and a management dashboard for the business owner.",
+  "shortDescription": {
+    "en": "a web application for appointments, staff scheduling and customer management.",
+    "ar": ""
+  },
+  "fullDescription": {
+    "en": "This placeholder illustrates a typical Modexa web application: online appointment booking, staff and resource scheduling, automated reminders and a management dashboard for the business owner.",
+    "ar": ""
+  },
   "thumbnail": "/images/ChatGPT Image Jul 17, 2026, 10_42_15 PM.png",
   "technologies": [
     "Next.js",
@@ -13,5 +22,8 @@
   "projectStatus": "concept",
   "featured": false,
   "published": false,
-  "displayOrder": 6
+  "displayOrder": 6,
+  "galleryImages": [],
+  "customerName": "",
+  "websiteUrl": ""
 }

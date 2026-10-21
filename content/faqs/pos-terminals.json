@@ -1,0 +1,14 @@
+{
+  "slug": "pos-terminals",
+  "group": "pos",
+  "question": {
+    "en": "Can I use more than one terminal?",
+    "ar": "هل يمكنني استخدام أكثر من جهاز؟"
+  },
+  "answer": {
+    "en": "Yes. Several terminals can work together on the same local network, sharing products, orders and reports.",
+    "ar": "نعم. يمكن لعدة أجهزة العمل معًا على الشبكة المحلية نفسها، مع مشاركة المنتجات والطلبات والتقارير."
+  },
+  "published": true,
+  "displayOrder": 7
+}

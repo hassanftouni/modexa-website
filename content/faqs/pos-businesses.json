@@ -1,0 +1,14 @@
+{
+  "slug": "pos-businesses",
+  "group": "pos",
+  "question": {
+    "en": "Which businesses is it made for?",
+    "ar": "لأي أنواع الأعمال صُمّم؟"
+  },
+  "answer": {
+    "en": "Restaurants, cafés, bars, retail stores and shops — from a single location to growing businesses with several branches.",
+    "ar": "للمطاعم والمقاهي والبارات ومحلات البيع بالتجزئة والمتاجر — من الفرع الواحد إلى الشركات النامية متعددة الفروع."
+  },
+  "published": true,
+  "displayOrder": 8
+}

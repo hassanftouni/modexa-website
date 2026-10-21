@@ -1,0 +1,80 @@
+{
+  "slug": "ai-agents",
+  "icon": "bot",
+  "name": {
+    "en": "AI agents",
+    "ar": "وكلاء الذكاء الاصطناعي"
+  },
+  "summary": {
+    "en": "Assistants that answer customer questions, qualify enquiries and handle repetitive tasks — with your team in control.",
+    "ar": "مساعدون يجيبون عن أسئلة العملاء ويفرزون الاستفسارات وينجزون المهام المتكررة — مع بقاء فريقك صاحب القرار."
+  },
+  "problem": {
+    "en": "Teams spend hours every day answering the same questions, sorting enquiries and copying information between systems. The work is repetitive, but it still has to be done well.",
+    "ar": "تقضي الفرق ساعات يوميًا في الإجابة عن الأسئلة نفسها وفرز الاستفسارات ونقل المعلومات بين الأنظمة. عمل متكرر، لكنه يجب أن يُنجز بإتقان."
+  },
+  "solution": {
+    "en": "We set up AI agents that learn your business information and processes. They answer customer questions, qualify enquiries, help with bookings and take on repetitive work — and hand over to a person whenever needed.",
+    "ar": "نُعدّ وكلاء ذكاء اصطناعي يتعلّمون معلومات عملك وإجراءاته. يجيبون عن أسئلة العملاء ويفرزون الاستفسارات ويساعدون في الحجوزات وينجزون الأعمال المتكررة، ويحوّلون المحادثة إلى أحد موظفيك عند الحاجة."
+  },
+  "benefits": [
+    {
+      "en": "Faster replies for customers",
+      "ar": "ردود أسرع للعملاء"
+    },
+    {
+      "en": "More time for your team",
+      "ar": "وقت أكثر لفريقك"
+    },
+    {
+      "en": "Consistent, accurate answers",
+      "ar": "إجابات دقيقة ومتّسقة"
+    },
+    {
+      "en": "Available outside working hours",
+      "ar": "متاح خارج ساعات العمل"
+    }
+  ],
+  "features": [
+    {
+      "en": "Customer support agents",
+      "ar": "وكلاء لدعم العملاء"
+    },
+    {
+      "en": "Enquiry qualification",
+      "ar": "فرز الاستفسارات وتأهيلها"
+    },
+    {
+      "en": "Booking assistants",
+      "ar": "مساعدون للحجوزات"
+    },
+    {
+      "en": "Answers from your own business information",
+      "ar": "إجابات من معلومات عملك نفسها"
+    },
+    {
+      "en": "Chat on your website",
+      "ar": "محادثة على موقعك"
+    },
+    {
+      "en": "Hand-over to a person when needed",
+      "ar": "تحويل إلى موظف عند الحاجة"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A support assistant that knows your services",
+      "ar": "مساعد دعم يعرف خدماتك"
+    },
+    {
+      "en": "An assistant that qualifies sales enquiries",
+      "ar": "مساعد يفرز استفسارات المبيعات"
+    },
+    {
+      "en": "A question-answering assistant for a booking business",
+      "ar": "مساعد يجيب عن الأسئلة لنشاط يعتمد على الحجوزات"
+    }
+  ],
+  "published": true,
+  "displayOrder": 5
+}

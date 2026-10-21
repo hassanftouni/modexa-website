@@ -1,63 +1,95 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { Locale } from "@/i18n/config";
+import { localize, type Resolved } from "@/i18n/localize";
 import type {
   Customer,
+  Faq,
   PortfolioProject,
+  PosFeature,
+  ProcessStep,
+  Product,
+  Service,
+  SiteSettings,
   Testimonial,
-} from "@/content/types";
+} from "@/content/schema";
+import type { PageContent, PageName } from "@/content/pages";
 
 /**
- * Loader for CMS-managed content collections (content/*.json).
+ * Loader for CMS-managed content (content/).
  *
- * These folders are edited through Pages CMS (see .pages.yml) — the website
- * owner adds, edits, publishes and hides records there without touching any
- * React component. Files are read at build time; every page consuming them is
- * statically generated, so Vercel rebuilds pick up CMS commits automatically.
+ * Everything in content/ is edited through Pages CMS (see .pages.yml) — the
+ * team adds, edits, publishes and hides records there without touching any
+ * React component. Files are read at build time; every page is statically
+ * generated, so a CMS commit triggers a Vercel rebuild that picks it up.
+ *
+ * Each getter resolves bilingual { en, ar } fields to the requested locale.
  */
 const contentDir = path.join(process.cwd(), "content");
 
-function readCollection<T>(name: string): T[] {
+function readJson<T>(relativePath: string): T {
+  return JSON.parse(fs.readFileSync(path.join(contentDir, relativePath), "utf8")) as T;
+}
+
+function readCollection<T extends { published: boolean; displayOrder: number }>(
+  name: string
+): T[] {
   const dir = path.join(contentDir, name);
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
     .filter((file) => file.endsWith(".json"))
-    .map(
-      (file) =>
-        JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")) as T
-    );
+    .map((file) => readJson<T>(path.join(name, file)))
+    .filter((record) => record.published)
+    .sort((a, b) => a.displayOrder - b.displayOrder);
 }
 
-function byDisplayOrder(a: { displayOrder: number }, b: { displayOrder: number }) {
-  return a.displayOrder - b.displayOrder;
+export type Localized<T> = Resolved<T>;
+
+export function getSettings(locale: Locale): Resolved<SiteSettings> {
+  return localize(readJson<SiteSettings>("settings.json"), locale);
 }
 
-/** Published customers, ordered for display. */
-export function getCustomers(): Customer[] {
-  return readCollection<Customer>("customers")
-    .filter((customer) => customer.published)
-    .sort(byDisplayOrder);
+export function getPage<N extends PageName>(name: N, locale: Locale): Resolved<PageContent[N]> {
+  return localize(readJson<PageContent[N]>(`pages/${name}.json`), locale);
 }
 
-export function getFeaturedCustomers(): Customer[] {
-  return getCustomers().filter((customer) => customer.featured);
+export function getServices(locale: Locale) {
+  return localize(readCollection<Service>("services"), locale);
 }
 
-/** Published testimonials, ordered for display. */
-export function getTestimonials(): Testimonial[] {
-  return readCollection<Testimonial>("testimonials")
-    .filter((testimonial) => testimonial.published)
-    .sort(byDisplayOrder);
+export function getProducts(locale: Locale) {
+  return localize(readCollection<Product>("products"), locale);
 }
 
-/** Published portfolio projects, ordered for display. */
-export function getPortfolioProjects(): PortfolioProject[] {
-  return readCollection<PortfolioProject>("portfolio")
-    .filter((project) => project.published)
-    .sort(byDisplayOrder);
+export function getPosFeatures(locale: Locale) {
+  return localize(readCollection<PosFeature>("pos-features"), locale);
 }
 
-export function getFeaturedProjects(limit?: number): PortfolioProject[] {
-  const featured = getPortfolioProjects().filter((project) => project.featured);
+export function getFaqs(group: Faq["group"], locale: Locale) {
+  return localize(
+    readCollection<Faq>("faqs").filter((faq) => faq.group === group),
+    locale
+  );
+}
+
+export function getProcessSteps(locale: Locale) {
+  return localize(readCollection<ProcessStep>("process-steps"), locale);
+}
+
+export function getPortfolioProjects(locale: Locale) {
+  return localize(readCollection<PortfolioProject>("portfolio"), locale);
+}
+
+export function getFeaturedProjects(locale: Locale, limit?: number) {
+  const featured = getPortfolioProjects(locale).filter((project) => project.featured);
   return typeof limit === "number" ? featured.slice(0, limit) : featured;
+}
+
+export function getCustomers(locale: Locale) {
+  return localize(readCollection<Customer>("customers"), locale);
+}
+
+export function getTestimonials(locale: Locale) {
+  return localize(readCollection<Testimonial>("testimonials"), locale);
 }

@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Icon } from "@/components/ui/icons";
-import type { PortfolioProject } from "@/content/types";
+import type { PortfolioProject as RawPortfolioProject } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type PortfolioProject = Localized<RawPortfolioProject>;
 
 /*
  * Projects come from the CMS-managed collection in content/portfolio/.

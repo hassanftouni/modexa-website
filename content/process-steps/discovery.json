@@ -1,0 +1,14 @@
+{
+  "slug": "discovery",
+  "icon": "search",
+  "title": {
+    "en": "Understand",
+    "ar": "نفهم"
+  },
+  "description": {
+    "en": "We listen to how your business works today, what's in the way and what you want to achieve.",
+    "ar": "نستمع إلى طريقة سير عملك اليوم، وما يعيقه، وما تريد تحقيقه."
+  },
+  "published": true,
+  "displayOrder": 1
+}

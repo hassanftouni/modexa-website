@@ -1,9 +1,18 @@
 {
-  "title": "Professional Portfolio Website",
+  "title": {
+    "en": "Professional Portfolio Website",
+    "ar": "موقع شخصي احترافي (بورتفوليو)"
+  },
   "slug": "concept-portfolio-website",
   "category": "websites",
-  "shortDescription": "Concept Project — a personal portfolio website with project showcases and personal branding.",
-  "fullDescription": "Concept Project — project details coming soon. This placeholder illustrates a typical Modexa portfolio website: elegant personal branding, project case studies, skills and experience sections and a contact flow — all fast, responsive and SEO-friendly.",
+  "shortDescription": {
+    "en": "A personal portfolio website with project showcases and a strong personal brand.",
+    "ar": "موقع شخصي يعرض المشاريع ويبني هوية شخصية احترافية."
+  },
+  "fullDescription": {
+    "en": "An elegant personal website presenting projects, skills and experience with a clear way to get in touch — fast, comfortable on phones and easy to find on search engines.",
+    "ar": "موقع شخصي بهوية أنيقة، يعرض المشاريع والمهارات والخبرات مع طريقة تواصل واضحة — سريع ويعمل جيدًا على الهاتف ومهيّأ لمحركات البحث."
+  },
   "thumbnail": "/images/Screenshot 2026-07-17 225951-1.png",
   "technologies": [
     "Next.js",
@@ -14,5 +23,7 @@
   "projectStatus": "concept",
   "featured": false,
   "published": true,
-  "displayOrder": 3
+  "displayOrder": 3,
+  "galleryImages": [],
+  "customerName": ""
 }

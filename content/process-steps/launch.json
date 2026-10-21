@@ -1,0 +1,14 @@
+{
+  "slug": "launch",
+  "icon": "zap",
+  "title": {
+    "en": "Test & launch",
+    "ar": "نختبر ونطلق"
+  },
+  "description": {
+    "en": "We test on real devices, fix what needs fixing and launch — then make sure your team is comfortable using it.",
+    "ar": "نختبر على أجهزة حقيقية ونصلح ما يلزم ثم نطلق، ونتأكد من أن فريقك مرتاح في استخدامه."
+  },
+  "published": true,
+  "displayOrder": 4
+}

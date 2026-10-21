@@ -1,0 +1,14 @@
+{
+  "slug": "pos-offline",
+  "group": "pos",
+  "question": {
+    "en": "Does Modexa POS work without internet?",
+    "ar": "هل يعمل Modexa POS دون إنترنت؟"
+  },
+  "answer": {
+    "en": "Yes. Modexa POS runs on your local network, so selling, printing and daily operations keep working even when the internet connection drops.",
+    "ar": "نعم. يعمل Modexa POS على شبكتك المحلية، لذا يستمر البيع والطباعة والعمل اليومي حتى عند انقطاع الإنترنت."
+  },
+  "published": true,
+  "displayOrder": 6
+}

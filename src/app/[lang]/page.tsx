@@ -19,9 +19,9 @@ import {
 } from "@/lib/content";
 
 export default function Home() {
-  const customers = getCustomers();
-  const projects = getPortfolioProjects();
-  const testimonials = getTestimonials();
+  const customers = getCustomers("en");
+  const projects = getPortfolioProjects("en");
+  const testimonials = getTestimonials("en");
 
   return (
     <>

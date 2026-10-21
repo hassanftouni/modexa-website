@@ -1,0 +1,32 @@
+{
+  "slug": "reports",
+  "icon": "chart",
+  "title": {
+    "en": "Sales reports",
+    "ar": "تقارير المبيعات"
+  },
+  "description": {
+    "en": "Clear dashboards that turn daily sales into numbers you can act on.",
+    "ar": "لوحات واضحة تحوّل مبيعات اليوم إلى أرقام تساعدك على اتخاذ القرار."
+  },
+  "features": [
+    {
+      "en": "Daily and period reports",
+      "ar": "تقارير يومية ولفترات محددة"
+    },
+    {
+      "en": "Best-sellers",
+      "ar": "الأكثر مبيعًا"
+    },
+    {
+      "en": "Revenue overview",
+      "ar": "نظرة عامة على الإيرادات"
+    },
+    {
+      "en": "Business dashboards",
+      "ar": "لوحات متابعة الأعمال"
+    }
+  ],
+  "published": true,
+  "displayOrder": 8
+}

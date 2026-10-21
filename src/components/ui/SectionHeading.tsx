@@ -5,32 +5,27 @@ interface SectionHeadingProps {
   eyebrow?: string;
   title: ReactNode;
   description?: ReactNode;
-  align?: "center" | "left";
+  align?: "start" | "center";
+  /** Heading level — h2 by default; use "h1" for page titles. */
+  as?: "h1" | "h2";
   className?: string;
 }
 
+/** Eyebrow + display heading + lead paragraph, aligned to the reading edge. */
 export function SectionHeading({
   eyebrow,
   title,
   description,
-  align = "center",
+  align = "start",
+  as: Heading = "h2",
   className = "",
 }: SectionHeadingProps) {
-  const alignment =
-    align === "center" ? "mx-auto text-center items-center" : "text-left items-start";
+  const alignment = align === "center" ? "mx-auto items-center text-center" : "items-start";
 
   return (
-    <AnimatedContainer
-      className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}
-    >
-      {eyebrow ? (
-        <p className="text-sm font-medium tracking-widest text-brand-accent uppercase">
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
-        {title}
-      </h2>
+    <AnimatedContainer className={`flex max-w-2xl flex-col gap-5 ${alignment} ${className}`}>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      <Heading className="display text-[2rem] sm:text-[2.5rem] lg:text-5xl">{title}</Heading>
       {description ? (
         <p className="text-lg leading-relaxed text-soft/80">{description}</p>
       ) : null}

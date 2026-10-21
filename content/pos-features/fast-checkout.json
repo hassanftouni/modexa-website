@@ -1,0 +1,32 @@
+{
+  "slug": "fast-checkout",
+  "icon": "creditCard",
+  "title": {
+    "en": "Fast checkout",
+    "ar": "بيع سريع"
+  },
+  "description": {
+    "en": "A checkout made for busy hours — clear, simple and dependable for your staff.",
+    "ar": "شاشة بيع مصمّمة لأوقات الذروة — واضحة وبسيطة وموثوقة لموظفيك."
+  },
+  "features": [
+    {
+      "en": "Quick product selection",
+      "ar": "اختيار سريع للمنتجات"
+    },
+    {
+      "en": "Order changes and notes",
+      "ar": "تعديل الطلبات وإضافة الملاحظات"
+    },
+    {
+      "en": "Several payment methods",
+      "ar": "عدة طرق للدفع"
+    },
+    {
+      "en": "Smooth daily operation",
+      "ar": "تشغيل يومي سلس"
+    }
+  ],
+  "published": true,
+  "displayOrder": 1
+}

@@ -2,10 +2,17 @@
   "name": "Moussa Jaffar Portfolio",
   "slug": "concept-portfolio-moussa-jaffar",
   "logo": "/images/Screenshot 2026-07-17 225951.png",
-  "industry": "Professional Services",
+  "industry": {
+    "en": "Professional Services",
+    "ar": "الخدمات المهنية"
+  },
   "website": "https://mjportfolio-woad.vercel.app/",
   "projectType": "Portfolio Website",
   "featured": true,
   "published": false,
-  "displayOrder": 3
+  "displayOrder": 3,
+  "testimonial": {
+    "en": "",
+    "ar": ""
+  }
 }

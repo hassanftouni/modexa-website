@@ -1,0 +1,14 @@
+{
+  "slug": "general-cost",
+  "group": "general",
+  "question": {
+    "en": "How much does a project cost?",
+    "ar": "كم تبلغ تكلفة المشروع؟"
+  },
+  "answer": {
+    "en": "Every project is different, so we don't use fixed price lists. After a short conversation about your goals, you receive a clear custom quote — with no obligation.",
+    "ar": "كل مشروع مختلف، لذلك لا نعتمد قوائم أسعار ثابتة. بعد محادثة قصيرة حول أهدافك، تحصل على عرض سعر واضح ومخصّص دون أي التزام."
+  },
+  "published": true,
+  "displayOrder": 1
+}

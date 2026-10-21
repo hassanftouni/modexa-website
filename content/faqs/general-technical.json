@@ -1,0 +1,14 @@
+{
+  "slug": "general-technical",
+  "group": "general",
+  "question": {
+    "en": "I'm not technical. Is that a problem?",
+    "ar": "لست متخصصًا في التقنية. هل هذه مشكلة؟"
+  },
+  "answer": {
+    "en": "Not at all. Most of our clients aren't. Tell us about your business in your own words — we'll explain the options in plain language and recommend what makes sense.",
+    "ar": "إطلاقًا. معظم عملائنا ليسوا تقنيين. حدّثنا عن عملك بكلماتك الخاصة، وسنشرح لك الخيارات بلغة بسيطة ونوصي بما يناسبك."
+  },
+  "published": true,
+  "displayOrder": 5
+}

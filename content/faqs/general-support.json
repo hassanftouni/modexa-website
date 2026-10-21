@@ -1,0 +1,14 @@
+{
+  "slug": "general-support",
+  "group": "general",
+  "question": {
+    "en": "Do you help after launch?",
+    "ar": "هل تقدّمون الدعم بعد الإطلاق؟"
+  },
+  "answer": {
+    "en": "Yes. We offer maintenance and support agreements covering updates, fixes, monitoring and improvements, based on what your project needs.",
+    "ar": "نعم. نقدّم اتفاقيات صيانة ودعم تشمل التحديثات والإصلاحات والمراقبة والتحسينات، حسب احتياجات مشروعك."
+  },
+  "published": true,
+  "displayOrder": 3
+}

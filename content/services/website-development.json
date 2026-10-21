@@ -1,0 +1,80 @@
+{
+  "slug": "website-development",
+  "icon": "globe",
+  "name": {
+    "en": "Website development",
+    "ar": "تطوير المواقع الإلكترونية"
+  },
+  "summary": {
+    "en": "Fast, modern websites that explain what you do and turn visitors into customers.",
+    "ar": "مواقع سريعة وعصرية تشرح ما تقدّمه وتحوّل الزوّار إلى عملاء."
+  },
+  "problem": {
+    "en": "An outdated or slow website costs you credibility and customers. Many businesses still have sites that look broken on phones, load slowly or don't clearly say what they offer.",
+    "ar": "الموقع القديم أو البطيء يُفقدك الثقة والعملاء. ما زالت شركات كثيرة تملك مواقع تظهر بشكل سيئ على الهاتف، أو تتأخر في التحميل، أو لا توضّح ما تقدّمه."
+  },
+  "solution": {
+    "en": "We design and build fast websites with a clear structure and a modern look, set up so Google can find them — so your business looks professional on every screen.",
+    "ar": "نصمّم ونطوّر مواقع سريعة بهيكل واضح ومظهر عصري، ومهيّأة لتظهر في نتائج البحث على Google، لتبدو شركتك احترافية على كل شاشة."
+  },
+  "benefits": [
+    {
+      "en": "A professional first impression",
+      "ar": "انطباع أول احترافي"
+    },
+    {
+      "en": "Loads fast and works on phones",
+      "ar": "تحميل سريع وعمل ممتاز على الهاتف"
+    },
+    {
+      "en": "Built to be found on Google",
+      "ar": "مهيّأ للظهور في نتائج Google"
+    },
+    {
+      "en": "Easy to grow later",
+      "ar": "سهل التوسعة لاحقًا"
+    }
+  ],
+  "features": [
+    {
+      "en": "Design that matches your brand",
+      "ar": "تصميم يناسب هوية علامتك"
+    },
+    {
+      "en": "Layouts for phones, tablets and computers",
+      "ar": "تصميم يتكيّف مع الهاتف والجهاز اللوحي والكمبيوتر"
+    },
+    {
+      "en": "Speed optimisation",
+      "ar": "تحسين سرعة التحميل"
+    },
+    {
+      "en": "Contact and enquiry forms",
+      "ar": "نماذج تواصل واستفسار"
+    },
+    {
+      "en": "Visitor analytics (optional)",
+      "ar": "إحصاءات الزوّار (اختياري)"
+    },
+    {
+      "en": "Secure hosting setup",
+      "ar": "إعداد استضافة آمنة"
+    }
+  ],
+  "examples": [
+    {
+      "en": "A company website presenting your services",
+      "ar": "موقع شركة يعرض خدماتك"
+    },
+    {
+      "en": "A restaurant website with the menu",
+      "ar": "موقع مطعم مع قائمة الطعام"
+    },
+    {
+      "en": "A local business website with a booking request",
+      "ar": "موقع لنشاط محلي مع طلب حجز"
+    }
+  ],
+  "published": true,
+  "displayOrder": 1
+}

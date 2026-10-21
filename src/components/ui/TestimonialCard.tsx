@@ -1,4 +1,6 @@
-import type { Testimonial } from "@/content/types";
+import type { Testimonial as RawTestimonial } from "@/content/schema";
+import type { Localized } from "@/lib/content";
+type Testimonial = Localized<RawTestimonial>;
 import { Icon } from "./icons";
 
 /*

@@ -17,11 +17,32 @@
   --brand-primary: #06b6d4;
   --brand-hover: #22d3ee;
   --brand-deep: #0e7490;
+  /* Accent used for text and icons; darkened inside light sections. */
   --brand-accent: #06b6d4;
   --on-brand: #0b1220;
   --border: rgba(231, 237, 243, 0.1);
   --border-strong: rgba(231, 237, 243, 0.2);
   --shadow-card: 0 18px 40px -24px rgba(0, 0, 0, 0.75);
+}
+
+/*
+  Light sections (#E7EDF3) alternate with the midnight ones. Tokens are
+  remapped locally so every component works unchanged on either surface.
+  Cyan text fails contrast on light grey, so accents use deep cyan here.
+*/
+.section-light {
+  --background: #e7edf3;
+  --surface: #ffffff;
+  --surface-raised: #f5f8fb;
+  --foreground: #0b1220;
+  --soft: #1f2d3f;
+  --muted: #4b5b70;
+  --brand-accent: #0e7490;
+  --border: rgba(11, 18, 32, 0.12);
+  --border-strong: rgba(11, 18, 32, 0.24);
+  --shadow-card: 0 18px 40px -28px rgba(11, 18, 32, 0.35);
+  background: var(--background);
+  color: var(--foreground);
 }
 
 @theme inline {
@@ -39,11 +60,19 @@
   --color-edge: var(--border);
   --color-edge-strong: var(--border-strong);
   --shadow-card: var(--shadow-card);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-geist-sans), var(--font-plex-arabic), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-label: var(--font-space-mono), ui-monospace, monospace;
-  --font-copy: var(--font-instrument), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Arabic: IBM Plex Sans Arabic for everything, including headings. */
+:root:lang(ar) {
+  --font-sans: var(--font-plex-arabic), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plex-arabic), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Letter-spacing breaks the joins of Arabic script — never track Arabic. */
+:lang(ar) * {
+  letter-spacing: 0 !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -52,11 +81,30 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:lang(ar) body {
+  line-height: 1.7;
 }
 
 ::selection {
@@ -69,22 +117,68 @@ body {
   outline-offset: 2px;
 }
 
-/* Accent emphasis for the key phrase of a headline (solid cyan, no gradient). */
-.text-emphasis {
-  color: var(--brand-primary);
+/* ============================================================
+   Typography
+   ============================================================ */
+
+/* Large headings: Archivo, slightly condensed, tight. */
+.display {
+  font-family: var(--font-display);
+  font-stretch: 88%;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  text-wrap: balance;
 }
 
-/* Subtle blueprint-style grid used behind hero sections. */
+:lang(ar) .display {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Small section label: a short cyan rule followed by muted caps. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: var(--brand-accent);
+}
+
+:lang(ar) .eyebrow {
+  font-size: 0.9375rem;
+}
+
+/* Accent emphasis for the key phrase of a headline (solid, no gradient). */
+.text-emphasis {
+  color: var(--brand-accent);
+}
+
+/* ============================================================
+   Surfaces
+   ============================================================ */
+
+/* Subtle blueprint grid used behind the hero. */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(231, 237, 243, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(231, 237, 243, 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 40%, transparent 100%);
+    linear-gradient(to right, rgba(231, 237, 243, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(231, 237, 243, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 30%, transparent 100%);
 }
 
-/* Raised card surface with a faint top highlight. */
+/* Panel surface with a faint top highlight. */
 .card-surface {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 55%),
@@ -92,130 +186,21 @@ body {
   border: 1px solid var(--border);
 }
 
-/* Hairline cyan rule along the top of hero/page headers — replaces glow blobs. */
+.section-light .card-surface {
+  background: var(--surface);
+}
+
+/* Hairline cyan rule used to mark the top edge of key panels. */
 .accent-rule {
   background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.55) 50%, transparent);
 }
 
-/* ============================================================
-   Name-assembly hero
-   Condensed Archivo display type; the X is never a font glyph —
-   it is built from the two rounded stripes of the Modexa mark.
-   All motion is applied by the hero's rAF loop via transform and
-   opacity only; these rules hold the static look of each piece.
-   ============================================================ */
-
-.hero-display {
-  font-family: var(--font-display);
-  font-stretch: 62%;
-  font-weight: 900;
-  text-transform: uppercase;
+/* Directional icons (arrows, chevrons) point the other way in RTL. */
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
 }
 
-.hero-wordmark {
-  font-size: clamp(3.1rem, 12.5vw, 9.75rem);
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.hero-letter {
-  will-change: transform;
-}
-
-/* The X: two rounded stripes that can split and rejoin. */
-.hero-x {
-  position: relative;
-  display: block;
-  width: 0.74em;
-  height: 0.72em;
-}
-
-.hero-stripe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.04em;
-  height: 0.16em;
-  border-radius: 999px;
-  will-change: transform;
-}
-
-/* Cyan stripe of the X (the logo's accent stroke). */
-.hero-stripe-grad {
-  background: var(--brand-primary);
-}
-
-.hero-stripe-white {
-  background: #ffffff;
-}
-
-/* Soft radial light behind the letter on stage; opacity-driven. */
-.hero-stage-light {
-  background: radial-gradient(
-    closest-side,
-    rgba(6, 182, 212, 0.07),
-    transparent 70%
-  );
-}
-
-/* Faint light pulsed once when the wordmark locks together. */
-.hero-bloom {
-  background: radial-gradient(
-    closest-side,
-    rgba(6, 182, 212, 0.1),
-    transparent 75%
-  );
-  filter: blur(26px);
-}
-
-/* ============================================================
-   Stack-build section
-   Isometric tower of six slabs. The tower keeps preserve-3d, so
-   it must never gain overflow, filter or animated opacity — all
-   motion lands on the slabs (transform) and overlays (opacity).
-   ============================================================ */
-
-.stack-perspective {
-  perspective: 1400px;
-}
-
-.stack-tower {
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.stack-slab {
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(23, 38, 56, 0.9);
-  will-change: transform, opacity;
-}
-
-/* Top slab (USERS) is the accent layer. */
-.stack-slab-top {
-  background:
-    linear-gradient(180deg, rgba(6, 182, 212, 0.1), rgba(6, 182, 212, 0.02)),
-    rgba(23, 38, 56, 0.92);
-  border-color: rgba(6, 182, 212, 0.5);
-}
-
-/* Lock highlight, flashed via opacity when a slab lands. */
-.stack-pulse {
-  position: absolute;
-  inset: -1px;
-  border-radius: 20px;
-  border: 1px solid rgba(6, 182, 212, 0.75);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.12);
-  pointer-events: none;
-}
-
-/* Soft floor shadow revealed when the stack comes online. */
-.stack-underglow {
-  background: radial-gradient(
-    closest-side,
-    rgba(6, 182, 212, 0.08),
-    transparent 70%
-  );
+/* Hide the native disclosure marker on FAQ <summary>. */
+summary::-webkit-details-marker {
+  display: none;
 }

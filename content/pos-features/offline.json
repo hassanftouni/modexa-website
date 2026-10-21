@@ -1,0 +1,32 @@
+{
+  "slug": "offline",
+  "icon": "wifiOff",
+  "title": {
+    "en": "Works without internet",
+    "ar": "يعمل دون إنترنت"
+  },
+  "description": {
+    "en": "Modexa POS runs on your local network, so you keep selling even when the internet goes down.",
+    "ar": "يعمل Modexa POS على شبكتك المحلية، فتواصل البيع حتى عند انقطاع الإنترنت."
+  },
+  "features": [
+    {
+      "en": "No internet needed for daily work",
+      "ar": "لا حاجة للإنترنت في العمل اليومي"
+    },
+    {
+      "en": "Syncs over the local network",
+      "ar": "مزامنة عبر الشبكة المحلية"
+    },
+    {
+      "en": "Stable during outages",
+      "ar": "ثبات أثناء الانقطاعات"
+    },
+    {
+      "en": "Made for real-world conditions",
+      "ar": "مصمّم لظروف العمل الحقيقية"
+    }
+  ],
+  "published": true,
+  "displayOrder": 3
+}

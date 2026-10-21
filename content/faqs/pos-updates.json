@@ -1,0 +1,14 @@
+{
+  "slug": "pos-updates",
+  "group": "pos",
+  "question": {
+    "en": "How do updates and licences work?",
+    "ar": "كيف تعمل التحديثات والتراخيص؟"
+  },
+  "answer": {
+    "en": "Licensing and automatic updates are built in, so your system stays current without manual installation. The details are agreed as part of your quote.",
+    "ar": "التراخيص والتحديثات التلقائية مدمجة في النظام، فيبقى محدّثًا دون تثبيت يدوي. يتم الاتفاق على التفاصيل ضمن عرض السعر."
+  },
+  "published": true,
+  "displayOrder": 11
+}

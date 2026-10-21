@@ -1,0 +1,32 @@
+{
+  "slug": "updates",
+  "icon": "refresh",
+  "title": {
+    "en": "Licences & automatic updates",
+    "ar": "التراخيص والتحديثات التلقائية"
+  },
+  "description": {
+    "en": "Licensing and updates are built in, so every terminal stays current without manual work.",
+    "ar": "التراخيص والتحديثات مدمجة، فتبقى كل الأجهزة محدّثة دون عمل يدوي."
+  },
+  "features": [
+    {
+      "en": "Licence management",
+      "ar": "إدارة التراخيص"
+    },
+    {
+      "en": "Automatic updates",
+      "ar": "تحديثات تلقائية"
+    },
+    {
+      "en": "Same version on every terminal",
+      "ar": "النسخة نفسها على كل الأجهزة"
+    },
+    {
+      "en": "No manual installation rounds",
+      "ar": "لا حاجة لتثبيت يدوي"
+    }
+  ],
+  "published": true,
+  "displayOrder": 11
+}

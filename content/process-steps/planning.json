@@ -1,0 +1,14 @@
+{
+  "slug": "planning",
+  "icon": "layers",
+  "title": {
+    "en": "Plan & design",
+    "ar": "نخطّط ونصمّم"
+  },
+  "description": {
+    "en": "We agree on what to build, show you how it will look and give you a clear quote and timeline.",
+    "ar": "نتفق على ما سنبنيه، ونريك كيف سيبدو، ونقدّم لك عرض سعر وجدولًا زمنيًا واضحين."
+  },
+  "published": true,
+  "displayOrder": 2
+}

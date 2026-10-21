@@ -1,9 +1,18 @@
 {
-  "title": "Modexa POS",
+  "title": {
+    "en": "Modexa POS",
+    "ar": "Modexa POS"
+  },
   "slug": "modexa-pos",
   "category": "modexa-pos",
-  "shortDescription": "Modexa POS is a modern point-of-sale system that helps businesses manage sales, products, inventory, customers, employees, and reports from one simple dashboard.",
-  "fullDescription": "Modexa POS is a complete business management and point-of-sale solution designed for retail stores, restaurants, cafés, and growing businesses. It provides a fast and user-friendly checkout experience while giving business owners full control over daily operations.\n\nWith Modexa POS, businesses can manage products, categories, prices, stock levels, customers, employees, orders, payments, and sales reports from one central system. The dashboard presents important business information clearly, helping owners understand performance and make better decisions.\n\nThe system is designed with a modern interface, smooth navigation, and a responsive layout that works across computers, tablets, and mobile devices. Modexa POS can also be customized based on the needs of each business, including branding, workflows, user permissions, reporting, and additional integrations.",
+  "shortDescription": {
+    "en": "Modexa POS is a modern point-of-sale system that helps businesses manage sales, products, inventory, customers, employees, and reports from one simple dashboard.",
+    "ar": "نظام نقاط بيع عصري يساعد الشركات على إدارة المبيعات والمنتجات والمخزون والعملاء والموظفين والتقارير من لوحة واحدة بسيطة."
+  },
+  "fullDescription": {
+    "en": "Modexa POS is a complete business management and point-of-sale solution designed for retail stores, restaurants, cafés, and growing businesses. It provides a fast and user-friendly checkout experience while giving business owners full control over daily operations.\n\nWith Modexa POS, businesses can manage products, categories, prices, stock levels, customers, employees, orders, payments, and sales reports from one central system. The dashboard presents important business information clearly, helping owners understand performance and make better decisions.\n\nThe system is designed with a modern interface, smooth navigation, and a responsive layout that works across computers, tablets, and mobile devices. Modexa POS can also be customized based on the needs of each business, including branding, workflows, user permissions, reporting, and additional integrations.",
+    "ar": "Modexa POS حل متكامل لنقاط البيع وإدارة الأعمال، مصمّم لمحلات البيع بالتجزئة والمطاعم والمقاهي والشركات النامية. يوفّر تجربة بيع سريعة وسهلة، ويمنح أصحاب العمل تحكمًا كاملًا في العمل اليومي.\n\nمع Modexa POS يمكنك إدارة المنتجات والتصنيفات والأسعار ومستويات المخزون والعملاء والموظفين والطلبات والمدفوعات وتقارير المبيعات من نظام واحد. تعرض لوحة التحكم أهم المعلومات بوضوح لتساعدك على فهم الأداء واتخاذ قرارات أفضل.\n\nيتميّز النظام بواجهة عصرية وتنقّل سلس وتصميم يعمل على أجهزة الكمبيوتر والأجهزة اللوحية والهواتف. ويمكن تخصيصه حسب احتياجات كل نشاط، بما في ذلك الهوية البصرية وسير العمل وصلاحيات المستخدمين والتقارير وعمليات الربط الإضافية."
+  },
   "thumbnail": "/images/Screenshot 2026-07-16 155820.png",
   "technologies": [
     "Laravel",
@@ -15,5 +24,8 @@
   "projectStatus": "completed",
   "featured": true,
   "published": true,
-  "displayOrder": 99
+  "displayOrder": 99,
+  "galleryImages": [],
+  "customerName": "",
+  "websiteUrl": ""
 }

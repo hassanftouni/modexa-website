@@ -215,7 +215,10 @@ interface IconProps extends SVGProps<SVGSVGElement> {
   title?: string;
 }
 
-export function Icon({ name, title, ...props }: IconProps) {
+/** Icons that indicate direction and must mirror in right-to-left layouts. */
+const directional = new Set<IconName>(["arrowRight", "arrowUpRight"]);
+
+export function Icon({ name, title, className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -226,6 +229,7 @@ export function Icon({ name, title, ...props }: IconProps) {
       strokeLinejoin="round"
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
+      className={directional.has(name) ? `flip-rtl ${className}` : className}
       {...props}
     >
       {title ? <title>{title}</title> : null}

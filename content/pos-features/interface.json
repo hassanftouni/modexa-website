@@ -1,0 +1,32 @@
+{
+  "slug": "interface",
+  "icon": "layout",
+  "title": {
+    "en": "A clean, modern interface",
+    "ar": "واجهة عصرية وواضحة"
+  },
+  "description": {
+    "en": "An interface staff learn quickly and owners enjoy using every day.",
+    "ar": "واجهة يتعلّمها الموظفون بسرعة ويستمتع أصحاب العمل باستخدامها يوميًا."
+  },
+  "features": [
+    {
+      "en": "Clear, modern design",
+      "ar": "تصميم واضح وعصري"
+    },
+    {
+      "en": "Quick to learn for new staff",
+      "ar": "سهلة التعلّم للموظفين الجدد"
+    },
+    {
+      "en": "Owner dashboards",
+      "ar": "لوحات لأصحاب العمل"
+    },
+    {
+      "en": "Made for daily use",
+      "ar": "مصمّمة للاستخدام اليومي"
+    }
+  ],
+  "published": true,
+  "displayOrder": 12
+}
